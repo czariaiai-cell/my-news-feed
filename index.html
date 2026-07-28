@@ -308,8 +308,8 @@
             for (const key in userVotes) delete userVotes[key];
 
             try {
-                // Fetch daily markdown file from archive
-                const response = await fetch(`archive/${selectedDate}.md`);
+                // Fetch daily markdown file from journal
+                const response = await fetch(`journal/${selectedDate}.md`);
                 if (!response.ok) {
                     throw new Error("Brak pliku archiwalnego");
                 }
