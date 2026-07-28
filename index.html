@@ -343,9 +343,9 @@
                     card.setAttribute('data-id', news.id);
                     card.innerHTML = `
                         <div>
-                            <div class="category">${escapeHtml(news.category)}</div>
-                            <h3>${escapeHtml(news.title)}</h3>
-                            <p class="description">${escapeHtml(news.description)}</p>
+                            <div class="category">${escapeHtml(stripMarkdownLinks(news.category))}</div>
+                            <h3>${escapeHtml(stripMarkdownLinks(news.title))}</h3>
+                            <p class="description">${escapeHtml(stripMarkdownLinks(news.description))}</p>
                         </div>
                         <div class="card-bottom">
                             <div class="btn-group">
@@ -373,6 +373,11 @@
                       .replace(/>/g, "&gt;")
                       .replace(/"/g, "&quot;")
                       .replace(/'/g, "&#039;");
+        }
+
+        function stripMarkdownLinks(str) {
+            // Converts [[Ukraina]] -> Ukraina and [[topic|Topic]] -> Topic
+            return str.replace(/\[\[(?:[^\]|]*\|)?([^\]]+)\]\]/g, '$1');
         }
 
         function selectVote(newsId, action) {
