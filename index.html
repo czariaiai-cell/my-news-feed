@@ -5,41 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piguła Geopolityczna</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 15px; max-width: 600px; margin: 0 auto; background: #f4f4f9; }
-        .news-item { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .btn-group { margin-top: 10px; display: flex; gap: 10px; }
-        button { padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        body { font-family: -apple-system, sans-serif; background: #eef2f5; padding: 10px; margin: 0; }
+        h1 { text-align: center; color: #333; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; }
+        .news-item { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
+        .category { font-size: 0.75rem; color: #666; text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
+        h3 { margin: 0 0 10px 0; font-size: 1.1rem; color: #111; }
+        p { margin: 0 0 10px 0; font-size: 0.95rem; color: #444; }
+        textarea { width: 100%; height: 50px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; padding: 5px; box-sizing: border-box; font-family: inherit; resize: vertical; }
+        .btn-group { margin-top: 10px; display: flex; gap: 8px; }
+        button { flex: 1; padding: 8px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.9rem; }
         .btn-like { background: #4caf50; color: white; }
         .btn-dislike { background: #f44336; color: white; }
+        .status { margin-top: 8px; font-size: 0.85rem; font-weight: bold; text-align: center; }
     </style>
 </head>
 <body>
-    <h1>Dzisiejsza Piguła</h1>
-    <div id="news-container">
+    <h1>Dzisiejsza Piguła (28.07)</h1>
+    <div class="grid" id="news-container">
         <!-- News 1 -->
         <div class="news-item">
-            <h3>Ukraina: "Strefa Śmierci"</h3>
-            <p>Drony czynią broń pancerną bezużyteczną na 30 km froncie. Podziemne nory zastępują okopy.</p>
-            <form action="https://formspree.io/f/mvzeldya" method="POST">
-                <input type="hidden" name="news_id" value="1">
+            <div>
+                <div class="category">Geopolityka</div>
+                <h3>Ukraina: "Strefa Śmierci"</h3>
+                <p>Drony czynią broń pancerną bezużyteczną na 30 km froncie. Podziemne nory zastępują okopy.</p>
+            </div>
+            <form onsubmit="submitForm(event)">
+                <input type="hidden" name="news" value="Ukraina_Strefa">
+                <textarea name="comment" placeholder="Twój komentarz..."></textarea>
                 <div class="btn-group">
-                    <button class="btn-like" name="action" value="LIKE_Ukraine_Strefa">LUBIĘ</button>
-                    <button class="btn-dislike" name="action" value="DISLIKE_Ukraine_Strefa">NIE LUBIĘ</button>
+                    <button type="submit" class="btn-like" name="action" value="LIKE" onclick="setAction(this)">LUBIĘ</button>
+                    <button type="submit" class="btn-dislike" name="action" value="DISLIKE" onclick="setAction(this)">NIE LUBIĘ</button>
                 </div>
+                <div class="status"></div>
             </form>
         </div>
         <!-- News 2 -->
         <div class="news-item">
-            <h3>Eksplozja w Cieśninie Ormuz</h3>
-            <p>Tankowiec wpłynął na minę morską po zboczeniu z kursu. Wzrost napięcia w regionie.</p>
-            <form action="https://formspree.io/f/mvzeldya" method="POST">
-                <input type="hidden" name="news_id" value="2">
+            <div>
+                <div class="category">Świat</div>
+                <h3>Eksplozja w Cieśninie Ormuz</h3>
+                <p>Tankowiec wpłynął na minę morską po zboczeniu z kursu. Wzrost napięcia w regionie.</p>
+            </div>
+            <form onsubmit="submitForm(event)">
+                <input type="hidden" name="news" value="Ormuz_Explosion">
+                <textarea name="comment" placeholder="Twój komentarz..."></textarea>
                 <div class="btn-group">
-                    <button class="btn-like" name="action" value="LIKE_Ormuz_Explosion">LUBIĘ</button>
-                    <button class="btn-dislike" name="action" value="DISLIKE_Ormuz_Explosion">NIE LUBIĘ</button>
+                    <button type="submit" class="btn-like" name="action" value="LIKE" onclick="setAction(this)">LUBIĘ</button>
+                    <button type="submit" class="btn-dislike" name="action" value="DISLIKE" onclick="setAction(this)">NIE LUBIĘ</button>
                 </div>
+                <div class="status"></div>
             </form>
         </div>
     </div>
+    <script>
+        let selectedAction = '';
+        function setAction(btn) {
+            selectedAction = btn.value;
+        }
+        function submitForm(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            formData.set('action', selectedAction);
+            
+            const statusDiv = form.querySelector('.status');
+            statusDiv.innerHTML = 'Wysyłanie...';
+            
+            fetch('https://formspree.io/f/mvzeldya', { 
+                method: 'POST', 
+                body: formData, 
+                headers: {'Accept': 'application/json'} 
+            })
+            .then(response => {
+                if(response.ok) {
+                    statusDiv.innerHTML = '<span style="color:green;">Zapisano! Dziękujemy.</span>';
+                    form.querySelector('textarea').disabled = true;
+                    form.querySelectorAll('button').forEach(b => b.disabled = true);
+                } else {
+                    statusDiv.innerHTML = '<span style="color:red;">Błąd wysyłania.</span>';
+                }
+            })
+            .catch(() => {
+                statusDiv.innerHTML = '<span style="color:red;">Błąd sieci.</span>';
+            });
+        }
+    </script>
 </body>
 </html>
