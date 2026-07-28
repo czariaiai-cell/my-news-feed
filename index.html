@@ -66,6 +66,15 @@
             border-color: rgba(197, 160, 89, 0.2);
         }
 
+        .news-item .category {
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 6px;
+            letter-spacing: 0.8px;
+        }
+
         .news-item h3 {
             font-size: 18px;
             font-weight: 600;
@@ -180,21 +189,180 @@
     <div id="news-container">
         <!-- News 1 -->
         <div class="news-item" data-id="1">
+            <div class="category">Geopolityka</div>
             <h3>Ukraina: "Strefa Śmierci"</h3>
-            <p>Drony czynią broń pancerną bezużyteczną na 30 km froncie. Podziemne nory zastępują okopy.</p>
+            <p>Reuters: Drony czynią broń pancerną bezużyteczną na 30 km froncie. Podziemne nory zastępują okopy.</p>
             <div class="btn-group">
                 <button class="vote-btn btn-like" onclick="selectVote(1, 'LIKE')">LUBIĘ</button>
                 <button class="vote-btn btn-dislike" onclick="selectVote(1, 'DISLIKE')">NIE LUBIĘ</button>
             </div>
             <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
         </div>
+        
         <!-- News 2 -->
         <div class="news-item" data-id="2">
+            <div class="category">Świat</div>
             <h3>Eksplozja w Cieśninie Ormuz</h3>
             <p>Tankowiec wpłynął na minę morską po zboczeniu z kursu. Wzrost napięcia w regionie.</p>
             <div class="btn-group">
                 <button class="vote-btn btn-like" onclick="selectVote(2, 'LIKE')">LUBIĘ</button>
                 <button class="vote-btn btn-dislike" onclick="selectVote(2, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 3 -->
+        <div class="news-item" data-id="3">
+            <div class="category">Polska</div>
+            <h3>Spadek ludności Polski</h3>
+            <p>GUS: Polska liczy 37,2 mln osób. Spadek o 159 tys. w ciągu roku.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(3, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(3, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 4 -->
+        <div class="news-item" data-id="4">
+            <div class="category">Świat</div>
+            <h3>Atak w Berlinie</h3>
+            <p>Zamach na Paradzie Równości. Ofiara śmiertelna to Polka.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(4, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(4, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 5 -->
+        <div class="news-item" data-id="5">
+            <div class="category">Technologia</div>
+            <h3>Polski satelita serwisowy</h3>
+            <p>Premier zapowiedział budowę statku do serwisu satelitów na orbicie (2029).</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(5, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(5, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 6 -->
+        <div class="news-item" data-id="6">
+            <div class="category">Gospodarka</div>
+            <h3>Kontrole lekarzy</h3>
+            <p>Skarbówka wykryła 9,4 mln zł nadużyć w 82 prywatnych gabinetach.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(6, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(6, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 7 -->
+        <div class="news-item" data-id="7">
+            <div class="category">Geopolityka</div>
+            <h3>Strategia Energetyczna UE</h3>
+            <p>Bruksela wprowadza nowe wytyczne dla bezpieczeństwa dostaw.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(7, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(7, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 8 -->
+        <div class="news-item" data-id="8">
+            <div class="category">Świat</div>
+            <h3>Rosyjskie motocykle</h3>
+            <p>Rosjanie zmieniają taktykę, używając motocykli do unikania dronów.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(8, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(8, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 9 -->
+        <div class="news-item" data-id="9">
+            <div class="category">Gospodarka</div>
+            <h3>Rynek pracy 2030</h3>
+            <p>Analiza wpływu spadku demograficznego na polski rynek pracy.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(9, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(9, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 10 -->
+        <div class="news-item" data-id="10">
+            <div class="category">Świat</div>
+            <h3>Morze Południowochińskie</h3>
+            <p>Wzrost napięcia i aktywności marynarki wojennej Chin.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(10, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(10, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 11 -->
+        <div class="news-item" data-id="11">
+            <div class="category">Sport/Geopolityka</div>
+            <h3>Ayrton Senna - Brazylia</h3>
+            <p>Analiza historycznego hołdu piłkarzy i znaczenia dla tożsamości narodowej.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(11, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(11, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 12 -->
+        <div class="news-item" data-id="12">
+            <div class="category">Środowisko</div>
+            <h3>Bałtyk - Eksperci</h3>
+            <p>Prof. Węsławski o błędach w postrzeganiu ekologii Bałtyku.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(12, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(12, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 13 -->
+        <div class="news-item" data-id="13">
+            <div class="category">Społeczeństwo</div>
+            <h3>Wyzwania rodziców</h3>
+            <p>Analiza mitów dot. opieki nad dziećmi i aktywności zawodowej.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(13, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(13, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 14 -->
+        <div class="news-item" data-id="14">
+            <div class="category">Świat</div>
+            <h3>Bezpieczeństwo w Berlinie</h3>
+            <p>Niemcy zwiększają środki po zamachu w czasie Parady Równości.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(14, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(14, 'DISLIKE')">NIE LUBIĘ</button>
+            </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
+        </div>
+
+        <!-- News 15 -->
+        <div class="news-item" data-id="15">
+            <div class="category">Gospodarka</div>
+            <h3>Ceny paliw a Logistyka</h3>
+            <p>Analiza wpływu wysokich cen na łańcuch dostaw w Europie.</p>
+            <div class="btn-group">
+                <button class="vote-btn btn-like" onclick="selectVote(15, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(15, 'DISLIKE')">NIE LUBIĘ</button>
             </div>
             <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
         </div>
