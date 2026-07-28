@@ -7,14 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0b0c10;
-            --panel-bg: rgba(22, 26, 35, 0.65);
-            --border-color: rgba(255, 255, 255, 0.1);
-            --accent-color: #c5a059; /* Gold accent */
-            --like-color: #4caf50;
-            --dislike-color: #f44336;
-            --text-color: #e5e9f0;
-            --text-muted: #8892b0;
+            --bg-color: #f8fafc;
+            --panel-bg: rgba(255, 255, 255, 0.8);
+            --border-color: rgba(15, 23, 42, 0.08);
+            --accent-color: #9a7b43; /* Rich gold for light background */
+            --like-color: #2e7d32;
+            --dislike-color: #c62828;
+            --text-color: #0f172a;
+            --text-muted: #475569;
         }
 
         * {
@@ -31,7 +31,7 @@
             padding: 20px;
             max-width: 600px;
             margin: 0 auto;
-            background-image: radial-gradient(circle at 50% 0%, rgba(30, 39, 56, 0.4) 0%, rgba(11, 12, 16, 1) 100%);
+            background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, #e2e8f0 100%);
         }
 
         h1 {
@@ -39,7 +39,7 @@
             font-weight: 700;
             text-align: center;
             margin: 20px 0 10px;
-            background: linear-gradient(90deg, #ffffff, var(--accent-color));
+            background: linear-gradient(90deg, #0f172a, var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -58,12 +58,12 @@
             padding: 20px;
             margin-bottom: 20px;
             backdrop-filter: blur(12px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
             transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
         .news-item:hover {
-            border-color: rgba(197, 160, 89, 0.2);
+            border-color: rgba(154, 123, 67, 0.3);
         }
 
         .news-item .category {
@@ -79,7 +79,7 @@
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #ffffff;
+            color: #0f172a;
         }
 
         .news-item p {
@@ -111,36 +111,36 @@
         }
 
         .btn-like {
-            background: rgba(76, 175, 80, 0.08);
-            color: #81c784;
-            border: 1px solid rgba(76, 175, 80, 0.2);
+            background: rgba(46, 125, 80, 0.05);
+            color: var(--like-color);
+            border: 1px solid rgba(46, 125, 80, 0.15);
         }
 
         .btn-like:hover, .btn-like.active {
             background: var(--like-color);
             color: #ffffff;
             border-color: var(--like-color);
-            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+            box-shadow: 0 4px 12px rgba(46, 125, 80, 0.15);
         }
 
         .btn-dislike {
-            background: rgba(244, 67, 54, 0.08);
-            color: #e57373;
-            border: 1px solid rgba(244, 67, 54, 0.2);
+            background: rgba(198, 40, 40, 0.05);
+            color: var(--dislike-color);
+            border: 1px solid rgba(198, 40, 40, 0.15);
         }
 
         .btn-dislike:hover, .btn-dislike.active {
             background: var(--dislike-color);
             color: #ffffff;
             border-color: var(--dislike-color);
-            box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+            box-shadow: 0 4px 12px rgba(198, 40, 40, 0.15);
         }
 
         .comment-area {
             width: 100%;
             height: 60px;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border-color);
+            background: #ffffff;
+            border: 1px solid rgba(15, 23, 42, 0.12);
             border-radius: 8px;
             padding: 8px 12px;
             font-family: inherit;
@@ -164,21 +164,21 @@
         .submit-btn {
             width: 100%;
             padding: 16px;
-            background: linear-gradient(90deg, var(--accent-color), #d9b877);
-            color: #0b0c10;
+            background: linear-gradient(90deg, var(--accent-color), #816635);
+            color: #ffffff;
             border: none;
             border-radius: 12px;
             font-family: inherit;
             font-size: 16px;
             font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.25);
+            box-shadow: 0 8px 20px rgba(154, 123, 67, 0.2);
             transition: all 0.2s ease;
         }
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(197, 160, 89, 0.4);
+            box-shadow: 0 12px 25px rgba(154, 123, 67, 0.35);
         }
     </style>
 </head>
