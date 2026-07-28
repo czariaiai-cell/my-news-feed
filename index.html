@@ -127,7 +127,22 @@
             color: var(--text-muted);
             line-height: 1.5;
             margin-bottom: 16px;
+            word-break: break-word;
+            overflow-wrap: anywhere;
         }
+
+        .description a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .description a:hover {
+            border-bottom-color: var(--accent-color);
+        }
+
 
         .card-bottom {
             margin-top: auto;
@@ -316,20 +331,27 @@
                 const text = await response.text();
                 
                 // Parse markdown content dynamically
-                // Matches "## [Category] Title" followed by "Description"
+                // Matches "## [Category] Title" followed by all lines until next ## or end
                 const items = [];
-                const regex = /##\s*\[(.*?)\]\s*(.*?)\n([^\n]+)/g;
-                let match;
+                const sections = text.split(/(?=^## )/m).filter(s => s.match(/^## \[/));
                 let id = 1;
 
-                while ((match = regex.exec(text)) !== null) {
+                sections.forEach(section => {
+                    const headerMatch = section.match(/^## \[(.*?)\]\s*(.*?)\n([\s\S]*)/m);
+                    if (!headerMatch) return;
+                    // Get description lines: skip empty lines and the ## feedback section
+                    const rawDesc = headerMatch[3]
+                        .split('\n')
+                        .filter(l => l.trim() && !l.startsWith('#'))
+                        .join(' ')
+                        .trim();
                     items.push({
                         id: id++,
-                        category: match[1].trim(),
-                        title: match[2].trim(),
-                        description: match[3].trim()
+                        category: headerMatch[1].trim(),
+                        title: headerMatch[2].trim(),
+                        description: rawDesc
                     });
-                }
+                });
 
                 if (items.length === 0) {
                     statusMessage.textContent = "Nie udało się odczytać formatu wiadomości z pliku. Sprawdź strukturę pliku .md.";
@@ -343,9 +365,9 @@
                     card.setAttribute('data-id', news.id);
                     card.innerHTML = `
                         <div>
-                            <div class="category">${escapeHtml(stripMarkdownLinks(news.category))}</div>
-                            <h3>${escapeHtml(stripMarkdownLinks(news.title))}</h3>
-                            <p class="description">${escapeHtml(stripMarkdownLinks(news.description))}</p>
+                            <div class="category">${escapeHtml(stripObsidianLinks(news.category))}</div>
+                            <h3>${escapeHtml(stripObsidianLinks(news.title))}</h3>
+                            <p class="description">${renderMarkdown(news.description)}</p>
                         </div>
                         <div class="card-bottom">
                             <div class="btn-group">
@@ -375,9 +397,36 @@
                       .replace(/'/g, "&#039;");
         }
 
-        function stripMarkdownLinks(str) {
-            // Converts [[Ukraina]] -> Ukraina and [[topic|Topic]] -> Topic
+        // Strip Obsidian wiki links: [[Ukraina]] -> Ukraina, [[topic|Alias]] -> Alias
+        function stripObsidianLinks(str) {
             return str.replace(/\[\[(?:[^\]|]*\|)?([^\]]+)\]\]/g, '$1');
+        }
+
+        // Render markdown description to safe HTML with clickable links
+        function renderMarkdown(str) {
+            // 1. Strip Obsidian [[wiki]] links
+            str = stripObsidianLinks(str);
+            // 2. Convert markdown [text](url) to clickable links
+            str = str.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, (_, label, url) => {
+                return `<a href="${url}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`;
+            });
+            // 3. Convert bare URLs to short clickable links (show domain only)
+            str = str.replace(/(^|[^"'])(https?:\/\/[^\s)]+)/g, (_, pre, url) => {
+                try {
+                    const domain = new URL(url).hostname.replace('www.', '');
+                    return `${pre}<a href="${url}" target="_blank" rel="noopener">[${domain}]</a>`;
+                } catch { return _ ; }
+            });
+            // 4. Escape remaining HTML special chars (not inside <a> tags)
+            // We do a targeted escape on text nodes only (simple approach)
+            str = str.replace(/&(?!amp;|lt;|gt;|quot;|#039;)/g, '&amp;');
+            return str;
+        }
+
+        // Legacy alias
+        function stripMarkdownLinks(str) {
+            return stripObsidianLinks(str);
+
         }
 
         function selectVote(newsId, action) {
