@@ -241,11 +241,9 @@
             }
         }
 
-        function submitAllFeedback() {
-            const todayStr = new Date().toISOString().split('T')[0];
+        async function submitAllFeedback() {
             const newsItems = document.querySelectorAll('.news-item');
-            
-            let markdownContent = `### Opinie z dnia: ${todayStr}\n\n`;
+            const promises = [];
             let hasAnyVote = false;
 
             newsItems.forEach(item => {
@@ -254,17 +252,26 @@
                 const vote = userVotes[id] || 'NONE';
                 const comment = item.querySelector('.comment-area').value.trim();
 
+                // Send if user voted or added a comment
                 if (vote !== 'NONE' || comment !== '') {
                     hasAnyVote = true;
-                }
+                    
+                    const payload = {
+                        newsTitle: title,
+                        vote: vote === 'LIKE' ? 'LUBIĘ' : (vote === 'DISLIKE' ? 'NIE LUBIĘ' : 'BRAK OCENY'),
+                        comment: comment
+                    };
 
-                markdownContent += `- **ID**: ${id}\n`;
-                markdownContent += `  **Tytuł**: ${title}\n`;
-                markdownContent += `  **Ocena**: ${vote === 'LIKE' ? 'LUBIĘ' : (vote === 'DISLIKE' ? 'NIE LUBIĘ' : 'BRAK OCENY')}\n`;
-                if (comment) {
-                    markdownContent += `  **Komentarz**: ${comment}\n`;
+                    const p = fetch("https://script.google.com/macros/s/AKfycbxDCHUE8sx7QxCZe7c4LKZZ6f7RRykXUvLleGtwkyTGc-j5Ab9oOpuMDbpg1JDXGBemhg/exec", {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    promises.push(p);
                 }
-                markdownContent += `\n`;
             });
 
             if (!hasAnyVote) {
@@ -272,12 +279,28 @@
                 return;
             }
 
-            const title = `Feedback: ${todayStr}`;
-            const repoUrl = "https://github.com/czariaiai-cell/my-news-feed";
-            const url = `${repoUrl}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(markdownContent)}`;
-            
-            // Navigate to GitHub Issue page
-            window.location.href = url;
+            // Disable submit button during upload
+            const submitBtn = document.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Wysyłanie...";
+            submitBtn.style.opacity = "0.5";
+
+            try {
+                await Promise.all(promises);
+                alert("Opinie zostały zapisane bezpośrednio w Twoim Arkuszu Google! ✓");
+                // Clear comments and votes
+                newsItems.forEach(item => {
+                    item.querySelector('.comment-area').value = '';
+                });
+                document.querySelectorAll('.vote-btn').forEach(btn => btn.classList.remove('active'));
+                for (const key in userVotes) delete userVotes[key];
+            } catch (err) {
+                alert("Wystąpił błąd podczas wysyłania opinii: " + err);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Wyślij dzisiejsze opinie (1 kliknięcie)";
+                submitBtn.style.opacity = "1";
+            }
         }
     </script>
 </body>
