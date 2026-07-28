@@ -18,11 +18,14 @@ Jesteś **Analitykiem Geopiguły** — opiekunem dedykowanego mózgu dla projekt
 
 ## 🛠 Podstawowe Komendy Git
 
-> ⚠️ **Konfiguracja SSH:** Remote `origin` używa SSH (`git@github.com:czariaiai-cell/my-news-feed.git`).
-> Klucz SSH jest skonfigurowany w `.git/config` jako `core.sshCommand` z bezwzględną ścieżką.
-> **Nie zmieniaj remote URL na HTTPS ani nie nadpisuj `core.sshCommand`.**
+> ℹ️ **Architektura push:** Remote `origin` to SSH — działa z hosta.
+> Wewnątrz kontenera Docker **nie ma binarnego `ssh`**, więc `git push origin main` nie zadziała.
+> **Zawsze używaj poniższej komendy HTTPS-override — nie zapisuje ona tokena w configu repo.**
 
 *   Dodanie zmian: `git add .`
 *   Zatwierdzenie zmian: `git commit -m "Update: Codzienna piguła YYYY-MM-DD"`
-*   Wypchnięcie na serwer: `git push origin main`
-*   Jeśli push nie zadziała z powodu brakującego ssh — użyj: `GIT_SSH_COMMAND="ssh -i /home/rafal-ai/.ssh/id_ed25519_omnisquash -o StrictHostKeyChecking=no" git push git@github.com:czariaiai-cell/my-news-feed.git main`
+*   **Wypchnięcie z kontenera (HTTPS override — nie zmienia .git/config):**
+    ```bash
+    git push https://czariaiai-cell:GITHUB_TOKEN@github.com/czariaiai-cell/my-news-feed.git main
+    ```
+    Zastąp `GITHUB_TOKEN` aktualnym tokenem z pliku `.env` lub zmiennej środowiskowej (zapytaj użytkownika jeśli nie masz dostępu).
