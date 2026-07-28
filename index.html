@@ -4,102 +4,466 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piguła Geopolityczna</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, sans-serif; background: #eef2f5; padding: 10px; margin: 0; }
-        h1 { text-align: center; color: #333; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; }
-        .news-item { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: space-between; }
-        .category { font-size: 0.75rem; color: #0049ed; text-transform: uppercase; font-weight: bold; margin-bottom: 5px; }
-        h3 { margin: 0 0 10px 0; font-size: 1.2rem; color: #111; }
-        p { margin: 0 0 10px 0; font-size: 0.95rem; color: #333; }
-        .score { font-size: 0.8rem; color: #555; font-weight: bold; margin-bottom: 10px; }
-        .links { margin: 10px 0; font-size: 0.85rem; }
-        .links a { color: #0049ed; text-decoration: none; margin-right: 10px; }
-        textarea { width: 100%; height: 60px; margin-top: 10px; border: 1px solid #ddd; border-radius: 4px; padding: 8px; box-sizing: border-box; font-family: inherit; resize: vertical; }
-        .btn-group { margin-top: 10px; display: flex; gap: 8px; }
-        button { flex: 1; padding: 10px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.9rem; }
-        .btn-like { background: #4caf50; color: white; }
-        .btn-dislike { background: #f44336; color: white; }
-        .status { margin-top: 8px; font-size: 0.85rem; font-weight: bold; text-align: center; min-height: 20px; }
+        :root {
+            --bg-color: #f8fafc;
+            --panel-bg: #ffffff;
+            --border-color: rgba(15, 23, 42, 0.08);
+            --accent-color: #9a7b43; /* Rich gold for light background */
+            --like-color: #2e7d32;
+            --dislike-color: #c62828;
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 20px 20px 100px 20px; /* Space for sticky bar */
+            background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, #e2e8f0 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin: 10px 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #0f172a, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Date Picker Styling */
+        #date-picker {
+            padding: 10px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--text-color);
+            background: var(--panel-bg);
+            outline: none;
+            cursor: pointer;
+            margin: 15px auto 25px;
+            display: block;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.2s ease;
+        }
+
+        #date-picker:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 4px 12px rgba(154, 123, 67, 0.15);
+        }
+
+        /* Responsive Grid Layout */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .news-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+            transition: all 0.25s ease;
+            min-height: 250px;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(154, 123, 67, 0.3);
+            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        .category {
+            font-size: 9px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--accent-color);
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+        }
+
+        .news-card h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1e293b;
+            line-height: 1.4;
+        }
+
+        .description {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .card-bottom {
+            margin-top: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        button.vote-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-like {
+            background: rgba(46, 125, 80, 0.05);
+            color: var(--like-color);
+            border: 1px solid rgba(46, 125, 80, 0.15);
+        }
+
+        .btn-like:hover, .btn-like.active {
+            background: var(--like-color);
+            color: #ffffff;
+            border-color: var(--like-color);
+            box-shadow: 0 4px 10px rgba(46, 125, 80, 0.15);
+        }
+
+        .btn-dislike {
+            background: rgba(198, 40, 40, 0.05);
+            color: var(--dislike-color);
+            border: 1px solid rgba(198, 40, 40, 0.15);
+        }
+
+        .btn-dislike:hover, .btn-dislike.active {
+            background: var(--dislike-color);
+            color: #ffffff;
+            border-color: var(--dislike-color);
+            box-shadow: 0 4px 10px rgba(198, 40, 40, 0.15);
+        }
+
+        .comment-input {
+            width: 100%;
+            height: 36px;
+            background: #f8fafc;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: 6px;
+            padding: 0 10px;
+            font-family: inherit;
+            font-size: 12px;
+            color: var(--text-color);
+            outline: none;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .comment-input:focus {
+            border-color: var(--accent-color);
+            background: #ffffff;
+        }
+
+        /* Sticky Submit Bar */
+        .submit-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            padding: 14px 20px;
+            box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.04);
+            z-index: 1000;
+        }
+
+        .submit-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(90deg, var(--accent-color), #816635);
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(154, 123, 67, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 14px rgba(154, 123, 67, 0.3);
+        }
+
+        /* Status & Placeholder Messages */
+        #status-message {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 15px;
+            color: var(--text-muted);
+            background: var(--panel-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px dashed var(--border-color);
+        }
     </style>
 </head>
 <body>
-    <h1>Dzisiejsza Piguła (28.07)</h1>
-    <div class="grid" id="news-container">
-        <!-- News 1 -->
-        <div class="news-item">
-            <div>
-                <div class="category">Technologia / Geopolityka</div>
-                <h3>Polski satelita serwisowy</h3>
-                <p>PIAP Space buduje statek do serwisu satelitów na orbicie (tankowanie/transport). Gotowość: 2029 r., budżet 140 mln PLN. Polska wchodzi do elity technologii orbitalnej.</p>
-                <div class="score">Score: 9/10 | Źródło: Nauka w Polsce</div>
-                <div class="links">
-                    <a href="https://naukawpolsce.pl/aktualnosci/news%2C113979%2Cpolski-statek-kosmiczny-bedzie-bezzalogowym-urzadzeniem-do-trudnych">Szczegóły techniczne</a>
-                    <a href="https://www.wnp.pl/tech/piap-space-buduje-polski-statek-kosmiczny,1084775.html">Analiza przemysłowa</a>
-                </div>
-            </div>
-            <form onsubmit="submitForm(event)">
-                <input type="hidden" name="news_id" value="1">
-                <input type="hidden" name="news_title" value="Polski_Satelita">
-                <textarea name="comment" placeholder="Dodaj swój komentarz..."></textarea>
-                <div class="btn-group">
-                    <button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button>
-                    <button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button>
-                </div>
-                <div class="status"></div>
-            </form>
-        </div>
-        <!-- News 2 -->
-        <div class="news-item">
-            <div>
-                <div class="category">Świat / Bezpieczeństwo</div>
-                <h3>Atak w Berlinie</h3>
-                <p>Ofiara śmiertelna ataku na Paradzie Równości to Polka. Sprawca (islamista) wyeliminowany. Burmistrz zapowiada rewizję procedur bezpieczeństwa.</p>
-                <div class="score">Score: 10/10 | Źródło: WNP / Politico</div>
-                <div class="links">
-                    <a href="https://www.wnp.pl/rynki/niemcy-burmistrz-berlina-ofiara-smiertelna-ataku-podczas-parady-rownosci-to-obywatelka-polski,1084772.html">Stanowisko MSZ</a>
-                    <a href="https://www.politico.eu/article/berlin-pride-attack-security-review/">Kontekst Berlina</a>
-                </div>
-            </div>
-            <form onsubmit="submitForm(event)">
-                <input type="hidden" name="news_id" value="2">
-                <input type="hidden" name="news_title" value="Berlin_Attack">
-                <textarea name="comment" placeholder="Dodaj swój komentarz..."></textarea>
-                <div class="btn-group">
-                    <button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button>
-                    <button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button>
-                </div>
-                <div class="status"></div>
-            </form>
+    <div class="container">
+        <header>
+            <h1>Dzisiejsza Piguła</h1>
+            <div class="subtitle" id="date-subtitle">Środa, 28 lipca 2026</div>
+            <input type="date" id="date-picker">
+        </header>
+
+        <div id="status-message">Ładowanie wiadomości...</div>
+        <div class="news-grid" id="news-container" style="display: none;"></div>
+    </div>
+
+    <div class="submit-bar">
+        <div class="submit-bar-inner">
+            <button class="submit-btn" onclick="submitAllFeedback()">Wyślij opinie (1 kliknięcie)</button>
         </div>
     </div>
+
     <script>
-        async function submitForm(e) {
-            e.preventDefault();
-            const form = e.target;
-            const statusDiv = form.querySelector('.status');
-            const submitter = e.submitter;
-            statusDiv.innerHTML = 'Wysyłanie...';
-            const formData = new FormData();
-            formData.append('news_id', form.querySelector('input[name="news_id"]').value);
-            formData.append('news_title', form.querySelector('input[name="news_title"]').value);
-            formData.append('comment', form.querySelector('textarea').value);
-            formData.append('action', submitter.value);
+        const datePicker = document.getElementById('date-picker');
+        const newsContainer = document.getElementById('news-container');
+        const statusMessage = document.getElementById('status-message');
+
+        // Keep track of votes
+        const userVotes = {};
+
+        // Initialize date picker to today's date (local time)
+        const today = new Date();
+        const tzOffset = today.getTimezoneOffset() * 60000;
+        const localISODate = new Date(today.getTime() - tzOffset).toISOString().split('T')[0];
+        datePicker.value = localISODate;
+        datePicker.max = localISODate; // Prevent future dates
+
+        // Listen to date changes
+        datePicker.addEventListener('change', loadNews);
+
+        // Load news on initial open
+        loadNews();
+
+        async function loadNews() {
+            const selectedDate = datePicker.value;
+            
+            // Update human-friendly Polish date in header
+            const dateObj = new Date(selectedDate);
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('date-subtitle').textContent = dateObj.toLocaleDateString('pl-PL', options);
+
+            // Reset dashboard state
+            newsContainer.innerHTML = '';
+            newsContainer.style.display = 'none';
+            statusMessage.style.display = 'block';
+            statusMessage.textContent = 'Ładowanie wiadomości...';
+            
+            // Clear current selection memory
+            for (const key in userVotes) delete userVotes[key];
+
             try {
-                const response = await fetch('https://formspree.io/f/mvzeldya', { 
-                    method: 'POST', 
-                    body: formData, 
-                    headers: {'Accept': 'application/json'} 
-                });
-                if(response.ok) {
-                    statusDiv.innerHTML = '<span style="color:green;">✓ Zapisano!</span>';
-                    form.querySelector('textarea').disabled = true;
-                    form.querySelectorAll('button').forEach(b => b.disabled = true);
-                } else {
-                    statusDiv.innerHTML = '<span style="color:red;">Błąd serwera.</span>';
+                // Fetch daily markdown file from archive
+                const response = await fetch(`archive/${selectedDate}.md`);
+                if (!response.ok) {
+                    throw new Error("Brak pliku archiwalnego");
                 }
-            } catch (error) {
-                statusDiv.innerHTML = '<span style="color:red;">Błąd sieci.</span>';
+                const text = await response.text();
+                
+                // Parse markdown content dynamically
+                // Matches "## [Category] Title" followed by "Description"
+                const items = [];
+                const regex = /##\s*\[(.*?)\]\s*(.*?)\n([^\n]+)/g;
+                let match;
+                let id = 1;
+
+                while ((match = regex.exec(text)) !== null) {
+                    items.push({
+                        id: id++,
+                        category: match[1].trim(),
+                        title: match[2].trim(),
+                        description: match[3].trim()
+                    });
+                }
+
+                if (items.length === 0) {
+                    statusMessage.textContent = "Nie udało się odczytać formatu wiadomości z pliku. Sprawdź strukturę pliku .md.";
+                    return;
+                }
+
+                // Render news cards
+                items.forEach(news => {
+                    const card = document.createElement('div');
+                    card.className = 'news-card';
+                    card.setAttribute('data-id', news.id);
+                    card.innerHTML = `
+                        <div>
+                            <div class="category">${escapeHtml(news.category)}</div>
+                            <h3>${escapeHtml(news.title)}</h3>
+                            <p class="description">${escapeHtml(news.description)}</p>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="btn-group">
+                                <button class="vote-btn btn-like" onclick="selectVote(${news.id}, 'LIKE')">LUBIĘ</button>
+                                <button class="vote-btn btn-dislike" onclick="selectVote(${news.id}, 'DISLIKE')">NIE LUBIĘ</button>
+                            </div>
+                            <input type="text" class="comment-input" placeholder="Dodaj notatkę (opcjonalnie)...">
+                        </div>
+                    `;
+                    newsContainer.appendChild(card);
+                });
+
+                // Display cards
+                statusMessage.style.display = 'none';
+                newsContainer.style.display = 'grid';
+
+            } catch (err) {
+                statusMessage.textContent = "Brak wiadomości z wybranego dnia. Wybierz inną datę.";
+            }
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;")
+                      .replace(/</g, "&lt;")
+                      .replace(/>/g, "&gt;")
+                      .replace(/"/g, "&quot;")
+                      .replace(/'/g, "&#039;");
+        }
+
+        function selectVote(newsId, action) {
+            const card = document.querySelector(`.news-card[data-id="${newsId}"]`);
+            const likeBtn = card.querySelector('.btn-like');
+            const dislikeBtn = card.querySelector('.btn-dislike');
+
+            if (action === 'LIKE') {
+                if (userVotes[newsId] === 'LIKE') {
+                    // Deselect
+                    delete userVotes[newsId];
+                    likeBtn.classList.remove('active');
+                } else {
+                    userVotes[newsId] = 'LIKE';
+                    likeBtn.classList.add('active');
+                    dislikeBtn.classList.remove('active');
+                }
+            } else if (action === 'DISLIKE') {
+                if (userVotes[newsId] === 'DISLIKE') {
+                    // Deselect
+                    delete userVotes[newsId];
+                    dislikeBtn.classList.remove('active');
+                } else {
+                    userVotes[newsId] = 'DISLIKE';
+                    dislikeBtn.classList.add('active');
+                    likeBtn.classList.remove('active');
+                }
+            }
+        }
+
+        async function submitAllFeedback() {
+            const selectedDate = datePicker.value;
+            const newsCards = document.querySelectorAll('.news-card');
+            const promises = [];
+            let hasAnyVote = false;
+
+            newsCards.forEach(card => {
+                const id = card.getAttribute('data-id');
+                const title = card.querySelector('h3').textContent;
+                const vote = userVotes[id] || 'NONE';
+                const comment = card.querySelector('.comment-input').value.trim();
+
+                // Send if user voted or added a comment
+                if (vote !== 'NONE' || comment !== '') {
+                    hasAnyVote = true;
+                    
+                    const payload = {
+                        // Prepend the date of the news so we know which archive file it belongs to
+                        newsTitle: `[${selectedDate}] ${title}`,
+                        vote: vote === 'LIKE' ? 'LUBIĘ' : (vote === 'DISLIKE' ? 'NIE LUBIĘ' : 'BRAK OCENY'),
+                        comment: comment
+                    };
+
+                    const p = fetch("https://script.google.com/macros/s/AKfycbxDCHUE8sx7QxCZe7c4LKZZ6f7RRykXUvLleGtwkyTGc-j5Ab9oOpuMDbpg1JDXGBemhg/exec", {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    promises.push(p);
+                }
+            });
+
+            if (!hasAnyVote) {
+                alert("Zanim wyślesz, zaznacz przynajmniej jedną opinię lub napisz komentarz!");
+                return;
+            }
+
+            // Disable submit button during upload
+            const submitBtn = document.querySelector('.submit-btn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Wysyłanie...";
+            submitBtn.style.opacity = "0.5";
+
+            try {
+                await Promise.all(promises);
+                alert("Opinie zostały zapisane bezpośrednio w Twoim Arkuszu Google! ✓");
+                // Clear comments and votes
+                newsCards.forEach(card => {
+                    card.querySelector('.comment-input').value = '';
+                });
+                document.querySelectorAll('.vote-btn').forEach(btn => btn.classList.remove('active'));
+                for (const key in userVotes) delete userVotes[key];
+            } catch (err) {
+                alert("Wystąpił błąd podczas wysyłania opinii: " + err);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Wyślij opinie (1 kliknięcie)";
+                submitBtn.style.opacity = "1";
             }
         }
     </script>
