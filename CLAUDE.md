@@ -26,6 +26,6 @@ Jesteś **Analitykiem Geopiguły** — opiekunem dedykowanego mózgu dla projekt
 *   Zatwierdzenie zmian: `git commit -m "Update: Codzienna piguła YYYY-MM-DD"`
 *   **Wypchnięcie z kontenera (HTTPS override — nie zmienia .git/config):**
     ```bash
-    git push https://czariaiai-cell:GITHUB_TOKEN@github.com/czariaiai-cell/my-news-feed.git main
+    git push https://czariaiai-cell:${GITHUB_TOKEN}@github.com/czariaiai-cell/my-news-feed.git main
     ```
-    Zastąp `GITHUB_TOKEN` aktualnym tokenem z pliku `.env` lub zmiennej środowiskowej (zapytaj użytkownika jeśli nie masz dostępu).
+    Zmienna `GITHUB_TOKEN` jest ustawiona w środowisku kontenera OpenClaw.
