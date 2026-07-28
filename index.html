@@ -38,10 +38,17 @@
             font-size: 28px;
             font-weight: 700;
             text-align: center;
-            margin: 20px 0 30px;
+            margin: 20px 0 10px;
             background: linear-gradient(90deg, #ffffff, var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 30px;
         }
 
         .news-item {
@@ -56,8 +63,7 @@
         }
 
         .news-item:hover {
-            transform: translateY(-2px);
-            border-color: rgba(197, 160, 89, 0.3);
+            border-color: rgba(197, 160, 89, 0.2);
         }
 
         .news-item h3 {
@@ -71,21 +77,21 @@
             font-size: 14px;
             color: var(--text-muted);
             line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
 
         .btn-group {
             display: flex;
             gap: 12px;
+            margin-bottom: 12px;
         }
 
-        button {
+        button.vote-btn {
             flex: 1;
-            padding: 12px 20px;
-            border-radius: 10px;
-            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
             font-family: inherit;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -96,60 +102,181 @@
         }
 
         .btn-like {
-            background: rgba(76, 175, 80, 0.15);
+            background: rgba(76, 175, 80, 0.08);
             color: #81c784;
-            border: 1px solid rgba(76, 175, 80, 0.3);
+            border: 1px solid rgba(76, 175, 80, 0.2);
         }
 
-        .btn-like:hover {
+        .btn-like:hover, .btn-like.active {
             background: var(--like-color);
             color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+            border-color: var(--like-color);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
         }
 
         .btn-dislike {
-            background: rgba(244, 67, 54, 0.15);
+            background: rgba(244, 67, 54, 0.08);
             color: #e57373;
-            border: 1px solid rgba(244, 67, 54, 0.3);
+            border: 1px solid rgba(244, 67, 54, 0.2);
         }
 
-        .btn-dislike:hover {
+        .btn-dislike:hover, .btn-dislike.active {
             background: var(--dislike-color);
             color: #ffffff;
+            border-color: var(--dislike-color);
+            box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+        }
+
+        .comment-area {
+            width: 100%;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-family: inherit;
+            font-size: 13px;
+            color: var(--text-color);
+            resize: none;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .comment-area:focus {
+            border-color: var(--accent-color);
+        }
+
+        /* Submit Section */
+        .submit-section {
+            margin: 40px 0 60px;
+            text-align: center;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(90deg, var(--accent-color), #d9b877);
+            color: #0b0c10;
+            border: none;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+            box-shadow: 0 12px 25px rgba(197, 160, 89, 0.4);
         }
     </style>
 </head>
 <body>
     <h1>Dzisiejsza Piguła</h1>
+    <div class="subtitle" id="date-subtitle">Środa, 28 lipca 2026</div>
+
     <div id="news-container">
         <!-- News 1 -->
-        <div class="news-item">
+        <div class="news-item" data-id="1">
             <h3>Ukraina: "Strefa Śmierci"</h3>
             <p>Drony czynią broń pancerną bezużyteczną na 30 km froncie. Podziemne nory zastępują okopy.</p>
             <div class="btn-group">
-                <button class="btn-like" onclick="submitFeedback(1, 'Ukraina: Strefa Śmierci', 'LIKE')">LUBIĘ</button>
-                <button class="btn-dislike" onclick="submitFeedback(1, 'Ukraina: Strefa Śmierci', 'DISLIKE')">NIE LUBIĘ</button>
+                <button class="vote-btn btn-like" onclick="selectVote(1, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(1, 'DISLIKE')">NIE LUBIĘ</button>
             </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
         </div>
         <!-- News 2 -->
-        <div class="news-item">
+        <div class="news-item" data-id="2">
             <h3>Eksplozja w Cieśninie Ormuz</h3>
             <p>Tankowiec wpłynął na minę morską po zboczeniu z kursu. Wzrost napięcia w regionie.</p>
             <div class="btn-group">
-                <button class="btn-like" onclick="submitFeedback(2, 'Eksplozja w Cieśninie Ormuz', 'LIKE')">LUBIĘ</button>
-                <button class="btn-dislike" onclick="submitFeedback(2, 'Eksplozja w Cieśninie Ormuz', 'DISLIKE')">NIE LUBIĘ</button>
+                <button class="vote-btn btn-like" onclick="selectVote(2, 'LIKE')">LUBIĘ</button>
+                <button class="vote-btn btn-dislike" onclick="selectVote(2, 'DISLIKE')">NIE LUBIĘ</button>
             </div>
+            <textarea class="comment-area" placeholder="Dodaj krótki komentarz/notatkę (opcjonalnie)..."></textarea>
         </div>
     </div>
+
+    <div class="submit-section">
+        <button class="submit-btn" onclick="submitAllFeedback()">Wyślij dzisiejsze opinie (1 kliknięcie)</button>
+    </div>
+
     <script>
-        function submitFeedback(newsId, newsTitle, action) {
-            const title = `${action}: ${newsTitle}`;
-            const body = `ID: ${newsId}\nAction: ${action}\nNews: ${newsTitle}`;
+        // Set dynamic date in human-friendly polish format
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('date-subtitle').textContent = new Date().toLocaleDateString('pl-PL', options);
+
+        // Keep track of votes
+        const userVotes = {};
+
+        function selectVote(newsId, action) {
+            // Find the item container
+            const item = document.querySelector(`.news-item[data-id="${newsId}"]`);
+            const likeBtn = item.querySelector('.btn-like');
+            const dislikeBtn = item.querySelector('.btn-dislike');
+
+            if (action === 'LIKE') {
+                if (userVotes[newsId] === 'LIKE') {
+                    // Deselect
+                    delete userVotes[newsId];
+                    likeBtn.classList.remove('active');
+                } else {
+                    userVotes[newsId] = 'LIKE';
+                    likeBtn.classList.add('active');
+                    dislikeBtn.classList.remove('active');
+                }
+            } else if (action === 'DISLIKE') {
+                if (userVotes[newsId] === 'DISLIKE') {
+                    // Deselect
+                    delete userVotes[newsId];
+                    dislikeBtn.classList.remove('active');
+                } else {
+                    userVotes[newsId] = 'DISLIKE';
+                    dislikeBtn.classList.add('active');
+                    likeBtn.classList.remove('active');
+                }
+            }
+        }
+
+        function submitAllFeedback() {
+            const todayStr = new Date().toISOString().split('T')[0];
+            const newsItems = document.querySelectorAll('.news-item');
+            
+            let markdownContent = `### Opinie z dnia: ${todayStr}\n\n`;
+            let hasAnyVote = false;
+
+            newsItems.forEach(item => {
+                const id = item.getAttribute('data-id');
+                const title = item.querySelector('h3').textContent;
+                const vote = userVotes[id] || 'NONE';
+                const comment = item.querySelector('.comment-area').value.trim();
+
+                if (vote !== 'NONE' || comment !== '') {
+                    hasAnyVote = true;
+                }
+
+                markdownContent += `- **ID**: ${id}\n`;
+                markdownContent += `  **Tytuł**: ${title}\n`;
+                markdownContent += `  **Ocena**: ${vote === 'LIKE' ? 'LUBIĘ' : (vote === 'DISLIKE' ? 'NIE LUBIĘ' : 'BRAK OCENY')}\n`;
+                if (comment) {
+                    markdownContent += `  **Komentarz**: ${comment}\n`;
+                }
+                markdownContent += `\n`;
+            });
+
+            if (!hasAnyVote) {
+                alert("Zanim wyślesz, zaznacz przynajmniej jedną opinię lub napisz komentarz!");
+                return;
+            }
+
+            const title = `Feedback: ${todayStr}`;
             const repoUrl = "https://github.com/czariaiai-cell/my-news-feed";
-            const url = `${repoUrl}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+            const url = `${repoUrl}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(markdownContent)}`;
+            
+            // Navigate to GitHub Issue page
             window.location.href = url;
         }
     </script>
