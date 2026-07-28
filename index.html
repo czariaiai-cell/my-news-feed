@@ -411,10 +411,22 @@
                 sections.forEach(section => {
                     const headerMatch = section.match(/^## \[(.*?)\]\s*(.*?)\n([\s\S]*)/m);
                     if (!headerMatch) return;
-                    // Get description lines: skip empty lines and the ## feedback section
+                    // Get description lines: stop at feedback section markers or ## headings
                     const rawDesc = headerMatch[3]
                         .split('\n')
-                        .filter(l => l.trim() && !l.startsWith('#'))
+                        .reduce((acc, l) => {
+                            if (acc.done) return acc;
+                            // Stop when we hit feedback/comment markers
+                            if (l.includes('**Title:**') || l.includes('**Vote:**') ||
+                                l.includes('**Zsynchronizowano') || l.startsWith('**Comment:**') ||
+                                l.startsWith('- **') || l.startsWith('## ')) {
+                                acc.done = true; return acc;
+                            }
+                            if (l.trim()) acc.lines.push(l.trim());
+                            return acc;
+                        }, { lines: [], done: false })
+                        .lines
+                        .slice(0, 8)   // max 8 linii opisu
                         .join(' ')
                         .trim();
                     items.push({
