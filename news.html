@@ -21,43 +21,97 @@
     </style>
 </head>
 <body>
-    <h1>Dzisiejsza Piguła (Testy)</h1>
+    <h1>Dzisiejsza Piguła (28.07)</h1>
     <div class="grid" id="news-container">
-        <!-- News 1 -->
         <div class="news-item">
-            <div>
-                <div class="category">Geopolityka</div>
-                <h3>Ukraina: "Strefa Śmierci"</h3>
-                <p>Drony czynią broń pancerną bezużyteczną. Rosjanie używają motocykli.</p>
-            </div>
-            <form onsubmit="submitForm(event)">
-                <input type="hidden" name="news_id" value="1">
-                <input type="hidden" name="news_title" value="Ukraina_Strefa">
-                <textarea name="comment" placeholder="Twój komentarz..."></textarea>
-                <div class="btn-group">
-                    <button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button>
-                    <button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button>
-                </div>
-                <div class="status"></div>
-            </form>
+            <div class="category">Geopolityka</div>
+            <h3>Ukraina: "Strefa Śmierci"</h3>
+            <p>Reuters: Drony czynią broń pancerną bezużyteczną na 30 km froncie.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Ukraina_Strefa"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
         </div>
-        <!-- News 2 -->
         <div class="news-item">
-            <div>
-                <div class="category">Świat</div>
-                <h3>Eksplozja w Cieśninie Ormuz</h3>
-                <p>Tankowiec wpłynął na minę morską. Region w stanie gotowości.</p>
-            </div>
-            <form onsubmit="submitForm(event)">
-                <input type="hidden" name="news_id" value="2">
-                <input type="hidden" name="news_title" value="Ormuz_Explosion">
-                <textarea name="comment" placeholder="Twój komentarz..."></textarea>
-                <div class="btn-group">
-                    <button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button>
-                    <button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button>
-                </div>
-                <div class="status"></div>
-            </form>
+            <div class="category">Świat</div>
+            <h3>Eksplozja w Cieśninie Ormuz</h3>
+            <p>Tankowiec wpłynął na minę morską po zboczeniu z kursu.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Ormuz_Explosion"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Polska</div>
+            <h3>Spadek ludności Polski</h3>
+            <p>GUS: Polska liczy 37,2 mln osób. Spadek o 159 tys. w ciągu roku.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Demografia_PL"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Świat</div>
+            <h3>Atak w Berlinie</h3>
+            <p>Zamach na Paradzie Równości. Ofiara śmiertelna to Polka.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Atak_Berlin"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Technologia</div>
+            <h3>Polski satelita serwisowy</h3>
+            <p>Premier zapowiedział budowę statku do serwisu satelitów na orbicie (2029).</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Polski_Kosmos"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Gospodarka</div>
+            <h3>Kontrole lekarzy</h3>
+            <p>Skarbówka wykryła 9,4 mln zł nadużyć w 82 prywatnych gabinetach.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Kontrole_Lekarzy"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Geopolityka</div>
+            <h3>Strategia Energetyczna UE</h3>
+            <p>Bruksela wprowadza nowe wytyczne dla bezpieczeństwa dostaw.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Energia_UE"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Świat</div>
+            <h3>Rosyjskie motocykle</h3>
+            <p>Rosjanie zmieniają taktykę, używając motocykli do unikania dronów.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Rosyjskie_Motocykle"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Gospodarka</div>
+            <h3>Rynek pracy 2030</h3>
+            <p>Analiza wpływu spadku demograficznego na polski rynek pracy.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Demografia_RynekPracy"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Świat</div>
+            <h3>Morze Południowochińskie</h3>
+            <p>Wzrost napięcia i aktywności marynarki wojennej Chin.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Chiny_Morze"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Sport/Geopolityka</div>
+            <h3>Ayrton Senna - Brazylia</h3>
+            <p>Analiza historycznego hołdu piłkarzy i znaczenia dla tożsamości narodowej.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Senna_Brazylia"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Środowisko</div>
+            <h3>Bałtyk - Eksperci</h3>
+            <p>Prof. Węsławski o błędach w postrzeganiu ekologii Bałtyku.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Baltyk_Weslawski"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Społeczeństwo</div>
+            <h3>Wyzwania rodziców</h3>
+            <p>Analiza mitów dot. opieki nad dziećmi i aktywności zawodowej.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Rodzice_RynekPracy"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Świat</div>
+            <h3>Bezpieczeństwo w Berlinie</h3>
+            <p>Niemcy zwiększają środki po zamachu w czasie Parady Równości.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Berlin_Security"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
+        </div>
+        <div class="news-item">
+            <div class="category">Gospodarka</div>
+            <h3>Ceny paliw a Logistyka</h3>
+            <p>Analiza wpływu wysokich cen na łańcuch dostaw w Europie.</p>
+            <form onsubmit="submitForm(event)"><input type="hidden" name="news" value="Paliwa_Logistyka"><textarea name="comment" placeholder="Twój komentarz..."></textarea><div class="btn-group"><button type="submit" class="btn-like" name="action" value="LIKE">LUBIĘ</button><button type="submit" class="btn-dislike" name="action" value="DISLIKE">NIE LUBIĘ</button></div><div class="status"></div></form>
         </div>
     </div>
     <script>
@@ -65,7 +119,7 @@
             e.preventDefault();
             const form = e.target;
             const statusDiv = form.querySelector('.status');
-            const submitter = e.submitter; // Wymaga nowszej przeglądarki, ale działa na telefonach
+            const submitter = e.submitter;
             
             statusDiv.innerHTML = 'Wysyłanie...';
             
