@@ -17,6 +17,12 @@ Jesteś **Analitykiem Geopiguły** — opiekunem dedykowanego mózgu dla projekt
 *   **Język:** Raporty dzienne i notatki w tym Vault piszemy w języku **polskim** (zgodnie z preferencjami językowymi użytkownika piguły).
 
 ## 🛠 Podstawowe Komendy Git
+
+> ⚠️ **Konfiguracja SSH:** Remote `origin` używa SSH (`git@github.com:czariaiai-cell/my-news-feed.git`).
+> Klucz SSH jest skonfigurowany w `.git/config` jako `core.sshCommand` z bezwzględną ścieżką.
+> **Nie zmieniaj remote URL na HTTPS ani nie nadpisuj `core.sshCommand`.**
+
 *   Dodanie zmian: `git add .`
 *   Zatwierdzenie zmian: `git commit -m "Update: Codzienna piguła YYYY-MM-DD"`
 *   Wypchnięcie na serwer: `git push origin main`
+*   Jeśli push nie zadziała z powodu brakującego ssh — użyj: `GIT_SSH_COMMAND="ssh -i /home/rafal-ai/.ssh/id_ed25519_omnisquash -o StrictHostKeyChecking=no" git push git@github.com:czariaiai-cell/my-news-feed.git main`
