@@ -493,7 +493,7 @@
                     content = parseNewsMarkdown(text);
                 } else {
                     // Fetch land research markdown
-                    const response = await fetch(`land/${selectedDate}.md`);
+                    const response = await fetch(`land/bytow_land_report_${selectedDate.replace(/-/g, '')}.md`);
                     if (!response.ok) {
                         // Try to show a friendly message if no data yet
                         statusMessage.textContent = "Brak danych o nieruchomościach dla wybranego dnia.";
@@ -713,9 +713,9 @@
 
             // Disable submit button during upload
             const submitBtn = document.querySelector('.submit-btn');
-            sendBtn.disabled = true;
-            sendBtn.textContent = "Wysyłanie...";
-            sendBtn.style.opacity = "0.5";
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Wysyłanie...";
+            submitBtn.style.opacity = "0.5";
 
             try {
                 await Promise.all(promises);
@@ -729,9 +729,9 @@
             } catch (err) {
                 alert("Wystąpił błąd podczas wysyłania opinii: " + err);
             } finally {
-                sendBtn.disabled = false;
-                sendBtn.textContent = "Wyślij opinie (1 kliknięcie)";
-                sendBtn.style.opacity = "1";
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Wyślij opinie (1 kliknięcie)";
+                submitBtn.style.opacity = "1";
             }
         }
     </script>
