@@ -11,38 +11,33 @@
             --bg-color: #f8fafc;
             --panel-bg: #ffffff;
             --border-color: rgba(15, 23, 42, 0.08);
-            --accent-color: #9a7b43; /* Rich gold for light background */
+            --accent-color: #9a7b43;
             --like-color: #2e7d32;
             --dislike-color: #c62828;
             --text-color: #0f172a;
             --text-muted: #64748b;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
             font-family: 'Outfit', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             min-height: 100vh;
-            padding: 20px 20px 100px 20px; /* Space for sticky bar */
+            padding: 20px 20px 100px 20px;
             background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, #e2e8f0 100%);
         }
-
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-
         header {
             margin: 10px 0 20px;
             text-align: center;
         }
-
         h1 {
             font-size: 32px;
             font-weight: 700;
@@ -50,14 +45,11 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .subtitle {
             font-size: 14px;
             color: var(--text-muted);
             margin-top: 4px;
         }
-
-        /* Date Picker Styling */
         #date-picker {
             padding: 10px 16px;
             border: 1px solid var(--border-color);
@@ -70,23 +62,19 @@
             cursor: pointer;
             margin: 15px auto 25px;
             display: block;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
             transition: all 0.2s ease;
         }
-
         #date-picker:focus {
             border-color: var(--accent-color);
-            box-shadow: 0 4px 12px rgba(154, 123, 67, 0.15);
+            box-shadow: 0 4px 12px rgba(154,123,67,0.15);
         }
-
-        /* Mode Selector */
         #mode-selector {
             display: flex;
             justify-content: center;
             gap: 8px;
             margin: 0 0 20px;
         }
-
         .mode-btn {
             padding: 6px 16px;
             border-radius: 20px;
@@ -99,38 +87,29 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-
         .mode-btn:hover {
             border-color: var(--accent-color);
             color: var(--accent-color);
         }
-
         .mode-btn.active {
             background: var(--accent-color);
             border-color: var(--accent-color);
             color: #fff;
         }
-
-        /* Responsive Grid Layout */
         .news-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
             margin-bottom: 20px;
         }
-
-        /* Column layout modifiers */
         .news-grid.cols-1 { grid-template-columns: 1fr; max-width: 680px; margin-left: auto; margin-right: auto; }
         .news-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
-
-        /* Column switcher */
         .cols-switcher {
             display: flex;
             justify-content: center;
             gap: 8px;
             margin: 0 0 20px;
         }
-
         .col-btn {
             padding: 6px 16px;
             border-radius: 20px;
@@ -143,22 +122,18 @@
             cursor: pointer;
             transition: all 0.2s ease;
         }
-
         .col-btn:hover {
             border-color: var(--accent-color);
             color: var(--accent-color);
         }
-
         .col-btn.active {
             background: var(--accent-color);
             border-color: var(--accent-color);
             color: #fff;
         }
-
         @media (max-width: 600px) {
             .news-grid.cols-2 { grid-template-columns: 1fr; }
         }
-
         .news-card {
             background: var(--panel-bg);
             border: 1px solid var(--border-color);
@@ -167,17 +142,15 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03), 0 2px 4px -2px rgba(0,0,0,0.03);
             transition: all 0.25s ease;
             min-height: 250px;
         }
-
         .news-card:hover {
             transform: translateY(-3px);
-            border-color: rgba(154, 123, 67, 0.3);
-            box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.06);
+            border-color: rgba(154,123,67,0.3);
+            box-shadow: 0 12px 20px -3px rgba(0,0,0,0.06), 0 4px 6px -2px rgba(0,0,0,0.06);
         }
-
         .category {
             font-size: 9px;
             text-transform: uppercase;
@@ -186,7 +159,6 @@
             letter-spacing: 0.8px;
             margin-bottom: 6px;
         }
-
         .news-card h3 {
             font-size: 17px;
             font-weight: 600;
@@ -194,7 +166,6 @@
             color: #1e293b;
             line-height: 1.4;
         }
-
         .description {
             font-size: 13px;
             color: var(--text-muted);
@@ -203,7 +174,6 @@
             word-break: break-word;
             overflow-wrap: anywhere;
         }
-
         .description a {
             color: var(--accent-color);
             text-decoration: none;
@@ -211,21 +181,17 @@
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s ease;
         }
-
         .description a:hover {
             border-bottom-color: var(--accent-color);
         }
-
         .card-bottom {
             margin-top: auto;
         }
-
         .btn-group {
             display: flex;
             gap: 10px;
             margin-bottom: 10px;
         }
-
         button.vote-btn {
             flex: 1;
             padding: 8px 12px;
@@ -240,33 +206,28 @@
             align-items: center;
             gap: 6px;
         }
-
         .btn-like {
             background: rgba(46, 125, 80, 0.05);
             color: var(--like-color);
             border: 1px solid rgba(46, 125, 80, 0.15);
         }
-
         .btn-like:hover, .btn-like.active {
             background: var(--like-color);
             color: #ffffff;
             border-color: var(--like-color);
             box-shadow: 0 4px 10px rgba(46, 125, 80, 0.15);
         }
-
         .btn-dislike {
             background: rgba(198, 40, 40, 0.05);
             color: var(--dislike-color);
             border: 1px solid rgba(198, 40, 40, 0.15);
         }
-
         .btn-dislike:hover, .btn-dislike.active {
             background: var(--dislike-color);
             color: #ffffff;
             border-color: var(--dislike-color);
             box-shadow: 0 4px 10px rgba(198, 40, 40, 0.15);
         }
-
         .comment-input {
             width: 100%;
             height: 36px;
@@ -280,13 +241,10 @@
             outline: none;
             transition: border-color 0.2s ease, background-color 0.2s ease;
         }
-
         .comment-input:focus {
             border-color: var(--accent-color);
             background: #ffffff;
         }
-
-        /* Sticky Submit Bar */
         .submit-bar {
             position: fixed;
             bottom: 0;
@@ -299,12 +257,10 @@
             box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.04);
             z-index: 1000;
         }
-
         .submit-bar-inner {
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .submit-btn {
             width: 100%;
             padding: 14px;
@@ -319,13 +275,10 @@
             box-shadow: 0 4px 10px rgba(154, 123, 67, 0.2);
             transition: all 0.2s ease;
         }
-
         .submit-btn:hover {
             transform: translateY(-1px);
             box-shadow: 0 6px 14px rgba(154, 123, 67, 0.3);
         }
-
-        /* Status & Placeholder Messages */
         #status-message {
             text-align: center;
             margin: 50px 0;
@@ -336,8 +289,6 @@
             border-radius: 16px;
             border: 1px dashed var(--border-color);
         }
-
-        /* Full-width markdown view for land research */
         .markdown-view {
             background: var(--panel-bg);
             border: 1px solid var(--border-color);
@@ -391,7 +342,6 @@
             <input type="date" id="date-picker">
         </header>
 
-        <!-- Mode Selector -->
         <div id="mode-selector">
             <button class="mode-btn active" id="mode-news" data-mode="news">Wiadomości</button>
             <button class="mode-btn" id="mode-land" data-mode="land">Nieruchomości Bytów</button>
@@ -399,14 +349,13 @@
 
         <div id="status-message">Ładowanie...</div>
 
-        <!-- Column layout switcher -->
         <div class="cols-switcher">
             <button class="col-btn" id="btn-cols-1" onclick="setCols(1)" title="Jedna kolumna">▌ 1</button>
             <button class="col-btn" id="btn-cols-2" onclick="setCols(2)" title="Dwie kolumny">▌▌ 2</button>
             <button class="col-btn active" id="btn-cols-auto" onclick="setCols('auto')" title="Domyślnie">▌▌▌ Auto</button>
         </div>
 
-        <div class="news-grid" id="news-container" style="display: none;"></div>
+        <div class="news-grid" id="news-container" style="display:none;"></div>
     </div>
 
     <div class="submit-bar">
@@ -416,6 +365,17 @@
     </div>
 
     <script>
+        // Debug flag - set to true to see console logs
+        const DEBUG = true;
+        
+        function debugLog(...args) {
+            if (DEBUG) {
+                console.log('[PIGULA DEBUG]', ...args);
+            }
+        }
+
+        debugLog('Script loading...');
+        
         const datePicker = document.getElementById('date-picker');
         const newsContainer = document.getElementById('news-container');
         const statusMessage = document.getElementById('status-message');
@@ -423,10 +383,13 @@
             news: document.getElementById('mode-news'),
             land: document.getElementById('mode-land')
         };
-        let currentMode = 'news'; // default
+        let currentMode = 'news';
+
+        debugLog('Elements found:', { datePicker, newsContainer, statusMessage, modeButtons });
 
         // Column layout switcher
         function setCols(n) {
+            debugLog('Setting columns to:', n);
             newsContainer.classList.remove('cols-1', 'cols-2');
             document.querySelectorAll('.col-btn').forEach(b => b.classList.remove('active'));
             if (n === 1) {
@@ -447,33 +410,75 @@
                 const saved = localStorage.getItem('pigula_cols');
                 if (saved === '1') setCols(1);
                 else if (saved === '2') setCols(2);
-            } catch(e) {}
+            } catch(e) {
+                debugLog('Could not restore column preference:', e);
+            }
         })();
 
         // Initialize date picker to today's date (local time)
-        const today = new Date();
-        const tzOffset = today.getTimezoneOffset() * 60000;
-        const localISODate = new Date(today.getTime() - tzOffset).toISOString().split('T')[0];
-        datePicker.value = localISODate;
-        datePicker.max = localISODate; // Prevent future dates
+        function initDatePicker() {
+            debugLog('Initializing date picker...');
+            const today = new Date();
+            debugLog('Today (local):', today);
+            
+            // Get timezone offset in milliseconds
+            const tzOffset = today.getTimezoneOffset() * 60000;
+            debugLog('Timezone offset (ms):', tzOffset);
+            
+            // Adjust for timezone to get local date string
+            const localTime = today.getTime() - tzOffset;
+            const localDate = new Date(localTime);
+            debugLog('Local date:', localDate);
+            
+            const localISODate = localDate.toISOString().split('T')[0];
+            debugLog('Local ISO date:', localISODate);
+            
+            datePicker.value = localISODate;
+            datePicker.max = localISODate; // Prevent future dates
+            
+            debugLog('Date picker value set to:', datePicker.value);
+        }
+
+        // Initialize date picker on load
+        initDatePicker();
 
         // Listen to date changes
-        datePicker.addEventListener('change', loadContent);
+        datePicker.addEventListener('change', (e) => {
+            debugLog('Date changed to:', e.target.value);
+            loadContent();
+        });
 
         // Listen to mode changes
         modeButtons.news.addEventListener('click', () => setMode('news'));
         modeButtons.land.addEventListener('click', () => setMode('land'));
 
         // Load content on initial open
+        debugLog('Calling initial loadContent()');
         loadContent();
 
         async function loadContent() {
             const selectedDate = datePicker.value;
+            debugLog('Loading content for date:', selectedDate, 'mode:', currentMode);
+            
+            // Validate date
+            if (!selectedDate) {
+                debugLog('No date selected, using today');
+                initDatePicker(); // Re-initialize if empty
+                return loadContent(); // Try again
+            }
 
             // Update human-friendly Polish date in header
-            const dateObj = new Date(selectedDate);
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('date-subtitle').textContent = dateObj.toLocaleDateString('pl-PL', options);
+            try {
+                const dateObj = new Date(selectedDate);
+                debugLog('Date object:', dateObj);
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = dateObj.toLocaleDateString('pl-PL', options);
+                debugLog('Formatted date:', formattedDate);
+                document.getElementById('date-subtitle').textContent = formattedDate;
+            } catch (e) {
+                debugLog('Error formatting date:', e);
+                document.getElementById('date-subtitle').textContent = selectedDate;
+            }
 
             // Reset dashboard state
             newsContainer.innerHTML = '';
@@ -484,26 +489,36 @@
             try {
                 let content;
                 if (currentMode === 'news') {
+                    debugLog('Fetching news for date:', selectedDate);
                     // Fetch daily markdown file from journal
                     const response = await fetch(`journal/${selectedDate}.md`);
+                    debugLog('News response status:', response.status);
                     if (!response.ok) {
-                        throw new Error("Brak pliku archiwalnego");
+                        throw new Error(`Brak pliku archiwalnego (status: ${response.status})`);
                     }
                     const text = await response.text();
+                    debugLog('News text length:', text.length);
                     content = parseNewsMarkdown(text);
                 } else {
+                    debugLog('Fetching land data for date:', selectedDate);
                     // Fetch land research markdown
-                    const response = await fetch(`land/bytow_land_report_${selectedDate.replace(/-/g, '')}.md`);
+                    const formattedDate = selectedDate.replace(/-/g, '');
+                    const landFile = `land/bytow_land_report_${formattedDate}.md`;
+                    debugLog('Fetching land file:', landFile);
+                    const response = await fetch(landFile);
+                    debugLog('Land response status:', response.status);
                     if (!response.ok) {
-                        // Try to show a friendly message if no data yet
-                        statusMessage.textContent = "Brak danych o nieruchomościach dla wybranego dnia.";
+                        statusMessage.textContent = 'Brak danych o nieruchomościach dla wybranego dnia.';
                         statusMessage.style.display = 'block';
                         newsContainer.style.display = 'none';
                         return;
                     }
                     const text = await response.text();
+                    debugLog('Land text length:', text.length);
                     content = await renderLandMarkdown(text);
                 }
+
+                debugLog('Content parsed:', currentMode === 'news' ? `${content.length} items` : 'HTML string');
 
                 if (currentMode === 'news') {
                     renderNewsCards(content);
@@ -515,43 +530,42 @@
                 // Display results
                 statusMessage.style.display = 'none';
                 newsContainer.style.display = 'grid';
+                debugLog('Content displayed successfully');
             } catch (err) {
-                statusMessage.textContent = "Brak wiadomości z wybranego dnia. Wybierz inną datę.";
+                debugLog('Error loading content:', err);
+                statusMessage.textContent = 'Brak wiadomości z wybranego dnia. Wybierz inną datę.';
                 console.error(err);
             }
         }
 
         function setMode(mode) {
-            // Update button states
-            Object.keys(modeButtons).forEach(key => {
-                modeButtons[key].classList.remove('active');
+            debugLog('Setting mode to:', mode);
+            Object.keys(modeButtons).forEach(k => {
+                modeButtons[k].classList.remove('active');
             });
             modeButtons[mode].classList.add('active');
             currentMode = mode;
-            // Reload content for the new mode with current date
             loadContent();
         }
 
         async function renderLandMarkdown(markdownText) {
-            // Use marked.js to convert markdown to HTML
+            debugLog('Rendering markdown (length:', markdownText.length, ')');
             return marked.parse(markdownText);
         }
 
         function parseNewsMarkdown(text) {
-            // Matches "## [Category] Title" followed by all lines until next ## or end
+            debugLog('Parsing news markdown (length:', text.length, ')');
             const items = [];
             const sections = text.split(/(?=^## )/m).filter(s => s.match(/^## \[/));
+            debugLog('Found sections:', sections.length);
             let id = 1;
-
             sections.forEach(section => {
                 const headerMatch = section.match(/^## \[(.*?)\]\s*(.*?)\n([\s\S]*)/m);
                 if (!headerMatch) return;
-                // Get description lines: stop at feedback section markers or ## headings
                 const rawDesc = headerMatch[3]
                     .split('\n')
                     .reduce((acc, l) => {
                         if (acc.done) return acc;
-                        // Stop when we hit feedback/comment markers
                         if (l.includes('**Title:**') || l.includes('**Vote:**') ||
                             l.includes('**Zsynchronizowano') || l.startsWith('**Comment:**') ||
                             l.startsWith('- **') || l.startsWith('## ')) {
@@ -559,9 +573,9 @@
                         }
                         if (l.trim()) acc.lines.push(l.trim());
                         return acc;
-                    }, { lines: [], done: false })
+                    }, { lines:[], done:false })
                     .lines
-                    .slice(0, 8)   // max 8 lines of description
+                    .slice(0,8)
                     .join(' ')
                     .trim();
                 items.push({
@@ -571,14 +585,15 @@
                     description: rawDesc
                 });
             });
-
+            debugLog('Parsed items:', items.length);
             if (items.length === 0) {
-                throw new Error("Nie udało się odczytać formatu wiadomości z pliku. Sprawdź strukturę pliku .md.");
+                throw new Error('Nie udało się odczytać formatu wiadomości z pliku.');
             }
             return items;
         }
 
         function renderNewsCards(items) {
+            debugLog('Rendering', items.length, 'news cards');
             items.forEach(news => {
                 const card = document.createElement('div');
                 card.className = 'news-card';
@@ -591,8 +606,8 @@
                     </div>
                     <div class="card-bottom">
                         <div class="btn-group">
-                            <button class="vote-btn btn-like" onclick="selectVote(${news.id}, 'LIKE')'>LUBIĘ</button>
-                            <button class="vote-btn btn-dislike" onclick="selectVote(${news.id}, 'DISLIKE')'>NIE LUBIĘ</button>
+                            <button class="vote-btn btn-like" onclick="selectVote(${news.id}, 'LIKE')">LUBIĘ</button>
+                            <button class="vote-btn btn-dislike" onclick="selectVote(${news.id}, 'DISLIKE')">NIE LUBIĘ</button>
                         </div>
                         <input type="text" class="comment-input" placeholder="Dodaj notatkę (opcjonalnie)...">
                     </div>
@@ -602,52 +617,44 @@
         }
 
         function escapeHtml(str) {
-            return str.replace(/&/g, "&")
-                      .replace(/</g, "<")
-                      .replace(/>/g, ">")
-                      .replace(/\"/g, "")
-                      .replace(/'/g, "&#039;");
+            return String(str)
+                .replace(/&/g, '&')
+                .replace(/</g, '<')
+                .replace(/>/g, '>')
+                .replace(/"/g, '"')
+                .replace(/'/g, '&#039;');
         }
 
-        // Strip Obsidian wiki links: [[Ukraina]] -> Ukraina, [[topic|Alias]] -> Alias
         function stripObsidianLinks(str) {
-            return str.replace(/\\[\\[(?:[^\\]|]*\\|)?([^\\]]+)\\]\\]/g, '$1');
+            return str.replace(/\[\[(?:[^]|]*\|)?([^]]+)\]\]/g, '$1');
         }
 
-        // Render markdown description to safe HTML with clickable links
         function renderMarkdown(str) {
             // 1. Strip Obsidian [[wiki]] links
             str = stripObsidianLinks(str);
             // 2. Convert markdown [text](url) to clickable links
-            str = str.replace(/\\[([^\\]]+)\\]\\((https?:\\/\\/[^)]+)\\)/g, (_, label, url) => {
+            str = str.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, (_, label, url) => {
                 return `<a href="${url}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`;
             });
             // 3. Convert bare URLs to short clickable links (show domain only)
-            str = str.replace(/(^|[^"'])(https?:\\/\\/[^\\s)]+)/g, (_, pre, url) => {
+            str = str.replace(/(^|[^"'])(https?:\/\/[^\s)]+)/g, (_, pre, url) => {
                 try {
                     const domain = new URL(url).hostname.replace('www.', '');
                     return `${pre}<a href="${url}" target="_blank" rel="noopener">[${domain}]</a>`;
                 } catch { return _; }
             });
             // 4. Escape remaining HTML special chars (not inside <a> tags)
-            // We do a targeted escape on text nodes only (simple approach)
             str = str.replace(/&(?!amp;|lt;|gt;|quot;|#039;)/g, '&');
             return str;
         }
 
-        // Legacy alias
-        function stripMarkdownLinks(str) {
-            return stripObsidianLinks(str);
-        }
-
         function selectVote(newsId, action) {
+            debugLog('Vote selected:', newsId, action);
             const card = document.querySelector(`.news-card[data-id="${newsId}"]`);
             const likeBtn = card.querySelector('.btn-like');
             const dislikeBtn = card.querySelector('.btn-dislike');
-
             if (action === 'LIKE') {
                 if (userVotes[newsId] === 'LIKE') {
-                    // Deselect
                     delete userVotes[newsId];
                     likeBtn.classList.remove('active');
                 } else {
@@ -657,7 +664,6 @@
                 }
             } else if (action === 'DISLIKE') {
                 if (userVotes[newsId] === 'DISLIKE') {
-                    // Deselect
                     delete userVotes[newsId];
                     dislikeBtn.classList.remove('active');
                 } else {
@@ -668,10 +674,10 @@
             }
         }
 
-        // Keep track of votes
         const userVotes = {};
 
         async function submitAllFeedback() {
+            debugol('Submitting feedback...');
             const selectedDate = datePicker.value;
             const newsCards = document.querySelectorAll('.news-card');
             const promises = [];
@@ -683,23 +689,17 @@
                 const vote = userVotes[id] || 'NONE';
                 const comment = card.querySelector('.comment-input').value.trim();
 
-                // Send if user voted or added a comment
                 if (vote !== 'NONE' || comment !== '') {
                     hasAnyVote = true;
-
                     const payload = {
-                        // Prepend the date of the news so we know which archive file it belongs to
                         newsTitle: `[${selectedDate}] ${title}`,
                         vote: vote === 'LIKE' ? 'LUBIĘ' : (vote === 'DISLIKE' ? 'NIE LUBIĘ' : 'BRAK OCENY'),
                         comment: comment
                     };
-
                     const p = fetch("https://script.google.com/macros/s/AKfycbxDCHUE8sx7QxCZe7c4LKZZ6f7RRykXUvLleGtwkyTGc-j5Ab9oOpuMDbpg1JDXGBemhg/exec", {
                         method: 'POST',
                         mode: 'no-cors',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
+                        headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(payload)
                     });
                     promises.push(p);
@@ -707,31 +707,29 @@
             });
 
             if (!hasAnyVote) {
-                alert("Zanim wyślesz, zaznacz przynajmniej jedną opinię lub napisz komentarz!");
+                alert('Zanim wyślesz, zaznacz przynajmniej jedną opinię lub napisz komentarz!');
                 return;
             }
 
-            // Disable submit button during upload
             const submitBtn = document.querySelector('.submit-btn');
             submitBtn.disabled = true;
-            submitBtn.textContent = "Wysyłanie...";
-            submitBtn.style.opacity = "0.5";
+            submitBtn.textContent = 'Wysyłanie...';
+            submitBtn.style.opacity = '0.5';
 
             try {
                 await Promise.all(promises);
-                alert("Opinie zostały zapisane bezpośrednio w Twoim Arkuszu Google! ✓");
-                // Clear comments and votes
+                alert('Opinie zostały zapisane bezpośrednio w Twoim Arkuszu Google! ✓');
                 newsCards.forEach(card => {
                     card.querySelector('.comment-input').value = '';
                 });
                 document.querySelectorAll('.vote-btn').forEach(btn => btn.classList.remove('active'));
                 for (const key in userVotes) delete userVotes[key];
             } catch (err) {
-                alert("Wystąpił błąd podczas wysyłania opinii: " + err);
+                alert('Wystąpił błąd podczas wysyłania opinii: ' + err);
             } finally {
                 submitBtn.disabled = false;
-                submitBtn.textContent = "Wyślij opinie (1 kliknięcie)";
-                submitBtn.style.opacity = "1";
+                submitBtn.textContent = 'Wyślij opinie (1 kliknięcie)';
+                submitBtn.style.opacity = '1';
             }
         }
     </script>
