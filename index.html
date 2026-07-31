@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piguła Geopolityczna</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         :root {
             --bg-color: #f8fafc;
@@ -76,6 +77,38 @@
         #date-picker:focus {
             border-color: var(--accent-color);
             box-shadow: 0 4px 12px rgba(154, 123, 67, 0.15);
+        }
+
+        /* Mode Selector */
+        #mode-selector {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 0 0 20px;
+        }
+
+        .mode-btn {
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background: var(--panel-bg);
+            color: var(--text-muted);
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .mode-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .mode-btn.active {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+            color: #fff;
         }
 
         /* Responsive Grid Layout */
@@ -182,7 +215,6 @@
         .description a:hover {
             border-bottom-color: var(--accent-color);
         }
-
 
         .card-bottom {
             margin-top: auto;
@@ -304,6 +336,51 @@
             border-radius: 16px;
             border: 1px dashed var(--border-color);
         }
+
+        /* Full-width markdown view for land research */
+        .markdown-view {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+        .markdown-view h1, .markdown-view h2, .markdown-view h3, .markdown-view h4, .markdown-view h5, .markdown-view h6 {
+            color: var(--accent-color);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .markdown-view p {
+            margin-bottom: 1em;
+        }
+        .markdown-view a {
+            color: var(--accent-color);
+            word-break: break-all;
+        }
+        .markdown-view ul, .markdown-view ol {
+            margin-bottom: 1em;
+            padding-left: 2em;
+        }
+        .markdown-view blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1em;
+            color: var(--text-muted);
+            margin: 1em 0;
+        }
+        .markdown-view pre {
+            background: #f1f5f9;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .markdown-view code {
+            background: #f1f5f9;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
     </style>
 </head>
 <body>
@@ -314,8 +391,15 @@
             <input type="date" id="date-picker">
         </header>
 
-        <div id="status-message">Ładowanie wiadomości...</div>
+        <!-- Mode Selector -->
+        <div id="mode-selector">
+            <button class="mode-btn active" id="mode-news" data-mode="news">Wiadomości</button>
+            <button class="mode-btn" id="mode-land" data-mode="land">Nieruchomości Bytów</button>
+        </div>
 
+        <div id="status-message">Ładowanie...</div>
+
+        <!-- Column layout switcher -->
         <div class="cols-switcher">
             <button class="col-btn" id="btn-cols-1" onclick="setCols(1)" title="Jedna kolumna">▌ 1</button>
             <button class="col-btn" id="btn-cols-2" onclick="setCols(2)" title="Dwie kolumny">▌▌ 2</button>
@@ -335,6 +419,11 @@
         const datePicker = document.getElementById('date-picker');
         const newsContainer = document.getElementById('news-container');
         const statusMessage = document.getElementById('status-message');
+        const modeButtons = {
+            news: document.getElementById('mode-news'),
+            land: document.getElementById('mode-land')
+        };
+        let currentMode = 'news'; // default
 
         // Column layout switcher
         function setCols(n) {
@@ -361,9 +450,6 @@
             } catch(e) {}
         })();
 
-        // Keep track of votes
-        const userVotes = {};
-
         // Initialize date picker to today's date (local time)
         const today = new Date();
         const tzOffset = today.getTimezoneOffset() * 60000;
@@ -372,14 +458,18 @@
         datePicker.max = localISODate; // Prevent future dates
 
         // Listen to date changes
-        datePicker.addEventListener('change', loadNews);
+        datePicker.addEventListener('change', loadContent);
 
-        // Load news on initial open
-        loadNews();
+        // Listen to mode changes
+        modeButtons.news.addEventListener('click', () => setMode('news'));
+        modeButtons.land.addEventListener('click', () => setMode('land'));
 
-        async function loadNews() {
+        // Load content on initial open
+        loadContent();
+
+        async function loadContent() {
             const selectedDate = datePicker.value;
-            
+
             // Update human-friendly Polish date in header
             const dateObj = new Date(selectedDate);
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -389,101 +479,139 @@
             newsContainer.innerHTML = '';
             newsContainer.style.display = 'none';
             statusMessage.style.display = 'block';
-            statusMessage.textContent = 'Ładowanie wiadomości...';
-            
-            // Clear current selection memory
-            for (const key in userVotes) delete userVotes[key];
+            statusMessage.textContent = 'Ładowanie...';
 
             try {
-                // Fetch daily markdown file from journal
-                const response = await fetch(`journal/${selectedDate}.md`);
-                if (!response.ok) {
-                    throw new Error("Brak pliku archiwalnego");
-                }
-                const text = await response.text();
-                
-                // Parse markdown content dynamically
-                // Matches "## [Category] Title" followed by all lines until next ## or end
-                const items = [];
-                const sections = text.split(/(?=^## )/m).filter(s => s.match(/^## \[/));
-                let id = 1;
-
-                sections.forEach(section => {
-                    const headerMatch = section.match(/^## \[(.*?)\]\s*(.*?)\n([\s\S]*)/m);
-                    if (!headerMatch) return;
-                    // Get description lines: stop at feedback section markers or ## headings
-                    const rawDesc = headerMatch[3]
-                        .split('\n')
-                        .reduce((acc, l) => {
-                            if (acc.done) return acc;
-                            // Stop when we hit feedback/comment markers
-                            if (l.includes('**Title:**') || l.includes('**Vote:**') ||
-                                l.includes('**Zsynchronizowano') || l.startsWith('**Comment:**') ||
-                                l.startsWith('- **') || l.startsWith('## ')) {
-                                acc.done = true; return acc;
-                            }
-                            if (l.trim()) acc.lines.push(l.trim());
-                            return acc;
-                        }, { lines: [], done: false })
-                        .lines
-                        .slice(0, 8)   // max 8 linii opisu
-                        .join(' ')
-                        .trim();
-                    items.push({
-                        id: id++,
-                        category: headerMatch[1].trim(),
-                        title: headerMatch[2].trim(),
-                        description: rawDesc
-                    });
-                });
-
-                if (items.length === 0) {
-                    statusMessage.textContent = "Nie udało się odczytać formatu wiadomości z pliku. Sprawdź strukturę pliku .md.";
-                    return;
+                let content;
+                if (currentMode === 'news') {
+                    // Fetch daily markdown file from journal
+                    const response = await fetch(`journal/${selectedDate}.md`);
+                    if (!response.ok) {
+                        throw new Error("Brak pliku archiwalnego");
+                    }
+                    const text = await response.text();
+                    content = parseNewsMarkdown(text);
+                } else {
+                    // Fetch land research markdown
+                    const response = await fetch(`land/${selectedDate}.md`);
+                    if (!response.ok) {
+                        // Try to show a friendly message if no data yet
+                        statusMessage.textContent = "Brak danych o nieruchomościach dla wybranego dnia.";
+                        statusMessage.style.display = 'block';
+                        newsContainer.style.display = 'none';
+                        return;
+                    }
+                    const text = await response.text();
+                    content = await renderLandMarkdown(text);
                 }
 
-                // Render news cards
-                items.forEach(news => {
-                    const card = document.createElement('div');
-                    card.className = 'news-card';
-                    card.setAttribute('data-id', news.id);
-                    card.innerHTML = `
-                        <div>
-                            <div class="category">${escapeHtml(stripObsidianLinks(news.category))}</div>
-                            <h3>${escapeHtml(stripObsidianLinks(news.title))}</h3>
-                            <p class="description">${renderMarkdown(news.description)}</p>
-                        </div>
-                        <div class="card-bottom">
-                            <div class="btn-group">
-                                <button class="vote-btn btn-like" onclick="selectVote(${news.id}, 'LIKE')">LUBIĘ</button>
-                                <button class="vote-btn btn-dislike" onclick="selectVote(${news.id}, 'DISLIKE')">NIE LUBIĘ</button>
-                            </div>
-                            <input type="text" class="comment-input" placeholder="Dodaj notatkę (opcjonalnie)...">
-                        </div>
-                    `;
-                    newsContainer.appendChild(card);
-                });
+                if (currentMode === 'news') {
+                    renderNewsCards(content);
+                } else {
+                    // For land mode, content is already HTML string
+                    newsContainer.innerHTML = `<div class="markdown-view">${content}</div>`;
+                }
 
-                // Display cards
+                // Display results
                 statusMessage.style.display = 'none';
                 newsContainer.style.display = 'grid';
-
             } catch (err) {
                 statusMessage.textContent = "Brak wiadomości z wybranego dnia. Wybierz inną datę.";
+                console.error(err);
             }
         }
 
+        function setMode(mode) {
+            // Update button states
+            Object.keys(modeButtons).forEach(key => {
+                modeButtons[key].classList.remove('active');
+            });
+            modeButtons[mode].classList.add('active');
+            currentMode = mode;
+            // Reload content for the new mode with current date
+            loadContent();
+        }
+
+        async function renderLandMarkdown(markdownText) {
+            // Use marked.js to convert markdown to HTML
+            return marked.parse(markdownText);
+        }
+
+        function parseNewsMarkdown(text) {
+            // Matches "## [Category] Title" followed by all lines until next ## or end
+            const items = [];
+            const sections = text.split(/(?=^## )/m).filter(s => s.match(/^## \[/));
+            let id = 1;
+
+            sections.forEach(section => {
+                const headerMatch = section.match(/^## \[(.*?)\]\s*(.*?)\n([\s\S]*)/m);
+                if (!headerMatch) return;
+                // Get description lines: stop at feedback section markers or ## headings
+                const rawDesc = headerMatch[3]
+                    .split('\n')
+                    .reduce((acc, l) => {
+                        if (acc.done) return acc;
+                        // Stop when we hit feedback/comment markers
+                        if (l.includes('**Title:**') || l.includes('**Vote:**') ||
+                            l.includes('**Zsynchronizowano') || l.startsWith('**Comment:**') ||
+                            l.startsWith('- **') || l.startsWith('## ')) {
+                            acc.done = true; return acc;
+                        }
+                        if (l.trim()) acc.lines.push(l.trim());
+                        return acc;
+                    }, { lines: [], done: false })
+                    .lines
+                    .slice(0, 8)   // max 8 lines of description
+                    .join(' ')
+                    .trim();
+                items.push({
+                    id: id++,
+                    category: headerMatch[1].trim(),
+                    title: headerMatch[2].trim(),
+                    description: rawDesc
+                });
+            });
+
+            if (items.length === 0) {
+                throw new Error("Nie udało się odczytać formatu wiadomości z pliku. Sprawdź strukturę pliku .md.");
+            }
+            return items;
+        }
+
+        function renderNewsCards(items) {
+            items.forEach(news => {
+                const card = document.createElement('div');
+                card.className = 'news-card';
+                card.setAttribute('data-id', news.id);
+                card.innerHTML = `
+                    <div>
+                        <div class="category">${escapeHtml(stripObsidianLinks(news.category))}</div>
+                        <h3>${escapeHtml(stripObsidianLinks(news.title))}</h3>
+                        <p class="description">${renderMarkdown(news.description)}</p>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="btn-group">
+                            <button class="vote-btn btn-like" onclick="selectVote(${news.id}, 'LIKE')'>LUBIĘ</button>
+                            <button class="vote-btn btn-dislike" onclick="selectVote(${news.id}, 'DISLIKE')'>NIE LUBIĘ</button>
+                        </div>
+                        <input type="text" class="comment-input" placeholder="Dodaj notatkę (opcjonalnie)...">
+                    </div>
+                `;
+                newsContainer.appendChild(card);
+            });
+        }
+
         function escapeHtml(str) {
-            return str.replace(/&/g, "&amp;")
-                      .replace(/</g, "&lt;")
-                      .replace(/>/g, "&gt;")
-                      .replace(/"/g, "&quot;")
+            return str.replace(/&/g, "&")
+                      .replace(/</g, "<")
+                      .replace(/>/g, ">")
+                      .replace(/\"/g, "")
                       .replace(/'/g, "&#039;");
         }
 
         // Strip Obsidian wiki links: [[Ukraina]] -> Ukraina, [[topic|Alias]] -> Alias
         function stripObsidianLinks(str) {
-            return str.replace(/\[\[(?:[^\]|]*\|)?([^\]]+)\]\]/g, '$1');
+            return str.replace(/\\[\\[(?:[^\\]|]*\\|)?([^\\]]+)\\]\\]/g, '$1');
         }
 
         // Render markdown description to safe HTML with clickable links
@@ -491,26 +619,25 @@
             // 1. Strip Obsidian [[wiki]] links
             str = stripObsidianLinks(str);
             // 2. Convert markdown [text](url) to clickable links
-            str = str.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, (_, label, url) => {
+            str = str.replace(/\\[([^\\]]+)\\]\\((https?:\\/\\/[^)]+)\\)/g, (_, label, url) => {
                 return `<a href="${url}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`;
             });
             // 3. Convert bare URLs to short clickable links (show domain only)
-            str = str.replace(/(^|[^"'])(https?:\/\/[^\s)]+)/g, (_, pre, url) => {
+            str = str.replace(/(^|[^"'])(https?:\\/\\/[^\\s)]+)/g, (_, pre, url) => {
                 try {
                     const domain = new URL(url).hostname.replace('www.', '');
                     return `${pre}<a href="${url}" target="_blank" rel="noopener">[${domain}]</a>`;
-                } catch { return _ ; }
+                } catch { return _; }
             });
             // 4. Escape remaining HTML special chars (not inside <a> tags)
             // We do a targeted escape on text nodes only (simple approach)
-            str = str.replace(/&(?!amp;|lt;|gt;|quot;|#039;)/g, '&amp;');
+            str = str.replace(/&(?!amp;|lt;|gt;|quot;|#039;)/g, '&');
             return str;
         }
 
         // Legacy alias
         function stripMarkdownLinks(str) {
             return stripObsidianLinks(str);
-
         }
 
         function selectVote(newsId, action) {
@@ -541,6 +668,9 @@
             }
         }
 
+        // Keep track of votes
+        const userVotes = {};
+
         async function submitAllFeedback() {
             const selectedDate = datePicker.value;
             const newsCards = document.querySelectorAll('.news-card');
@@ -556,7 +686,7 @@
                 // Send if user voted or added a comment
                 if (vote !== 'NONE' || comment !== '') {
                     hasAnyVote = true;
-                    
+
                     const payload = {
                         // Prepend the date of the news so we know which archive file it belongs to
                         newsTitle: `[${selectedDate}] ${title}`,
@@ -583,9 +713,9 @@
 
             // Disable submit button during upload
             const submitBtn = document.querySelector('.submit-btn');
-            submitBtn.disabled = true;
-            submitBtn.textContent = "Wysyłanie...";
-            submitBtn.style.opacity = "0.5";
+            sendBtn.disabled = true;
+            sendBtn.textContent = "Wysyłanie...";
+            sendBtn.style.opacity = "0.5";
 
             try {
                 await Promise.all(promises);
@@ -599,9 +729,9 @@
             } catch (err) {
                 alert("Wystąpił błąd podczas wysyłania opinii: " + err);
             } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = "Wyślij opinie (1 kliknięcie)";
-                submitBtn.style.opacity = "1";
+                sendBtn.disabled = false;
+                sendBtn.textContent = "Wyślij opinie (1 kliknięcie)";
+                sendBtn.style.opacity = "1";
             }
         }
     </script>
