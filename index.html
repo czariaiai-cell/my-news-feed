@@ -314,6 +314,9 @@
             margin-bottom: 1em;
             padding-left: 2em;
         }
+        .markdown-view .item-number {
+            color: var(--accent-color);
+        }
         .markdown-view blockquote {
             border-left: 4px solid var(--accent-color);
             padding-left: 1em;
@@ -569,7 +572,24 @@
 
         async function renderLandMarkdown(markdownText) {
             debugLog('Rendering markdown (length:', markdownText.length, ')');
-            return marked.parse(markdownText);
+            const html = marked.parse(markdownText);
+            return numberTopLevelListItems(html);
+        }
+
+        function numberTopLevelListItems(html) {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = html;
+            let counter = 1;
+            wrapper.querySelectorAll('li').forEach(li => {
+                // Only number top-level items: skip <li> whose closest <ul>/<ol> ancestor
+                // is itself nested inside another <li> (e.g. AI News timestamp sub-bullets).
+                if (li.parentElement.closest('li')) return;
+                const marker = document.createElement('strong');
+                marker.className = 'item-number';
+                marker.textContent = `${counter++}. `;
+                li.insertBefore(marker, li.firstChild);
+            });
+            return wrapper.innerHTML;
         }
 
         function parseNewsMarkdown(text) {
@@ -620,7 +640,7 @@
                 card.innerHTML = `
                     <div>
                         <div class="category">${escapeHtml(stripObsidianLinks(news.category))}</div>
-                        <h3>${escapeHtml(stripObsidianLinks(news.title))}</h3>
+                        <h3>${news.id}. ${escapeHtml(stripObsidianLinks(news.title))}</h3>
                         <p class="description">${renderMarkdown(news.description)}</p>
                     </div>
                     <div class="card-bottom">
@@ -645,7 +665,7 @@
         }
 
         function stripObsidianLinks(str) {
-            return str.replace(/\[\[(?:[^]|]*\|)?([^]]+)\]\]/g, '$1');
+            return str.replace(/\[\[(?:[^\]|]*\|)?([^\]]+)\]\]/g, '$1');
         }
 
         function renderMarkdown(str) {
