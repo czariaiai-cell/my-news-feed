@@ -345,6 +345,7 @@
         <div id="mode-selector">
             <button class="mode-btn active" id="mode-news" data-mode="news">Wiadomości</button>
             <button class="mode-btn" id="mode-land" data-mode="land">Nieruchomości Bytów</button>
+            <button class="mode-btn" id="mode-ai-news" data-mode="ai-news">AI News</button>
         </div>
 
         <div id="status-message">Ładowanie...</div>
@@ -381,7 +382,8 @@
         const statusMessage = document.getElementById('status-message');
         const modeButtons = {
             news: document.getElementById('mode-news'),
-            land: document.getElementById('mode-land')
+            land: document.getElementById('mode-land'),
+            'ai-news': document.getElementById('mode-ai-news')
         };
         let currentMode = 'news';
 
@@ -451,6 +453,7 @@
         // Listen to mode changes
         modeButtons.news.addEventListener('click', () => setMode('news'));
         modeButtons.land.addEventListener('click', () => setMode('land'));
+        modeButtons['ai-news'].addEventListener('click', () => setMode('ai-news'));
 
         // Load content on initial open
         debugLog('Calling initial loadContent()');
@@ -499,11 +502,11 @@
                     const text = await response.text();
                     debugLog('News text length:', text.length);
                     content = parseNewsMarkdown(text);
-                } else {
+                } else if (currentMode === 'land') {
                     debugLog('Fetching land data for date:', selectedDate);
                     // Fetch land research markdown
                     const formattedDate = selectedDate.replace(/-/g, '');
-                    const landFile = `land/bytow_land_report_${formattedDate}.md`;
+                    const landFile = `brain/journal/land/bytow_land_report_${formattedDate}.md`;
                     debugLog('Fetching land file:', landFile);
                     const response = await fetch(landFile);
                     debugLog('Land response status:', response.status);
@@ -516,6 +519,22 @@
                     const text = await response.text();
                     debugLog('Land text length:', text.length);
                     content = await renderLandMarkdown(text);
+                } else {
+                    debugLog('Fetching AI News digest for date:', selectedDate);
+                    // Fetch AI News digest markdown
+                    const aiNewsFile = `brain/journal/AI_News/ai_digest_${selectedDate}.md`;
+                    debugLog('Fetching AI News file:', aiNewsFile);
+                    const response = await fetch(aiNewsFile);
+                    debugLog('AI News response status:', response.status);
+                    if (!response.ok) {
+                        statusMessage.textContent = 'Brak digestu AI dla wybranego dnia.';
+                        statusMessage.style.display = 'block';
+                        newsContainer.style.display = 'none';
+                        return;
+                    }
+                    const text = await response.text();
+                    debugLog('AI News text length:', text.length);
+                    content = await renderLandMarkdown(text);
                 }
 
                 debugLog('Content parsed:', currentMode === 'news' ? `${content.length} items` : 'HTML string');
@@ -523,7 +542,7 @@
                 if (currentMode === 'news') {
                     renderNewsCards(content);
                 } else {
-                    // For land mode, content is already HTML string
+                    // For land / ai-news modes, content is already HTML string
                     newsContainer.innerHTML = `<div class="markdown-view">${content}</div>`;
                 }
 
