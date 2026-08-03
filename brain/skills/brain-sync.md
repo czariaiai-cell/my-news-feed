@@ -1,22 +1,22 @@
 # Skill: brain-sync
-> Audytuje wewnętrzną spójność bazy wiedzy Geopiguły (wiki, dziennik, umiejętności) i raportuje rozbieżności.
+> Audits the vault's internal consistency (wiki, journal, skills) and reports drift/discrepancies.
 
-## Uruchomienie
-`/brain-sync [--file <nazwa>]` — Argumenty: `$ARGUMENTS`.
+## Trigger
+`/brain-sync [--file <name>]` — Arguments: `$ARGUMENTS`.
 
-## Krok 0 — Spójność Warstwy Umiejętności
-- Każdy plik `brain/skills/*.md` (poza index) musi mieć odpowiadający mu plik komendy w repozytorium `.claude/commands/<nazwa>.md` (jeśli dotyczy) → w przeciwnym razie zgłoś `❌ BRAK SZABLONU`.
+## Step 0 — Skills-Layer Consistency
+- Every `brain/skills/*.md` file (except index) must have a matching command stub in the repository's `.claude/commands/<name>.md` (if applicable) → otherwise report `❌ MISSING STUB`.
 
-## Krok 1 — Spójność Strukturalna Bazy
-- **Pokrycie MOC (Map of Content):** Każda notatka w podfolderach `wiki/` musi być podlinkowana w odpowiednim pliku `index.md` danej domeny; MOC każdej domeny musi być podlinkowany w głównym pliku [[../index]].
-- **Archiwum Dziennika:** Każdy wpis w `journal/` musi być podlinkowany w indeksie dziennika [[../journal/index]].
-- **Świeżość STATUSu:** Cele i priorytety w [[../STATUS]] muszą odwoływać się do istniejących notatek.
+## Step 1 — Vault Structural Consistency
+- **MOC Coverage:** every note in a `wiki/` subdirectory must be linked from that domain's `index.md`; every domain MOC must be linked from the main [[../index]].
+- **Journal Archive:** every daily log in `journal/` must be linked from the journal index [[../journal/index]].
+- **STATUS Freshness:** items in the [[../STATUS]] active focus list must reference existing notes.
 
-## Krok 2 — Raport
+## Step 2 — Report
 ```
-RAPORT SYNC MÓZGU — <data>
-Sprawdzono: warstwę umiejętności, indeksy MOC, dziennik, status.
-✅ Zsynchronizowane: <lista>
-⚠️ Rozbieżności: <plik → szczegóły>
-Zalecane: uruchomienie /brain-harvest w celu aktualizacji.
+BRAIN SYNC REPORT — <date>
+Checked: skills layer, MOC indexes, journal, status.
+✅ In Sync: <list>
+⚠️ Drift: <file → findings>
+Recommended: run /brain-harvest with these findings.
 ```

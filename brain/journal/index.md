@@ -1,8 +1,8 @@
-# Dziennik Cyklów Geopiguły
+# Journal of Geopiguła Cycles
 
-Spis codziennych wpisów z raportów informacyjnych.
+Index of daily geopolitical news logs.
 
-## Wpisy
+## Entries
 - [[2026-08-03]]
 - [[2026-08-02]]
 - [[2026-08-01]]
@@ -11,4 +11,4 @@ Spis codziennych wpisów z raportów informacyjnych.
 - [[2026-07-29]]
 - [[2026-07-28]]
 
-- [[../index|Powrót do Strony Głównej]]
+- [[../index|Back to Home]]

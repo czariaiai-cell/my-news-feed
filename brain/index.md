@@ -1,8 +1,8 @@
-# Mózg Projektu Geopiguła
+# Geopiguła Project Brain
 
-Centralny punkt odniesienia (wiki i dziennik) dla bota geopolitycznego Geopiguła.
+Central reference point (wiki and journal) for the Geopiguła geopolitical bot.
 
-## Spis Treści
-- [[journal/index|Dziennik Cyklów]]
-- [[skills/index|Zintegrowane Umiejętności (Skills)]]
-- [[wiki/index|Baza Wiedzy (Wiki)]]
+## Table of Contents
+- [[journal/index|Journal of Cycles]]
+- [[skills/index|Integrated Skills]]
+- [[wiki/index|Knowledge Base (Wiki)]]

@@ -1,23 +1,23 @@
 # Skill: brain-lint
-> Sprawdza notatki bazy pod kątem uszkodzonych linków relatywnych, osieroconych plików i czystości strukturalnej.
+> Checks all notes for broken relative wikilinks, orphans, and structural health.
 
-## Uruchomienie
-`/brain-lint` — Argumenty: `$ARGUMENTS`.
+## Trigger
+`/brain-lint` — Arguments: `$ARGUMENTS`.
 
-## Krok 1 — Walidacja Linków i Plików
-- Linki muszą być **ścieżkami relatywnymi** od notatki zawierającej (np. `[[../wiki/kategoria/index|etykieta]]`, `[[notatka]]`).
-- Cel linku jest poprawny, jeśli w bazie istnieje plik `<nazwa>` lub `<nazwa>.md`.
-- Linki owinięte w backticks (` `[[...]]` `) są traktowane jako przykłady kodu i pomijane.
-- **Notatki osierocone**: Każda notatka (poza głównym `index.md`, `STATUS.md` i szablonami) musi być celem przynajmniej jednego linku z innej notatki.
+## Step 1 — Link and File Validation
+- Links must be **relative paths** from the containing note (e.g., `[[../wiki/category/index|label]]`, `[[note]]`).
+- A link resolves if `<resolved>` or `<resolved>.md` exists in the vault.
+- Links wrapped in backticks (e.g., ` `[[...]]` `) are treated as code syntax examples and skipped.
+- **Orphan notes:** every note (except `index.md`, `STATUS.md`, templates) must be targeted by at least one link from another note.
 
-## Krok 2 — Ocena Kondycji (Health Score)
+## Step 2 — Health Score
 ```
-score = 100 * (1 - (uszkodzone + 0.5*sieroty + 2*niekompletne) / wszystkie_notatki)
+score = 100 * (1 - (broken + 0.5*orphans + 2*incomplete) / total_notes)
 ```
-- ≥95 ✅ zdrowa baza · 85–94 ⚠️ wymagana uwaga · <85 ❌ spory dług dokumentacyjny.
-- **Niekompletna notatka**: Brak nagłówka `# Tytuł`, brak sekcji `##`, mniej niż 5 linii, lub obecność surowych znaczników `TODO`/`[TBD]`.
+- ≥95 ✅ healthy vault · 85–94 ⚠️ needs attention · <85 ❌ significant documentation debt.
+- **Incomplete note:** missing `# Title`, no `##` sections, <5 lines, or containing raw `TODO`/`[TBD]` placeholders.
 
-## Krok 3 — Kiedy uruchamiać
-- Po dodaniu, zmianie nazwy lub przeniesieniu notatek.
-- Na koniec sesji roboczej przed zakończeniem prac.
-- Wynik (Health Score) powinien być wpisywany w pliku [[../STATUS.md]].
+## Step 3 — When to Run
+- After adding, renaming, or moving notes.
+- At the end of a working session before closing.
+- Update the health score in [[../STATUS.md]] after runs.

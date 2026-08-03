@@ -1,9 +1,9 @@
-# Umiejętności Mózgu (Brain Skills)
+# Brain Skills
 
-Spis procedur agenta do zarządzania bazą wiedzy projektu Geopiguła.
+List of AI agent procedures for managing the Geopiguła knowledge base.
 
-## Spis Umiejętności
-- [[brain-sync|brain-sync]]: Audyt spójności bazy wiedzy.
-- [[brain-harvest|brain-harvest]]: Wyciąganie i zapisywanie wniosków z sesji.
-- [[brain-lint|brain-lint]]: Walidacja linków i struktury plików.
-- [[brain-add-page|brain-add-page]]: Dodawanie nowej strony wiki.
+## Skills
+- [[brain-sync|brain-sync]]: Audit the consistency of the knowledge base.
+- [[brain-harvest|brain-harvest]]: Extract and record discoveries from the session.
+- [[brain-lint|brain-lint]]: Validate wiki links and file structure.
+- [[brain-add-page|brain-add-page]]: Add a new wiki note.

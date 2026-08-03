@@ -1,6 +1,6 @@
-# Baza Wiedzy (Wiki) Geopiguły
+# Knowledge Base (Wiki)
 
-Spis tematów bazy wiedzy.
+Index of knowledge base domains.
 
-## Kategorie
-- [[../index|Powrót do Strony Głównej]]
+## Domains
+- [[../index|Back to Home]]

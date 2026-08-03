@@ -1,33 +1,33 @@
 # Skill: brain-harvest
-> Syntetyzuje wnioski z bieżącej sesji i zapisuje je w notatkach wiki i dzienniku Geopiguły.
-> Wdrożenie protokołu "Knowledge Tax" (Podatku od Wiedzy) – żadne wnioski z sesji nie mogą zostać zgubione.
+> Synthesizes discoveries from the current session into the Geopiguła wiki notes and journal.
+> Implements the "Knowledge Tax" protocol — no session's learnings are lost.
 
-## Uruchomienie
-`/brain-harvest` — Argumenty: `$ARGUMENTS` (opcjonalnie `--file <nazwa_notatki>` aby ograniczyć zapis do konkretnej strony).
+## Trigger
+`/brain-harvest` — Arguments: `$ARGUMENTS` (optional `--file <wiki_note>` to harvest to a specific note only).
 
-## Działanie
-1. Analizuje konwersację pod kątem nowych faktów geopolitycznych, decyzji projektowych, wyników testów scraperów/modeli, i preferencji użytkownika.
-2. Kieruje wnioski do odpowiednich domen wiki w folderze `wiki/`.
-3. **Aktualizuje konkretne notatki wiki** – to jest główny cel.
-4. Aktualizuje dziennik cykli w `journal/` oraz główny plik [[../STATUS]] jako podsumowanie sesji.
+## What This Does
+1. Reviews the conversation for new geopolitical facts, design decisions, crawler/model test outcomes, and user preferences.
+2. Routes discoveries to the correct wiki domain under `wiki/`.
+3. **Reads and updates the specific wiki notes** — this is the primary output.
+4. Updates the daily log in `journal/` and the [[../STATUS]] last, as a summary.
 
-## Krok 1 — Przegląd Sesji pod kątem Odkryć
-- **Zweryfikowane fakty**: Sprawdzone źródła, statystyki, linki API.
-- **Decyzje projektowe**: Wybory architektoniczne, zmiany w kodzie scrapera/renderera.
-- **Wyniki testów**: Wyniki uruchomień cykli Geopiguły, logi błędów API (np. brak kredytów Claude).
-- **Preferencje użytkownika**: Nowe wytyczne dotyczące tematów (np. geopolityka, technologia).
+## Step 1 — Review Session for Discoveries
+- **Verified facts**: confirmed specs, sources, API endpoints.
+- **Design decisions**: architectural choices, scraper/renderer updates.
+- **Test outcomes**: run outcomes, credit limits/errors (e.g. Claude credit errors).
+- **User preferences**: new guidelines for geopolitics, technology, or style.
 
-## Krok 2 — Aktualizacja Notatek Wiki (Wymagane)
-- Dla każdej notatki docelowej: przeczytaj ją, unikaj duplikatów, **nadpisuj przestarzałe sekcje w miejscu** (nigdy nie dopisuj poprawnych informacji obok błędnych).
-- Format wpisów:
-  - Specyfikacja/Fakt: `- **[<data>]** <precyzyjny wniosek, 1-2 zdania.>`
-  - Decyzja: `### <temat> — ZDECYDOWANO <data>` + wyjaśnienie co/dlaczego.
+## Step 2 — Update Each Wiki Note (MANDATORY)
+- For each target: read it; avoid duplicates; **overwrite stale sections in place** (never append next to conflicting information).
+- Formatting:
+  - Invariant/fact: `- **[<date>]** <precise finding, one or two sentences.>`
+  - Decision: `### <topic> — DECIDED <date>` + explanation of what/why.
 
-**Zasady Obsidian (twarde wymagania):**
-- Linki wiki to **ścieżki relatywne** (`[[../wiki/kategoria/indeks]]`, `[[notatka]]` w tym samym folderze).
-- Nigdy nie owijaj aktywnych linków wiki w backticks (znaki grawisu: ` `).
-- Notatki muszą być pisane w języku **polskim** zgodnie z polityką językową projektu.
+**Obsidian Rules (Hard Requirements):**
+- Wikilinks are **relative paths** (`[[../wiki/category/index]]`, `[[note]]` for same folder).
+- Never wrap an active wikilink in backticks (e.g. ` `[[link]]` `).
+- All notes must be written in **English** as per the linguistic policy.
 
-## Krok 3 — Dziennik i STATUS (podsumowanie)
-- Dopisz podsumowanie do dzisiejszego wpisu w `journal/` (np. `journal/2026-08-03.md`).
-- Zaktualizuj [[../STATUS.md]] w repozytorium (aktualny focus bota, dług technologiczny).
+## Step 3 — Journal + STATUS (summaries, last)
+- Append summary to `journal/<today>.md`.
+- Update [[../STATUS.md]] (current agent focus, debt).

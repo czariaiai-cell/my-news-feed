@@ -1,25 +1,25 @@
 # Skill: brain-add-page
-> Tworzy nową notatkę wiki we właściwym folderze według standardowego szablonu i automatycznie linkuje ją z Mapy Zawartości (MOC) danej domeny.
+> Creates a new wiki note in the correct folder using a standard template and automatically registers it in the domain's Map of Content (MOC).
 
-## Uruchomienie
-`/brain-add-page --title "<Tytuł>" --domain "<kategoria>"` — Argumenty: `$ARGUMENTS`.
+## Trigger
+`/brain-add-page --title "<Title>" --domain "<category>"` — Arguments: `$ARGUMENTS`.
 
-## Procedura
-1. **Nazwa pliku**: Zamień tytuł na małe litery, zastąp spacje myślnikami (kebab-case), usuń polskie znaki diakrytyczne (np. `ą` → `a`, `ę` → `e`, `ł` → `l` itp.) dla kompatybilności ścieżek URL (np. `Rosyjskie drony` → `rosyjskie-drony.md`).
-2. **Lokalizacja**: Utwórz plik w `wiki/<domain>/<nazwa-pliku>.md` (np. `wiki/analiza/rosyjskie-drony.md`).
-3. **Szablon**: Wpisz domyślną strukturę:
+## Procedure
+1. **Filename**: Convert title to lowercase, replace spaces with hyphens (kebab-case), and remove special characters (e.g. `Russian drones` ➔ `russian-drones.md`).
+2. **Location**: Create the file under `wiki/<domain>/<filename>.md` (e.g. `wiki/analysis/russian-drones.md`).
+3. **Template**: Populate the file with standard template layout:
    ```markdown
-   # <Tytuł Notatki>
+   # <Note Title>
    
-   > Krótki opis (jedno zdanie) celu i zawartości tej notatki.
+   > Short description (one sentence) of the purpose and contents of this note.
    
-   ## Kontekst i Dane wejściowe
-   - Powiązane wpisy: [[index]]
+   ## Context & Inputs
+   - Related: [[index]]
    
-   ## Stan wiedzy / Ustalenia
-   - Zapisuj fakty z datami, np. `- **[2026-08-03]** Pierwsze ustalenie.`
+   ## Current Understanding / Findings
+   - Record dated findings, e.g. `- **[2026-08-03]** Initial discovery.`
    
-   ## Otwarte Kwestie
-   - [ ] Co pozostało do zbadania
+   ## Open Items
+   - [ ] What remains to be researched
    ```
-4. **Rejestracja w MOC**: Otwórz plik `wiki/<domain>/index.md` (lub `wiki/<domain>/MOC.md`) i dopisz relatywny link do nowo utworzonego pliku.
+4. **MOC Registration**: Open `wiki/<domain>/index.md` (or `wiki/<domain>/MOC.md`) and append a relative link to the newly created page.
