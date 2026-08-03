@@ -494,7 +494,7 @@
                 if (currentMode === 'news') {
                     debugLog('Fetching news for date:', selectedDate);
                     // Fetch daily markdown file from journal
-                    const response = await fetch(`journal/${selectedDate}.md`);
+                    const response = await fetch(`brain/journal/${selectedDate}.md`);
                     debugLog('News response status:', response.status);
                     if (!response.ok) {
                         throw new Error(`Brak pliku archiwalnego (status: ${response.status})`);
