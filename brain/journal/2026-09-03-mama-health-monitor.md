@@ -15,6 +15,13 @@
   instead of a long PDF.
 - Expanded every baseline card with 3–4 concise, source-grounded key insights
   and practical observation points, while retaining the direct source link.
+- Built a 19-route standing research registry across PubMed, Cochrane,
+  guidelines, physiotherapy databases, Polish explainers and a labelled Dr.
+  Berg discovery stream. Future runs must rotate through this registry rather
+  than relying on ad-hoc web results.
+- Expanded the public baseline from five to eight substantive entries. Every
+  card now contains at least six concrete insights and three focused research
+  prompts, so it reads as a compact research note rather than a teaser.
 - Created and validated the shared `mama-health-monitor` skill for Codex and
   Hermes.
 

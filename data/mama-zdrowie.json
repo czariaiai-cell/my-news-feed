@@ -10,7 +10,14 @@
         "B1 uczestniczy w przemianach węglowodanów — czyli w wykorzystaniu energii z pożywienia przez organizm.",
         "Najbardziej charakterystyczne neurologiczne sygnały ciężkiego niedoboru to parestezje: mrowienie, pieczenie lub zaburzenia czucia, oraz osłabienie mięśni.",
         "Ciekawa rzecz do rozeznania: długotrwałe stosowanie furosemidu może sprzyjać utracie tiaminy z moczem; to jeden z przykładów, dlaczego sam objaw nie wskazuje jednej przyczyny.",
-        "W żywności B1 występuje m.in. w pełnych ziarnach, strączkach, orzechach, mięsie wieprzowym i drożdżach — dlatego liczy się cały wzorzec diety, nie pojedynczy produkt."
+        "W żywności B1 występuje m.in. w pełnych ziarnach, strączkach, orzechach, mięsie wieprzowym i drożdżach — dlatego liczy się cały wzorzec diety, nie pojedynczy produkt.",
+        "Organizm nie tworzy dużego magazynu tiaminy, więc regularność jej podaży ma większe znaczenie niż okazjonalny „superprodukt”.",
+        "W ciężkim niedoborze opisuje się również zmiany sercowo-naczyniowe i obrzęki; to pokazuje, że B1 nie jest tematem wyłącznie „na nerwy”."
+      ],
+      "research_prompts": [
+        "Czy objawy mają związek z dietą, wchłanianiem, lekami lub innym problemem metabolicznym — zamiast zakładać jedną prostą przyczynę?",
+        "Które produkty z B1 są faktycznie obecne w codziennych posiłkach, a które są tylko okazjonalne?",
+        "Czy interesujące źródło omawia badanie na ludziach, czy tylko mechanizm biologiczny albo doświadczenie pojedynczych osób?"
       ],
       "evidence": "Wiarygodne polskie źródło medyczne dla pacjentów; nie jest to indywidualne zalecenie leczenia.",
       "practical": "Warto zapamiętać, że B1 jest tylko jedną z możliwych części układanki przy drętwieniu. Materiał pomaga porównać objawy, dietę, leki i inne możliwe czynniki bez wyciągania pochopnego wniosku z jednego symptomu.",
@@ -28,7 +35,14 @@
         "Najbardziej sensowne pytanie nie brzmi „czy akupunktura działa zawsze?”, tylko: przy jakim rodzaju bólu i jako dodatek do czego może dawać wartość.",
         "W badaniach różni się sposób wykonywania zabiegu, liczba sesji i porównanie z inną terapią — dlatego wyniki nie dają jednej prostej odpowiedzi.",
         "Wniosek praktyczny: jakość wykonania ma znaczenie. Jednorazowe, sterylne igły i jasne kwalifikacje wykonującego są konkretną rzeczą do sprawdzenia przed zabiegiem.",
-        "Warto odróżniać akupunkturę od akupresury: pierwsza używa igieł, druga ucisku. To różne metody i nie należy przenosić wyników badań jednej automatycznie na drugą."
+        "Warto odróżniać akupunkturę od akupresury: pierwsza używa igieł, druga ucisku. To różne metody i nie należy przenosić wyników badań jednej automatycznie na drugą.",
+        "Wiele osób ocenia metodę wyłącznie po bólu, ale warto równolegle patrzeć na funkcję: sen, chodzenie, siedzenie, codzienne czynności i tolerancję ruchu.",
+        "Metaanaliza może pokazać średni efekt dla grupy, ale nie mówi, że każdy uczestnik uzyskał taką samą poprawę — różnice indywidualne są realne."
+      ],
+      "research_prompts": [
+        "Czy dana publikacja bada ból przewlekły, ostry, szyjny czy lędźwiowy? Wyniki dla tych grup nie są wymienne.",
+        "Czy akupunktura była badana samodzielnie, czy jako dodatek do ćwiczeń lub innego postępowania?",
+        "Jak długo utrzymywał się efekt po zakończeniu serii zabiegów — dni, tygodnie czy miesiące?"
       ],
       "evidence": "Dane są różne zależnie od schorzenia; metoda może być rozważana jako uzupełnienie, nie jako zastępstwo standardowego leczenia.",
       "practical": "Jeżeli rozważasz zabieg, sprawdź kwalifikacje osoby wykonującej go oraz to, czy używa sterylnych, jednorazowych igieł. To pomaga odróżnić rzetelną praktykę od marketingu.",
@@ -46,7 +60,14 @@
         "Ból pleców nie jest jedną chorobą: może wynikać z przeciążenia tkanek, stawów, dysków, napięcia mięśniowego albo innych problemów. Nazwanie wzorca bólu jest ważniejsze niż szukanie jednego uniwersalnego rozwiązania.",
         "To, co w TCM opisuje się jako „zimno” lub „wilgoć”, jest językiem tradycyjnego systemu. Może porządkować doświadczenie pacjenta, ale nie zastępuje biomedycznego wyjaśnienia przyczyny.",
         "Ciekawostka: przy zwykłych nieswoistych bólach pleców najczęściej ważniejszy jest stopniowy powrót do tolerowanego ruchu niż długie unieruchomienie.",
-        "Warto obserwować wzorzec: co nasila ból, co go łagodzi, czy promieniuje do nogi i czy pojawiają się zmiany czucia lub siły."
+        "Warto obserwować wzorzec: co nasila ból, co go łagodzi, czy promieniuje do nogi i czy pojawiają się zmiany czucia lub siły.",
+        "Długi odpoczynek w jednej pozycji może utrwalać sztywność i lęk przed ruchem; w wielu podejściach chodzi o odzyskiwanie zaufania do stopniowego ruchu.",
+        "„Dobra” metoda nie musi być najbardziej efektowna: ważne, czy da się ją powtarzać bez narastania objawów i czy poprawia codzienne funkcjonowanie."
+      ],
+      "research_prompts": [
+        "Czy aktywność jest stopniowana i tolerowana, czy prowadzi do wyraźnego pogorszenia następnego dnia? To ważniejsze niż nazwa ćwiczenia.",
+        "Czy źródło rozdziela zwykły ból nieswoisty od bólu z promieniowaniem lub objawami neurologicznymi?",
+        "Jaką rolę w danym podejściu ma sen, obciążenie dnia, pozycje statyczne i regularny ruch?"
       ],
       "evidence": "Wiarygodne polskie opracowanie dla pacjentów. Tradycyjne pojęcia TCM, takie jak „zimno” i „wilgoć”, nie są rozpoznaniami biomedycznymi.",
       "practical": "Sygnały alarmowe wymienione na stronie są po to, by nie pomylić poważnego problemu z typowym przeciążeniem. Poza nimi materiał pomaga spokojnie porównywać podejścia do ruchu, rehabilitacji i metod uzupełniających.",
@@ -64,7 +85,14 @@
         "Mniejsza wrażliwość na ból i temperaturę sprawia, że drobne otarcie lub oparzenie może zostać zauważone później — dlatego oglądanie stóp daje realną przewagę nad „wyczuwaniem problemu”.",
         "Delikatny masaż lub ucisk może być przyjemnym rytuałem relaksacyjnym, ale dowody na leczenie bólu neuropatycznego samą refleksologią są ograniczone.",
         "Najprostsza rzecz do rozeznania: czy drętwienie jest symetryczne, czy dotyczy obu stóp podobnie, czy zmienia się w czasie i czy są na skórze miejsca ucisku od obuwia.",
-        "Przy osłabionym czuciu szczególnie łatwo przesadzić z termoforem, gorącą kąpielą lub mocnym rolowaniem — brak bólu nie zawsze oznacza brak uszkodzenia skóry."
+        "Przy osłabionym czuciu szczególnie łatwo przesadzić z termoforem, gorącą kąpielą lub mocnym rolowaniem — brak bólu nie zawsze oznacza brak uszkodzenia skóry.",
+        "W neuropatii warto rozdzielić dwa wymiary: ból, który bywa palący lub kłujący, oraz utratę czucia, która może współistnieć z bólem.",
+        "Stan skóry, paznokci i miejsc ucisku od butów jest konkretną informacją do zapisywania, bo pozwala zauważać zmiany wcześniej niż ogólne samopoczucie."
+      ],
+      "research_prompts": [
+        "Czy obuwie zostawia odciski, otarcia lub miejsca powtarzalnego ucisku? To bardziej użyteczna obserwacja niż szukanie jednego „punktu na neuropatię”.",
+        "Czy opis metody mówi o bólu neuropatycznym, czy tylko o ogólnym relaksie? To dwie różne obietnice.",
+        "Czy po dotyku, masażu lub cieple skóra pozostaje bez zaczerwienienia i podrażnienia?"
       ],
       "evidence": "Ograniczone dane o akupresurze/refleksologii w bólu neuropatycznym. Pielęgnacja i ocena ryzyka stopy mają znaczenie niezależnie od wyboru metody uzupełniającej.",
       "practical": "Przy zmniejszonym czuciu unikaj mocnego ucisku, gorąca i agresywnego masażu. Codzienna obserwacja skóry stóp pozwala szybciej zauważyć ranę, zaczerwienienie lub obrzęk.",
@@ -82,7 +110,14 @@
         "Przegląd objął 10 badań z randomizacją — to więcej niż pojedyncza historia sukcesu, ale małe badania i ryzyko błędu ograniczają pewność wniosku.",
         "W praktyce oznacza to: możliwy efekt przeciwbólowy jest interesującym tropem, lecz nie ma podstaw, by przedstawiać moksy jako pewne leczenie przyczyny bólu krzyża.",
         "Moksoterapia polega na ogrzewaniu okolicy ciała palącą się moksą; podstawowym konkretnym ryzykiem jest oparzenie, a dym może przeszkadzać osobom wrażliwym oddechowo.",
-        "Warto rozdzielić dwa pytania: czy ciepło i rytuał przynoszą subiektywną ulgę oraz czy dana metoda ma mocne dowody na trwałą poprawę funkcjonowania."
+        "Warto rozdzielić dwa pytania: czy ciepło i rytuał przynoszą subiektywną ulgę oraz czy dana metoda ma mocne dowody na trwałą poprawę funkcjonowania.",
+        "Wysoka heterogeniczność badań oznacza, że ich wyniki mocno się różniły; może to wynikać z innych technik, grup uczestników i sposobów porównania.",
+        "W tradycji TCM moxa bywa łączona z dietą, ziołami i ruchem. W badaniach naukowych trzeba jednak analizować każdą metodę oddzielnie, jeśli chce się wiedzieć, co faktycznie przynosi efekt."
+      ],
+      "research_prompts": [
+        "Czy materiał opisuje samą moksę, czy połączenie kilku metod? Wynik terapii łączonej nie mówi, która część zadziałała.",
+        "Czy badanie raportuje działania niepożądane i jak długo obserwowano uczestników?",
+        "Czy „rozgrzewanie” jest opisem subiektywnego komfortu, czy autorzy próbują wyciągać daleko idące wnioski biologiczne bez mocnych danych?"
       ],
       "evidence": "Niska pewność dowodów. Wynik nie potwierdza, że moksoterapia leczy przyczynę bólu pleców.",
       "practical": "Nie stosuj moksy samodzielnie przy zaburzeniach czucia, chorobach skóry lub ryzyku oparzenia. Dymu nie używaj w słabo wentylowanym pomieszczeniu.",
@@ -90,6 +125,81 @@
       "source_language": "po angielsku — opis na stronie został wyjaśniony po polsku",
       "direct_info": "Krótki abstrakt badania naukowego, nie książka. Najważniejsze wnioski zostały już opisane po polsku na tym kafelku.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/32379643/"
+    },
+    {
+      "id": "auricular-acupressure-musculoskeletal-review-2025",
+      "category": "Akupresura",
+      "title_pl": "Akupresura ucha przy przewlekłym bólu: obiecujący sygnał z sześciu badań, ale jeszcze nie pewnik",
+      "summary": "Metaanaliza z 2025 r. zebrała sześć badań z randomizacją, obejmujących 496 osób z różnymi przewlekłymi bólami mięśniowo-szkieletowymi. Po zakończeniu interwencji odnotowano poprawę subiektywnego bólu i sprawności względem pozorowanej akupresury, lecz dla części wyników pewność danych była niska.",
+      "insights": [
+        "To nie jest badanie pojedynczej historii: autorzy przeszukali sześć baz danych i oceniali ryzyko błędu w badaniach.",
+        "Wynik dotyczy akupresury ucha, nie automatycznie ucisku stóp, dłoni ani wszystkich rodzajów bólu.",
+        "Najmocniejszy sygnał dotyczył efektu bezpośrednio po interwencji; dane o długim utrzymaniu poprawy są znacznie słabsze.",
+        "W analizie odnotowano nieliczne łagodne działania niepożądane, takie jak bolesność, tkliwość, podrażnienie lub zaczerwienienie, ustępujące w ciągu 1–7 dni.",
+        "Ciekawostka metodologiczna: porównanie z pozorowaną akupresurą jest bardziej wymagające niż porównanie z brakiem działania, bo częściowo kontroluje efekt oczekiwania i uwagi.",
+        "Najuczciwszy wniosek: metoda może być interesującym narzędziem wspierającym komfort, ale obecny materiał nie pokazuje, że rozwiązuje przyczynę przewlekłego bólu."
+      ],
+      "research_prompts": [
+        "Czy konkretny problem Eli jest podobny do grup badanych w publikacji, czy tylko ogólnie należy do kategorii „ból”?",
+        "Czy opis metody podaje dokładny schemat ucisku, czas i częstotliwość, czy używa ogólnych obietnic?",
+        "Czy nowsze badania potwierdzają efekt po kilku tygodniach lub miesiącach, a nie wyłącznie zaraz po serii?"
+      ],
+      "evidence": "Niska do umiarkowanej pewność zależnie od wyniku; sześć RCT to wartościowy sygnał, ale niewielka baza dla szerokich wniosków.",
+      "practical": "Ten wpis jest dobrym przykładem, jak czytać obiecujące wyniki: sprawdzić dokładnie metodę, rodzaj bólu, czas obserwacji i jakość porównania, zanim uzna się metodę za uniwersalną.",
+      "source_name": "PubMed — przegląd systematyczny i metaanaliza",
+      "source_language": "po angielsku — pełne omówienie na stronie jest po polsku",
+      "direct_info": "Abstrakt przeglądu z liczbą badań, liczbą uczestników, rodzajem porównania, wynikami i ograniczeniami — bez książki ani długiego raportu.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39018502/"
+    },
+    {
+      "id": "exercise-prescription-chronic-low-back-review-2025",
+      "category": "Kręgosłup i TCM",
+      "title_pl": "Ruch przy przewlekłym bólu krzyża: znaczenie może mieć dawka i regularność, nie tylko rodzaj ćwiczeń",
+      "summary": "Nowsza metaanaliza sieciowa porównywała elementy programów ćwiczeń w przewlekłym bólu krzyża. Autorzy wskazali jako obiecujący wzorzec krótsze sesje 15–30 minut, trzy razy w tygodniu i program prowadzony co najmniej 16 tygodni, ale zaznaczyli ograniczenia liczby badań.",
+      "insights": [
+        "Badanie stawia ciekawe pytanie: zamiast szukać jednego „najlepszego ćwiczenia”, porównuje czas sesji, częstotliwość i długość całego programu.",
+        "W analizie trzy sesje tygodniowo i program trwający co najmniej 16 tygodni wypadły lepiej niż krótsza ekspozycja; to argument za cierpliwą regularnością, nie za gwałtownym startem.",
+        "Wynik dla Tai Chi jest interesujący, ale nie dowodzi, że jest ono lepsze dla każdej osoby lub każdego rodzaju bólu kręgosłupa.",
+        "Sesja 15–30 minut może być praktyczniejsza do utrzymania niż bardzo długi trening — i właśnie utrzymanie regularności często jest realnym ograniczeniem.",
+        "Autorzy użyli metaanalizy sieciowej: zestawia ona wiele rodzajów interwencji pośrednio, co daje szeroki obraz, ale wymaga ostrożności w interpretacji rankingów.",
+        "Największa wartość tego wpisu nie polega na gotowym planie ćwiczeń, lecz na zmianie perspektywy: małe, powtarzalne dawki ruchu mogą być bardziej warte obserwacji niż zryw raz na tydzień."
+      ],
+      "research_prompts": [
+        "Który rodzaj ruchu jest na tyle przyjemny i dostępny, aby można go realnie utrzymać przez wiele tygodni?",
+        "Czy artykuł opisuje przewlekły nieswoisty ból krzyża, czy inny konkretny problem kręgosłupa?",
+        "Czy po małej dawce ruchu poprawia się funkcjonowanie w ciągu dnia, nawet jeśli ból nie znika natychmiast?"
+      ],
+      "evidence": "Metaanaliza sieciowa jest mocnym narzędziem syntezy, ale autorzy wprost wskazują ograniczoną liczbę badań dla części porównań.",
+      "practical": "Warto szukać informacji o regularności, tolerancji i długofalowym funkcjonowaniu, a nie tylko o natychmiastowym spadku bólu po pojedynczej sesji.",
+      "source_name": "PubMed — metaanaliza sieciowa",
+      "source_language": "po angielsku — pełne omówienie na stronie jest po polsku",
+      "direct_info": "Krótki abstrakt badania porównującego czas, częstotliwość i długość programów ruchowych w przewlekłym bólu krzyża.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40520315/"
+    },
+    {
+      "id": "tcm-foot-bath-acupoint-massage-neuropathy-review-2020",
+      "category": "TCM: „wilgoć i zimno”",
+      "title_pl": "Kąpiel stóp i masaż punktów w TCM przy neuropatii cukrzycowej: dużo badań, ale słaba jakość ogranicza wnioski",
+      "summary": "Przegląd i metaanaliza objęły 31 badań z randomizacją oraz 3284 osoby. Autorzy odnotowali korzystne wyniki dla połączenia kąpieli stóp w TCM i masażu punktów, ale jednocześnie jasno ocenili jakość metodologiczną badań jako niską.",
+      "insights": [
+        "Liczba 31 badań może robić wrażenie, ale sama liczba publikacji nie wystarcza — równie ważna jest jakość losowania, zaślepienia i raportowania wyników.",
+        "W tym przeglądzie badano połączenie kąpieli i masażu punktów, więc nie da się przypisać ewentualnego efektu jednej konkretnej części rytuału.",
+        "Autorzy raportowali wyniki dotyczące przewodnictwa nerwowego, objawów i tzw. całkowitej skuteczności, lecz wskazali potrzebę lepszych RCT, aby potwierdzić efekt.",
+        "Brak zgłoszonych działań niepożądanych w badaniach nie znaczy automatycznie, że metoda jest wolna od ryzyka w każdej sytuacji — część badań może po prostu słabo je raportować.",
+        "To dobry przykład materiału, który jest ciekawy i wart dalszego śledzenia, ale nie powinien być przedstawiany jako rozstrzygający dowód.",
+        "Przy zmniejszonym czuciu szczególnie ważne jest rozdzielenie idei relaksującej kąpieli od temperatury, która mogłaby podrażnić lub oparzyć skórę bez silnego sygnału bólowego."
+      ],
+      "research_prompts": [
+        "Czy konkretne badanie podaje temperaturę i czas kąpieli oraz sposób mierzenia bezpieczeństwa?",
+        "Czy wyniki są potwierdzone poza jedną grupą badaczy i w badaniach z wyższą jakością metodologiczną?",
+        "Czy źródło uczciwie informuje, że jest to terapia łączona i że nie wiadomo, która część odpowiada za wynik?"
+      ],
+      "evidence": "Duża liczba uczestników, ale niska jakość metodologiczna włączonych badań. Wniosek: sygnał do dalszego badania, nie twarde potwierdzenie.",
+      "practical": "Najcenniejsza lekcja z tego wpisu to nie obietnica efektu, lecz umiejętność czytania badań TCM: oddzielanie liczby prób od ich jakości i rozdzielanie metod łączonych od jednej techniki.",
+      "source_name": "PubMed — przegląd systematyczny i metaanaliza",
+      "source_language": "po angielsku — pełne omówienie na stronie jest po polsku",
+      "direct_info": "Abstrakt z liczbą badań i uczestników, mierzonymi wynikami oraz bardzo ważnym zastrzeżeniem autorów o niskiej jakości metodologicznej.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31659861/"
     }
   ]
 }

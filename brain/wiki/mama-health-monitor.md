@@ -33,9 +33,9 @@ promising treatment outcomes or replacing clinical care.
   distinct from the evidence assessment; their full video transcripts are not
   republished.
 - Cards should be substantial but scannable: a short synthesis followed by
-  3–4 concrete "key insights" that distinguish evidence, practical observation
-  points and genuinely useful context. Avoid filler or repeating the same
-  caveat.
+  at least 6 concrete "key insights" and 3 "worth exploring" prompts that
+  distinguish evidence, practical observation points and genuinely useful
+  context. Avoid filler or repeating the same caveat.
 - The canonical reusable workflow is the `mama-health-monitor` skill in the
   Codex and Hermes custom-skill directories.
 - Research must favor PubMed, primary studies, systematic reviews, NIH/NCCIH,
@@ -54,6 +54,16 @@ on thiamine, pain/acupuncture, back-pain warning signs and diabetic-foot
 safety. One PubMed moxibustion review remains as a clearly marked
 English-language evidence source. It is a starting library, not a claim of
 daily clinical relevance.
+
+## Research base — expanded 2026-09-03
+
+`data/mama-zdrowie-source-registry.json` is the operational source registry.
+It currently contains 19 research routes: topic-specific, newest-first PubMed
+searches; Cochrane evidence summaries; JOSPT and NICE guidance; PEDro and TRIP
+discovery databases; Polish patient-facing explainers; and a distinctly
+labelled Dr. Berg YouTube input stream. The registry is a discovery and
+verification queue, not an assertion that every listed source has equal
+evidentiary weight.
 
 ## Next
 
