@@ -75,6 +75,12 @@ long reports must name the relevant pages, section, table or figure where the
 source makes that possible; the page must never send Eli to a long work without
 an exact reading target.
 
+The first embedded video (2026-09-03) is a Polish 23:05 gentle-back-exercise
+video by Dr Marcin Wytrążek. Its automatic-caption retrieval failed, so its
+map honestly identifies the verified full-programme range rather than
+inventing sub-segment timestamps. Future granular timestamps require a usable
+transcript or equivalent verified viewing notes.
+
 ## Next
 
 - Configure an explicit Hermes daily schedule only after selecting a time and

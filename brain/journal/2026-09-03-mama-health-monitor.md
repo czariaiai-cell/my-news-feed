@@ -25,6 +25,10 @@
 - Added a video/long-source protocol: selected Polish YouTube material needs a
   direct link and exact timestamp map; English sources need longer Polish
   syntheses; long texts must identify relevant pages/sections.
+- Added the first directly embedded Polish YouTube card: a 23:05 gentle-back
+  exercise video by Dr Marcin Wytrążek. Automatic captions could not be
+  retrieved, so the timestamp map reports the verified full-programme range
+  rather than fabricated sub-segments.
 - Created and validated the shared `mama-health-monitor` skill for Codex and
   Hermes.
 

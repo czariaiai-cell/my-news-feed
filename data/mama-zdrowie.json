@@ -232,6 +232,36 @@
       "source_language": "po angielsku — pełne omówienie na stronie jest po polsku",
       "direct_info": "Abstrakt z liczbą badań i uczestników, mierzonymi wynikami oraz bardzo ważnym zastrzeżeniem autorów o niskiej jakości metodologicznej.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/31659861/"
+    },
+    {
+      "id": "video-wytrazek-gentle-back-exercises-2026-09-03",
+      "category": "Kręgosłup i TCM",
+      "title_pl": "Film: łagodne ćwiczenia na ból kręgosłupa i krzyża — dr n. med. Marcin Wytrążek",
+      "summary": "Polski film fizjoterapeutyczny o długości 23:05. Autor przedstawia łagodny zestaw mający rozruszać kręgosłup, pracować nad napiętymi tkankami oraz aktywizować m.in. mięśnie pośladkowe. Film jest osadzony poniżej — można go obejrzeć bez opuszczania strony Eli.",
+      "video_embed_id": "9nKqv4bwJwA",
+      "media_map": [
+        {"time":"00:00–23:05","note":"Cały łagodny zestaw ćwiczeń. Film nie udostępniał działających napisów do wiarygodnego podziału na mniejsze odcinki, więc nie wpisujemy sztucznych minut — pełna mapa segmentów pojawi się dopiero po sprawdzeniu transkryptu."}
+      ],
+      "source_locator": "Film trwa 23 min 05 s. Obejrzenie jest możliwe bezpośrednio w kafelku; pełny odnośnik pod kafelkiem otwiera film na YouTube.",
+      "insights": [
+        "Autorem jest dr n. med. Marcin Wytrążek, fizjoterapeuta; to wyraźnie opisany autor materiału, a nie anonimowy kanał z ćwiczeniami.",
+        "Film dotyczy łagodnego ruchu przy bólu, sztywności, zmianach zwyrodnieniowych i dolegliwościach kręgosłupa wymienionych przez autora — nie jest diagnozą konkretnej przyczyny bólu.",
+        "Opis filmu podkreśla trzy różne cele: delikatne rozruszanie, rozciąganie zesztywniałych tkanek oraz aktywizację rzadziej używanych mięśni pośladkowych.",
+        "To dobrze współgra z wnioskiem z badań o znaczeniu regularnego, tolerowanego ruchu: najważniejsza jest możliwość spokojnego powtarzania, a nie spektakularna intensywność.",
+        "Warto oglądać film jako konkretny zestaw do oceny, a nie jako uniwersalną odpowiedź na każdy ból kręgosłupa.",
+        "Ten wpis jest pierwszym testem nowego formatu: wideo jest od razu odtwarzalne w kafelku, a pod nim zawsze pozostaje źródło i mapa tego, co zostało zweryfikowane."
+      ],
+      "research_prompts": [
+        "Czy po obejrzeniu i spokojnym wykonaniu ruch jest płynny i tolerowany, czy któryś element wyraźnie nasila objawy?",
+        "Czy przy kolejnych filmach dostępny transkrypt pozwoli wskazać dokładnie: rozgrzewka, mobilizacja, aktywacja i wyciszenie?",
+        "Czy autor podaje powód danego ruchu, czy jedynie pokazuje ćwiczenie? Wyjaśnienie mechanizmu jest przydatne przy porównywaniu źródeł."
+      ],
+      "evidence": "To materiał edukacyjny polskiego fizjoterapeuty, nie publikacja naukowa. Wnioski o ćwiczeniach warto zestawiać z wytycznymi i przeglądami badań, które są osobno w bazie strony.",
+      "practical": "Największa wartość tego filmu to gotowy, łagodny zestaw do obejrzenia i skonfrontowania z własną tolerancją ruchu. Strona będzie wybierać kolejne filmy tylko z równie jasnym autorstwem i konkretną treścią.",
+      "source_name": "YouTube — dr n. med. Marcin Wytrążek, fizjoterapeuta",
+      "source_language": "po polsku — film osadzony bezpośrednio na stronie",
+      "direct_info": "Pełny, 23‑minutowy pokaz łagodnych ćwiczeń; odtwarza się w tym kafelku. Link prowadzi do tej samej strony filmu na YouTube.",
+      "url": "https://www.youtube.com/watch?v=9nKqv4bwJwA"
     }
   ]
 }
