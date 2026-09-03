@@ -35,6 +35,9 @@
   data.
 - **Access control:** ⚠️ a remembered client-side password gate is live but is
   not real confidentiality on public GitHub Pages.
+- **Mama Health Monitor:** ✅ public standalone page and validated reusable
+  research skill are ready with a cautious four-topic baseline. ⏸️ Hermes daily
+  scheduler remains intentionally unconfigured pending a chosen run time.
 
 ## Backlog / Tech Debt
 - Repair the two malformed legacy purchase CSV rows, then run the comment

@@ -1,0 +1,7 @@
+const escapeHtml = value => { const e=document.createElement('div'); e.textContent=value; return e.innerHTML; };
+const cards = document.getElementById('cards');
+fetch(`data/mama-zdrowie.json?v=${Date.now()}`,{cache:'no-store'}).then(r=>r.json()).then(data=>{
+  document.getElementById('date').textContent=`Ostatnia aktualizacja: ${data.updated_at}`;
+  document.getElementById('summary').innerHTML=`<div><b>${data.items.length}</b><span>zweryfikowane materiały startowe</span></div><div><b>4</b><span>obszar(y) codziennego monitoringu</span></div><div><b>Bez presji</b><span>mniej materiałów, ale z jasnym poziomem dowodów</span></div>`;
+  const render=()=>{const category=document.getElementById('filter').value;const list=data.items.filter(x=>category==='all'||x.category===category);cards.innerHTML=list.map(x=>`<article class="card"><div class="tag">${escapeHtml(x.category)}</div><h3>${escapeHtml(x.title_pl)}</h3><p>${escapeHtml(x.summary)}</p><div class="evidence"><b>Jak mocne są dane:</b> ${escapeHtml(x.evidence)}</div><p><b>Praktycznie:</b> ${escapeHtml(x.practical)}</p><a href="${escapeHtml(x.url)}" target="_blank" rel="noopener">Otwórz źródło ↗</a></article>`).join('')||'<p>Brak materiałów w tej kategorii.</p>';};render();document.getElementById('filter').addEventListener('change',render);
+}).catch(()=>{cards.textContent='Nie udało się wczytać aktualnego raportu.';});

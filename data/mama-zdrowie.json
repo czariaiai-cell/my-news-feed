@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-09-03",
+  "items": [
+    {
+      "id": "thiamin-ods-2026-09-03",
+      "category": "Tiamina i nerwy",
+      "title_pl": "Tiamina (witamina B1): niedobór może dawać mrowienie i drętwienie — wymaga oceny przyczyny",
+      "summary": "Materiał NIH opisuje, że ciężki niedobór tiaminy może wiązać się z mrowieniem lub drętwieniem dłoni i stóp, osłabieniem mięśni oraz słabszymi odruchami. Takie objawy nie wskazują jednak automatycznie na niedobór B1 — przyczyn neuropatii jest wiele.",
+      "evidence": "Wysoka wiarygodność źródła informacyjnego (NIH Office of Dietary Supplements); nie jest to indywidualne zalecenie leczenia.",
+      "practical": "Nie dobieraj samodzielnie dużych dawek ani nie odkładaj diagnostyki. Warto omówić z lekarzem objawy, dietę, leki, alkohol, cukrzycę i ewentualne badania.",
+      "url": "https://ods.od.nih.gov/pdf/factsheets/Thiamin-Consumer.pdf"
+    },
+    {
+      "id": "acupuncture-nccih-2026-09-03",
+      "category": "Kręgosłup i TCM",
+      "title_pl": "Akupunktura przy przewlekłym bólu krzyża: może być jedną z metod uzupełniających",
+      "summary": "NCCIH podaje, że badania sugerują możliwą korzyść akupunktury w bólu pleców i szyi; dla przewlekłego bólu krzyża jakość dowodów oceniano jako umiarkowaną. To nie zastępuje rozpoznania przyczyny bólu ani rehabilitacji.",
+      "evidence": "Umiarkowane dla części przewlekłych dolegliwości bólowych; efekt i jakość badań różnią się zależnie od problemu.",
+      "practical": "Jeżeli rozważasz zabieg, wybierz wykwalifikowanego praktyka używającego sterylnych, jednorazowych igieł i poinformuj lekarza o lekach oraz chorobach.",
+      "url": "https://www.nccih.nih.gov/health/acupuncture-effectiveness-and-safety"
+    },
+    {
+      "id": "moxibustion-review-2026-09-03",
+      "category": "TCM: „wilgoć i zimno”",
+      "title_pl": "Moksoterapia na przewlekły ból krzyża: wstępne wyniki, ale niska pewność dowodów",
+      "summary": "Przegląd 10 badań z randomizacją sugerował możliwą poprawę bólu i sprawności, lecz autorzy ocenili pewność dowodów jako bardzo niską do niskiej z powodu małych badań i ryzyka błędu.",
+      "evidence": "Niska pewność. „Wilgoć” i „zimno” są pojęciami tradycyjnego modelu TCM, a nie rozpoznaniami biomedycznymi.",
+      "practical": "Nie stosuj moksoterapii samodzielnie przy zaburzeniach czucia, chorobach skóry lub ryzyku oparzenia. Nie używaj dymu/moksy w słabo wentylowanym pomieszczeniu.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32379643/"
+    },
+    {
+      "id": "reflexology-neuropathic-pain-2026-09-03",
+      "category": "Akupresura",
+      "title_pl": "Ucisk i masaż stóp przy bólu neuropatycznym: obiecujący temat, ale nie zamiennik leczenia",
+      "summary": "Nowszy przegląd systematyczny bada refleksologię u osób z bólem neuropatycznym w cukrzycy. Taki dotyk może być dla części osób relaksujący, ale nie powinien zastępować kontroli cukrzycy, diagnostyki drętwienia ani ochrony stóp.",
+      "evidence": "Wstępne/ograniczone; szczegóły jakości badań należy sprawdzać przed wyciąganiem silnych wniosków.",
+      "practical": "Przy zmniejszonym czuciu nie stosuj mocnego ucisku, gorąca ani agresywnego masażu. Codziennie oglądaj skórę stóp; rana, zaczerwienienie lub obrzęk wymagają konsultacji.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42321037/"
+    }
+  ]
+}
