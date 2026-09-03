@@ -649,23 +649,20 @@
       "balcony": "unknown",
       "parking": "unknown",
       "furnishing": "unknown",
-      "universities_distances": "Pogoń/UŚ: dzielnica objęta strategią",
-      "published_date": " dokładna trasa piesza do UŚ do zmierzenia",
+      "universities_distances": "Pogoń/UŚ: dzielnica objęta strategią; dokładna trasa piesza do UŚ do zmierzenia",
+      "published_date": "unknown",
       "added_date": "unknown",
-      "first_seen": "unknown",
+      "first_seen": "2026-09-03",
       "last_seen": "2026-09-03",
-      "price_change_pln": "2026-09-03",
-      "disappeared_date": "0",
-      "days_observed": "",
-      "estimated_owner_rent_pln": "1",
-      "estimated_gross_yield_pct": "1500",
-      "investment_fit": "8.37",
-      "ranking_score": "potencjalnie dobry koszt wejścia, ale pełny zakres CAPEX i dokładny adres do weryfikacji",
-      "rank_position": "unknown",
-      "notes": "",
-      "null": [
-        "Karta Domiporta odczytana 2026-09-03 (portal podał dodanie 16 dni wcześniej): 2 pokoje, parter, piwnica 3.25 m²; czynsz SM 607.04 zł obejmuje wodę, CO, fundusz remontowy, eksploatację i śmieci; CWU gazowe. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome."
-      ]
+      "price_change_pln": "0",
+      "disappeared_date": "",
+      "days_observed": "1",
+      "estimated_owner_rent_pln": "1500",
+      "estimated_gross_yield_pct": "8.37",
+      "investment_fit": "potencjalnie dobry koszt wejścia, ale pełny zakres CAPEX i dokładny adres do weryfikacji",
+      "ranking_score": "unknown",
+      "rank_position": "",
+      "notes": "Karta Domiporta odczytana 2026-09-03 (portal podał dodanie 16 dni wcześniej): 2 pokoje, parter, piwnica 3.25 m²; czynsz SM 607.04 zł obejmuje wodę, CO, fundusz remontowy, eksploatację i śmieci; CWU gazowe. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome."
     },
     {
       "market_city": "Sosnowiec",
@@ -692,8 +689,8 @@
       "elevator": "unknown",
       "balcony": "unknown",
       "parking": "unknown",
-      "furnishing": "Pogoń/UŚ: ogłoszenie deklaruje bliskość uczelni",
-      "universities_distances": " dokładna trasa piesza do UŚ do zmierzenia",
+      "furnishing": "unknown",
+      "universities_distances": "Pogoń/UŚ: ogłoszenie deklaruje bliskość uczelni; dokładna trasa piesza do UŚ do zmierzenia",
       "published_date": "unknown",
       "added_date": "unknown",
       "first_seen": "2026-09-03",
@@ -744,13 +741,10 @@
       "days_observed": "1",
       "estimated_owner_rent_pln": "2000",
       "estimated_gross_yield_pct": "9.13",
-      "investment_fit": "silny kandydat kosztowy",
-      "ranking_score": " potwierdzić spacer, stan pieca oraz CAPEX",
-      "rank_position": "unknown",
-      "notes": "",
-      "null": [
-        "Karta Nieruchomosci-online odczytana 2026-09-03; oferta zaktualizowana na portalu 2026-08-09. 2 niezależne pokoje, piwnica, wyposażenie w cenie, miedziana instalacja elektryczna, ogrodzony parking i monitoring. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome."
-      ]
+      "investment_fit": "silny kandydat kosztowy; potwierdzić spacer, stan pieca oraz CAPEX",
+      "ranking_score": "unknown",
+      "rank_position": "",
+      "notes": "Karta Nieruchomosci-online odczytana 2026-09-03; oferta zaktualizowana na portalu 2026-08-09. 2 niezależne pokoje, piwnica, wyposażenie w cenie, miedziana instalacja elektryczna, ogrodzony parking i monitoring. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome."
     }
   ],
   "rental": [
@@ -1789,7 +1783,7 @@
     "purchase": {
       "total": 18,
       "active": 16,
-      "new_today": 3,
+      "new_today": 4,
       "median_price_pln": 269000.0,
       "top_candidate_id": "OLX_1092443603"
     },
