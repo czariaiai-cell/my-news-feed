@@ -10,5 +10,6 @@ Index of daily geopolitical news logs.
 - [[2026-07-30]]
 - [[2026-07-29]]
 - [[2026-07-28]]
+- [[2026-09-03-housing-dashboard|2026-09-03 — MieszkaniePolska Dashboard]]
 
 - [[../index|Back to Home]]

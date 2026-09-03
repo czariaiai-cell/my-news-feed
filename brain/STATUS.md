@@ -23,3 +23,9 @@
 
 ## Backlog / Tech Debt
 - `wiki/` is empty (only `index.md`). Populate as geopolitical topics accumulate across daily cycles.
+- **Deployment and credential follow-up (2026-09-03):** the Mieszkania Polska
+  dashboard is implemented locally but has not been committed or pushed. Before
+  publishing, confirm the GitHub Pages/deployment configuration, then commit
+  and push the reviewed files. The local `origin` URL contains an embedded
+  GitHub access token; revoke/rotate it and replace the remote with a
+  credential-free URL before any future push.
