@@ -1,3 +1,8 @@
+document.documentElement.style.visibility = 'hidden';
+const accessGateScript = document.createElement('script');
+accessGateScript.src = 'access-gate.js';
+document.head.append(accessGateScript);
+
 const fmt = new Intl.NumberFormat('pl-PL');
 const mode = document.body.dataset.mode;
 const isPurchase = mode === 'purchase';
