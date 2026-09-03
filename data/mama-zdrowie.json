@@ -6,6 +6,12 @@
       "category": "Tiamina i nerwy",
       "title_pl": "Tiamina (witamina B1): ważna dla układu nerwowego, ale drętwienie wymaga sprawdzenia przyczyny",
       "summary": "Medycyna Praktyczna opisuje tiaminę jako witaminę ważną dla układu nerwowego. Mrowienie, drętwienie lub osłabienie nie oznaczają jednak automatycznie niedoboru B1 — przyczyn neuropatii jest wiele.",
+      "insights": [
+        "B1 uczestniczy w przemianach węglowodanów — czyli w wykorzystaniu energii z pożywienia przez organizm.",
+        "Najbardziej charakterystyczne neurologiczne sygnały ciężkiego niedoboru to parestezje: mrowienie, pieczenie lub zaburzenia czucia, oraz osłabienie mięśni.",
+        "Ciekawa rzecz do rozeznania: długotrwałe stosowanie furosemidu może sprzyjać utracie tiaminy z moczem; to jeden z przykładów, dlaczego sam objaw nie wskazuje jednej przyczyny.",
+        "W żywności B1 występuje m.in. w pełnych ziarnach, strączkach, orzechach, mięsie wieprzowym i drożdżach — dlatego liczy się cały wzorzec diety, nie pojedynczy produkt."
+      ],
       "evidence": "Wiarygodne polskie źródło medyczne dla pacjentów; nie jest to indywidualne zalecenie leczenia.",
       "practical": "Warto zapamiętać, że B1 jest tylko jedną z możliwych części układanki przy drętwieniu. Materiał pomaga porównać objawy, dietę, leki i inne możliwe czynniki bez wyciągania pochopnego wniosku z jednego symptomu.",
       "direct_info": "Krótki opis tiaminy, możliwych objawów niedoboru i sytuacji, w których warto porozmawiać z lekarzem — bez pobierania książki ani raportu.",
@@ -18,6 +24,12 @@
       "category": "Kręgosłup i TCM",
       "title_pl": "Akupunktura przy bólu: metoda uzupełniająca, a nie zamiennik diagnostyki i rehabilitacji",
       "summary": "Polskie opracowanie Medycyny Praktycznej omawia akupunkturę jako jedną z metod rozważanych przy bólu. Skuteczność zależy od rodzaju problemu, a bezpieczeństwo wymaga właściwego wykonania zabiegu.",
+      "insights": [
+        "Najbardziej sensowne pytanie nie brzmi „czy akupunktura działa zawsze?”, tylko: przy jakim rodzaju bólu i jako dodatek do czego może dawać wartość.",
+        "W badaniach różni się sposób wykonywania zabiegu, liczba sesji i porównanie z inną terapią — dlatego wyniki nie dają jednej prostej odpowiedzi.",
+        "Wniosek praktyczny: jakość wykonania ma znaczenie. Jednorazowe, sterylne igły i jasne kwalifikacje wykonującego są konkretną rzeczą do sprawdzenia przed zabiegiem.",
+        "Warto odróżniać akupunkturę od akupresury: pierwsza używa igieł, druga ucisku. To różne metody i nie należy przenosić wyników badań jednej automatycznie na drugą."
+      ],
       "evidence": "Dane są różne zależnie od schorzenia; metoda może być rozważana jako uzupełnienie, nie jako zastępstwo standardowego leczenia.",
       "practical": "Jeżeli rozważasz zabieg, sprawdź kwalifikacje osoby wykonującej go oraz to, czy używa sterylnych, jednorazowych igieł. To pomaga odróżnić rzetelną praktykę od marketingu.",
       "source_name": "Medycyna Praktyczna",
@@ -26,10 +38,16 @@
       "url": "https://www.mp.pl/pacjent/reumatologia/aktualnosci/64588%2Cczy-akupunktura-jest-skuteczna-i-bezpieczna-w-leczeniu-bolu"
     },
     {
-      "id": "moxibustion-review-2026-09-03",
+      "id": "back-pain-mp-2026-09-03",
       "category": "TCM: „wilgoć i zimno”",
       "title_pl": "Ból pleców: najpierw wyklucz sygnały alarmowe, potem dobieraj ruch i leczenie",
       "summary": "Medycyna Praktyczna przypomina, że ból pleców ma wiele przyczyn. Szczególnej uwagi wymagają nowe deficyty neurologiczne, zaburzenia czucia w okolicy krocza, problemy z oddawaniem moczu lub stolca, gorączka albo ból po urazie.",
+      "insights": [
+        "Ból pleców nie jest jedną chorobą: może wynikać z przeciążenia tkanek, stawów, dysków, napięcia mięśniowego albo innych problemów. Nazwanie wzorca bólu jest ważniejsze niż szukanie jednego uniwersalnego rozwiązania.",
+        "To, co w TCM opisuje się jako „zimno” lub „wilgoć”, jest językiem tradycyjnego systemu. Może porządkować doświadczenie pacjenta, ale nie zastępuje biomedycznego wyjaśnienia przyczyny.",
+        "Ciekawostka: przy zwykłych nieswoistych bólach pleców najczęściej ważniejszy jest stopniowy powrót do tolerowanego ruchu niż długie unieruchomienie.",
+        "Warto obserwować wzorzec: co nasila ból, co go łagodzi, czy promieniuje do nogi i czy pojawiają się zmiany czucia lub siły."
+      ],
       "evidence": "Wiarygodne polskie opracowanie dla pacjentów. Tradycyjne pojęcia TCM, takie jak „zimno” i „wilgoć”, nie są rozpoznaniami biomedycznymi.",
       "practical": "Sygnały alarmowe wymienione na stronie są po to, by nie pomylić poważnego problemu z typowym przeciążeniem. Poza nimi materiał pomaga spokojnie porównywać podejścia do ruchu, rehabilitacji i metod uzupełniających.",
       "source_name": "Medycyna Praktyczna",
@@ -42,6 +60,12 @@
       "category": "Akupresura",
       "title_pl": "Ucisk i masaż stóp przy drętwieniu: delikatnie i z ochroną skóry",
       "summary": "Przy neuropatii, zwłaszcza w cukrzycy, stopy mogą mieć zmniejszone czucie. Oficjalny portal pacjenta przypomina o znaczeniu obserwowania objawów i ochrony stóp; sam ucisk nie leczy przyczyny drętwienia.",
+      "insights": [
+        "Mniejsza wrażliwość na ból i temperaturę sprawia, że drobne otarcie lub oparzenie może zostać zauważone później — dlatego oglądanie stóp daje realną przewagę nad „wyczuwaniem problemu”.",
+        "Delikatny masaż lub ucisk może być przyjemnym rytuałem relaksacyjnym, ale dowody na leczenie bólu neuropatycznego samą refleksologią są ograniczone.",
+        "Najprostsza rzecz do rozeznania: czy drętwienie jest symetryczne, czy dotyczy obu stóp podobnie, czy zmienia się w czasie i czy są na skórze miejsca ucisku od obuwia.",
+        "Przy osłabionym czuciu szczególnie łatwo przesadzić z termoforem, gorącą kąpielą lub mocnym rolowaniem — brak bólu nie zawsze oznacza brak uszkodzenia skóry."
+      ],
       "evidence": "Ograniczone dane o akupresurze/refleksologii w bólu neuropatycznym. Pielęgnacja i ocena ryzyka stopy mają znaczenie niezależnie od wyboru metody uzupełniającej.",
       "practical": "Przy zmniejszonym czuciu unikaj mocnego ucisku, gorąca i agresywnego masażu. Codzienna obserwacja skóry stóp pozwala szybciej zauważyć ranę, zaczerwienienie lub obrzęk.",
       "source_name": "pacjent.gov.pl",
@@ -54,6 +78,12 @@
       "category": "TCM: „wilgoć i zimno”",
       "title_pl": "Moksoterapia przy przewlekłym bólu krzyża: wyniki wstępne, a pewność dowodów niska",
       "summary": "Przegląd badań z randomizacją sugerował możliwą poprawę bólu i sprawności, ale autorzy ocenili pewność danych jako bardzo niską do niskiej. Pojęcia „wilgoci” i „zimna” pochodzą z tradycyjnego modelu TCM, nie z diagnostyki biomedycznej.",
+      "insights": [
+        "Przegląd objął 10 badań z randomizacją — to więcej niż pojedyncza historia sukcesu, ale małe badania i ryzyko błędu ograniczają pewność wniosku.",
+        "W praktyce oznacza to: możliwy efekt przeciwbólowy jest interesującym tropem, lecz nie ma podstaw, by przedstawiać moksy jako pewne leczenie przyczyny bólu krzyża.",
+        "Moksoterapia polega na ogrzewaniu okolicy ciała palącą się moksą; podstawowym konkretnym ryzykiem jest oparzenie, a dym może przeszkadzać osobom wrażliwym oddechowo.",
+        "Warto rozdzielić dwa pytania: czy ciepło i rytuał przynoszą subiektywną ulgę oraz czy dana metoda ma mocne dowody na trwałą poprawę funkcjonowania."
+      ],
       "evidence": "Niska pewność dowodów. Wynik nie potwierdza, że moksoterapia leczy przyczynę bólu pleców.",
       "practical": "Nie stosuj moksy samodzielnie przy zaburzeniach czucia, chorobach skóry lub ryzyku oparzenia. Dymu nie używaj w słabo wentylowanym pomieszczeniu.",
       "source_name": "PubMed — przegląd naukowy",

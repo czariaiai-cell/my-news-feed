@@ -32,6 +32,10 @@ promising treatment outcomes or replacing clinical care.
   input stream. Their useful ideas must be summarized in Polish and kept
   distinct from the evidence assessment; their full video transcripts are not
   republished.
+- Cards should be substantial but scannable: a short synthesis followed by
+  3–4 concrete "key insights" that distinguish evidence, practical observation
+  points and genuinely useful context. Avoid filler or repeating the same
+  caveat.
 - The canonical reusable workflow is the `mama-health-monitor` skill in the
   Codex and Hermes custom-skill directories.
 - Research must favor PubMed, primary studies, systematic reviews, NIH/NCCIH,

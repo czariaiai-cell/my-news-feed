@@ -13,6 +13,8 @@
 - Each card now explains what is directly available after opening its link;
   the B1 baseline link was replaced with a short Polish medical web article
   instead of a long PDF.
+- Expanded every baseline card with 3–4 concise, source-grounded key insights
+  and practical observation points, while retaining the direct source link.
 - Created and validated the shared `mama-health-monitor` skill for Codex and
   Hermes.
 
