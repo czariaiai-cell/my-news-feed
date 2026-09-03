@@ -23,6 +23,9 @@ promising treatment outcomes or replacing clinical care.
   English source remains allowed when it is materially stronger or fills a
   gap, but its language must be stated and its on-page explanation must be in
   Polish.
+- Do not link a reader to a long PDF, book or general home page when a direct
+  short article or a relevant study abstract is available. Each card says what
+  the reader will find after opening its link.
 - The canonical reusable workflow is the `mama-health-monitor` skill in the
   Codex and Hermes custom-skill directories.
 - Research must favor PubMed, primary studies, systematic reviews, NIH/NCCIH,

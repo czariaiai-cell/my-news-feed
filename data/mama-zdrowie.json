@@ -2,15 +2,16 @@
   "updated_at": "2026-09-03",
   "items": [
     {
-      "id": "thiamin-ods-2026-09-03",
+      "id": "thiamin-mp-2026-09-03",
       "category": "Tiamina i nerwy",
       "title_pl": "Tiamina (witamina B1): ważna dla układu nerwowego, ale drętwienie wymaga sprawdzenia przyczyny",
-      "summary": "Narodowe Centrum Edukacji Żywieniowej opisuje tiaminę jako witaminę ważną dla pracy ośrodkowego i obwodowego układu nerwowego. Mrowienie, drętwienie lub osłabienie nie oznaczają jednak automatycznie niedoboru B1 — przyczyn neuropatii jest wiele.",
-      "evidence": "Wiarygodne polskie źródło edukacyjne instytucji zdrowia publicznego; nie jest to indywidualne zalecenie leczenia.",
+      "summary": "Medycyna Praktyczna opisuje tiaminę jako witaminę ważną dla układu nerwowego. Mrowienie, drętwienie lub osłabienie nie oznaczają jednak automatycznie niedoboru B1 — przyczyn neuropatii jest wiele.",
+      "evidence": "Wiarygodne polskie źródło medyczne dla pacjentów; nie jest to indywidualne zalecenie leczenia.",
       "practical": "Nie dobieraj samodzielnie dużych dawek ani nie odkładaj diagnostyki. Objawy warto omówić z lekarzem wraz z dietą, lekami, cukrzycą i ewentualnymi badaniami.",
-      "source_name": "Narodowe Centrum Edukacji Żywieniowej / PZH",
+      "direct_info": "Krótki opis tiaminy, możliwych objawów niedoboru i sytuacji, w których warto porozmawiać z lekarzem — bez pobierania książki ani raportu.",
+      "source_name": "Medycyna Praktyczna",
       "source_language": "po polsku",
-      "url": "https://ncez.pzh.gov.pl/?download_id=19507&sdm_process_download=1"
+      "url": "https://www.mp.pl/pacjent/leki/subst.html%3Fid%3D780"
     },
     {
       "id": "acupuncture-nccih-2026-09-03",
@@ -21,6 +22,7 @@
       "practical": "Przy rozważaniu zabiegu wybierz wykwalifikowaną osobę używającą sterylnych, jednorazowych igieł. Poinformuj lekarza o lekach i chorobach.",
       "source_name": "Medycyna Praktyczna",
       "source_language": "po polsku",
+      "direct_info": "Konkretne wyjaśnienie, kiedy akupunktura bywa rozważana przy bólu oraz jakie są ograniczenia i kwestie bezpieczeństwa.",
       "url": "https://www.mp.pl/pacjent/reumatologia/aktualnosci/64588%2Cczy-akupunktura-jest-skuteczna-i-bezpieczna-w-leczeniu-bolu"
     },
     {
@@ -32,6 +34,7 @@
       "practical": "Przy sygnałach alarmowych nie czekaj na masaż, akupresurę ani zioła — skontaktuj się pilnie z lekarzem. Przy braku alarmów plan ruchu i terapii ustalaj z profesjonalistą.",
       "source_name": "Medycyna Praktyczna",
       "source_language": "po polsku",
+      "direct_info": "Prosta strona o przyczynach bólu pleców i objawach, z którymi nie należy zwlekać z kontaktem z lekarzem.",
       "url": "https://www.mp.pl/pacjent/objawy/51917%2Cbol-plecow-przyczyny"
     },
     {
@@ -43,6 +46,7 @@
       "practical": "Nie stosuj mocnego ucisku, gorąca ani agresywnego masażu przy zmniejszonym czuciu. Rana, zaczerwienienie, obrzęk albo szybko narastające drętwienie wymagają konsultacji.",
       "source_name": "pacjent.gov.pl",
       "source_language": "po polsku",
+      "direct_info": "Strona dla pacjentów o cukrzycy, w tym o rozpoznawaniu i ochronie stóp przy problemach z czuciem.",
       "url": "https://pacjent.gov.pl/jak-zyc-z-choroba/jak-zyc-z-cukrzyca"
     },
     {
@@ -54,6 +58,7 @@
       "practical": "Nie stosuj moksy samodzielnie przy zaburzeniach czucia, chorobach skóry lub ryzyku oparzenia. Dymu nie używaj w słabo wentylowanym pomieszczeniu.",
       "source_name": "PubMed — przegląd naukowy",
       "source_language": "po angielsku — opis na stronie został wyjaśniony po polsku",
+      "direct_info": "Krótki abstrakt badania naukowego, nie książka. Najważniejsze wnioski zostały już opisane po polsku na tym kafelku.",
       "url": "https://pubmed.ncbi.nlm.nih.gov/32379643/"
     }
   ]

@@ -10,6 +10,9 @@
   areas. The baseline now favors Polish public-health/patient sources; the
   remaining English scientific source is visibly labelled and summarized in
   Polish.
+- Each card now explains what is directly available after opening its link;
+  the B1 baseline link was replaced with a short Polish medical web article
+  instead of a long PDF.
 - Created and validated the shared `mama-health-monitor` skill for Codex and
   Hermes.
 
