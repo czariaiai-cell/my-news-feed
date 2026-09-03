@@ -18,9 +18,11 @@
 
 ## Safety decision
 
-The page is educational only. It states evidence strength, distinguishes TCM
-frameworks from biomedical diagnoses, avoids dosing/individual treatment and
-includes red-flag guidance.
+The page is a knowledge library. It states evidence strength and distinguishes
+TCM frameworks from biomedical diagnoses, but does not repeat generic
+referrals on every card. It retains concise factual red flags, avoids dosing
+and individual treatment, and can include clearly labelled popular/alternative
+perspectives such as Dr. Berg alongside evidence assessment.
 
 ## Pending
 

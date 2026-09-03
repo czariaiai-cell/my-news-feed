@@ -26,6 +26,12 @@ promising treatment outcomes or replacing clinical care.
 - Do not link a reader to a long PDF, book or general home page when a direct
   short article or a relevant study abstract is available. Each card says what
   the reader will find after opening its link.
+- The page is a knowledge library, not a stream of generic referrals. Safety
+  notes are concise and reserved for meaningful red flags or a specific risk.
+- Dr. Berg and comparable popular/alternative educators can be a labelled
+  input stream. Their useful ideas must be summarized in Polish and kept
+  distinct from the evidence assessment; their full video transcripts are not
+  republished.
 - The canonical reusable workflow is the `mama-health-monitor` skill in the
   Codex and Hermes custom-skill directories.
 - Research must favor PubMed, primary studies, systematic reviews, NIH/NCCIH,
