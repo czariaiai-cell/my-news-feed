@@ -17,6 +17,12 @@ promising treatment outcomes or replacing clinical care.
 
 - The public page is `mama-zdrowie.html`; its content is
   `data/mama-zdrowie.json`.
+- Its visible name is **"Zdrowie dla mamy Eli"**. It is intentionally a
+  single-column, large-type reading page: one material card below another.
+- Prefer reputable Polish-language sources when they are available. An
+  English source remains allowed when it is materially stronger or fills a
+  gap, but its language must be stated and its on-page explanation must be in
+  Polish.
 - The canonical reusable workflow is the `mama-health-monitor` skill in the
   Codex and Hermes custom-skill directories.
 - Research must favor PubMed, primary studies, systematic reviews, NIH/NCCIH,
@@ -30,9 +36,11 @@ promising treatment outcomes or replacing clinical care.
 
 ## Initial baseline
 
-The 2026-09-03 baseline covers NIH thiamine information, NCCIH acupuncture
-guidance, a PubMed moxibustion review and a PubMed reflexology review. It is a
-starting library, not a claim of daily clinical relevance.
+The 2026-09-03 baseline prioritizes Polish public-health and patient sources
+on thiamine, pain/acupuncture, back-pain warning signs and diabetic-foot
+safety. One PubMed moxibustion review remains as a clearly marked
+English-language evidence source. It is a starting library, not a claim of
+daily clinical relevance.
 
 ## Next
 

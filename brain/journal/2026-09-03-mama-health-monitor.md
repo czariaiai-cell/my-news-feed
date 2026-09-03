@@ -2,10 +2,14 @@
 
 ## Delivered
 
-- Created public `mama-zdrowie.html` with a Polish start report and direct
-  source links.
-- Added a JSON data store with four cautious baseline items covering the
-  requested areas.
+- Created public `mama-zdrowie.html` under the visible name **"Zdrowie dla
+  mamy Eli"**, with direct source links.
+- Adapted the page for older-person readability: very large text and one
+  full-width material card below another.
+- Added a JSON data store with a cautious baseline covering the requested
+  areas. The baseline now favors Polish public-health/patient sources; the
+  remaining English scientific source is visibly labelled and summarized in
+  Polish.
 - Created and validated the shared `mama-health-monitor` skill for Codex and
   Hermes.
 
