@@ -58,12 +58,22 @@ daily clinical relevance.
 ## Research base — expanded 2026-09-03
 
 `data/mama-zdrowie-source-registry.json` is the operational source registry.
-It currently contains 19 research routes: topic-specific, newest-first PubMed
+It currently contains 22 research routes: topic-specific, newest-first PubMed
 searches; Cochrane evidence summaries; JOSPT and NICE guidance; PEDro and TRIP
-discovery databases; Polish patient-facing explainers; and a distinctly
-labelled Dr. Berg YouTube input stream. The registry is a discovery and
-verification queue, not an assertion that every listed source has equal
-evidentiary weight.
+discovery databases; Polish patient-facing explainers; three Polish YouTube
+discovery routes; and a distinctly labelled Dr. Berg YouTube input stream. The
+registry is a discovery and verification queue, not an assertion that every
+listed source has equal evidentiary weight.
+
+## Video and long-source rule — DECIDED 2026-09-03
+
+Polish YouTube is a supplementary discovery stream, particularly for qualified
+physiotherapy/clinical educators. A selected video must have a direct link, an
+accessible transcript or verified viewing, and a timestamp map of relevant
+segments. English videos receive a longer Polish synthesis. Books, papers and
+long reports must name the relevant pages, section, table or figure where the
+source makes that possible; the page must never send Eli to a long work without
+an exact reading target.
 
 ## Next
 

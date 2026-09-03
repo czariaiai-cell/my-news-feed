@@ -106,6 +106,14 @@
       "category": "TCM: „wilgoć i zimno”",
       "title_pl": "Moksoterapia przy przewlekłym bólu krzyża: wyniki wstępne, a pewność dowodów niska",
       "summary": "Przegląd badań z randomizacją sugerował możliwą poprawę bólu i sprawności, ale autorzy ocenili pewność danych jako bardzo niską do niskiej. Pojęcia „wilgoci” i „zimna” pochodzą z tradycyjnego modelu TCM, nie z diagnostyki biomedycznej.",
+      "foreign_source_detail": [
+        "Co badano: autorzy przejrzeli wiele baz naukowych i znaleźli 10 randomizowanych badań z łącznie 987 uczestnikami z przewlekłym bólem krzyża.",
+        "Co porównywano: samą moksę lub moksę dołączoną do innych metod zestawiano m.in. z leczeniem zachodnim, akupunkturą, masażem i treningiem stabilizacji centralnej.",
+        "Co wyszło: w części porównań wyniki bólu i sprawności były korzystniejsze dla moksy; nie wykazano jednak wyraźnej przewagi nad treningiem stabilizacji centralnej.",
+        "Najważniejsze ograniczenie: małe próby i wysokie ryzyko błędu sprawiły, że autorzy ocenili pewność wyników w skali GRADE jako bardzo niską lub niską.",
+        "Co to znaczy po ludzku: badanie daje powód, by temat śledzić, ale nie daje podstaw do twierdzenia, że moksoterapia jest potwierdzonym sposobem leczenia przyczyny bólu krzyża.",
+        "Dlaczego to ważne: wiele artykułów popularnych cytuje dodatnie wyniki, pomijając ocenę jakości. Tutaj ograniczenie jest wprost zapisane przez autorów abstraktu."
+      ],
       "insights": [
         "Przegląd objął 10 badań z randomizacją — to więcej niż pojedyncza historia sukcesu, ale małe badania i ryzyko błędu ograniczają pewność wniosku.",
         "W praktyce oznacza to: możliwy efekt przeciwbólowy jest interesującym tropem, lecz nie ma podstaw, by przedstawiać moksy jako pewne leczenie przyczyny bólu krzyża.",
@@ -131,6 +139,14 @@
       "category": "Akupresura",
       "title_pl": "Akupresura ucha przy przewlekłym bólu: obiecujący sygnał z sześciu badań, ale jeszcze nie pewnik",
       "summary": "Metaanaliza z 2025 r. zebrała sześć badań z randomizacją, obejmujących 496 osób z różnymi przewlekłymi bólami mięśniowo-szkieletowymi. Po zakończeniu interwencji odnotowano poprawę subiektywnego bólu i sprawności względem pozorowanej akupresury, lecz dla części wyników pewność danych była niska.",
+      "foreign_source_detail": [
+        "Co badano: akupresurę małżowiny usznej u osób z różnymi przewlekłymi bólami mięśniowo-szkieletowymi — nie jedną konkretną chorobę.",
+        "Jak badano: przegląd objął sześć RCT i zastosował ocenę ryzyka błędu RoB 2; porównaniem była pozorowana akupresura, a nie tylko brak interwencji.",
+        "Wynik dotyczący bólu: autorzy opisali dużą poprawę subiektywnego bólu bezpośrednio po interwencji, lecz jakość tych danych ocenili jako niską.",
+        "Wynik dotyczący sprawności: odnotowano także poprawę niepełnosprawności związanej z bólem, ale heterogeniczność oznacza, że badania nie były identyczne.",
+        "Bezpieczeństwo: 14 osób zgłosiło łagodne, przejściowe dolegliwości miejscowe; nie jest to dowód braku ryzyka, ale ważna informacja o tym, co raportowano.",
+        "Co z tego wynika: jest to lepsza podstawa niż pojedyncze wideo, ale nadal za mała, by obiecywać trwały efekt albo przenosić wynik na każdy rodzaj bólu."
+      ],
       "insights": [
         "To nie jest badanie pojedynczej historii: autorzy przeszukali sześć baz danych i oceniali ryzyko błędu w badaniach.",
         "Wynik dotyczy akupresury ucha, nie automatycznie ucisku stóp, dłoni ani wszystkich rodzajów bólu.",
@@ -156,6 +172,14 @@
       "category": "Kręgosłup i TCM",
       "title_pl": "Ruch przy przewlekłym bólu krzyża: znaczenie może mieć dawka i regularność, nie tylko rodzaj ćwiczeń",
       "summary": "Nowsza metaanaliza sieciowa porównywała elementy programów ćwiczeń w przewlekłym bólu krzyża. Autorzy wskazali jako obiecujący wzorzec krótsze sesje 15–30 minut, trzy razy w tygodniu i program prowadzony co najmniej 16 tygodni, ale zaznaczyli ograniczenia liczby badań.",
+      "foreign_source_detail": [
+        "Co badano: autorzy nie oceniali jednego programu, lecz porównywali typ ruchu, długość pojedynczej sesji, częstotliwość i czas trwania całego programu.",
+        "Zakres: wyszukiwanie objęło PubMed, EBSCO, Web of Science, Embase i Cochrane do końca czerwca 2024 r., a wyniki połączono metodą metaanalizy sieciowej.",
+        "Sygnał dotyczący dawki: 15–30 minut na sesję, trzy sesje w tygodniu oraz okres co najmniej 16 tygodni uzyskały wysokie pozycje w rankingach tej analizy.",
+        "Sygnał dotyczący typu ruchu: Tai Chi wypadło obiecująco w rankingu, ale ranking nie jest tym samym co bezpośredni dowód wyższości dla każdej osoby.",
+        "Ograniczenie: autorzy piszą o ograniczonej liczbie badań i potrzebie dalszego potwierdzenia; wnioski o „optymalnej recepcie” nie powinny być traktowane jak sztywna reguła.",
+        "Co z tego wynika: artykuł mocno wspiera ideę konsekwentnego, długofalowego ruchu, ale nie daje gotowego uniwersalnego zestawu ćwiczeń dla każdego bólu krzyża."
+      ],
       "insights": [
         "Badanie stawia ciekawe pytanie: zamiast szukać jednego „najlepszego ćwiczenia”, porównuje czas sesji, częstotliwość i długość całego programu.",
         "W analizie trzy sesje tygodniowo i program trwający co najmniej 16 tygodni wypadły lepiej niż krótsza ekspozycja; to argument za cierpliwą regularnością, nie za gwałtownym startem.",
@@ -181,6 +205,14 @@
       "category": "TCM: „wilgoć i zimno”",
       "title_pl": "Kąpiel stóp i masaż punktów w TCM przy neuropatii cukrzycowej: dużo badań, ale słaba jakość ogranicza wnioski",
       "summary": "Przegląd i metaanaliza objęły 31 badań z randomizacją oraz 3284 osoby. Autorzy odnotowali korzystne wyniki dla połączenia kąpieli stóp w TCM i masażu punktów, ale jednocześnie jasno ocenili jakość metodologiczną badań jako niską.",
+      "foreign_source_detail": [
+        "Co badano: połączenie kąpieli stóp w TCM z masażem punktów, a nie samą kąpiel ani sam masaż. To ważne, bo nie można przypisać wyniku jednej części terapii.",
+        "Skala materiału: autorzy przeszukali osiem baz i włączyli 31 RCT z 3284 uczestnikami — liczbowo jest to duży zbiór jak na temat terapii uzupełniającej.",
+        "Jakie wyniki mierzono: przewodnictwo czuciowe i ruchowe nerwów, nasilenie objawów oraz tzw. całkowitą skuteczność stosowaną w części badań TCM.",
+        "Co wyszło: wyniki zbiorcze były korzystniejsze od grup kontrolnych dla kilku miar, ale autorzy nie uznali ich za wystarczająco pewne do mocnego potwierdzenia skuteczności.",
+        "Kluczowe ograniczenie: niska jakość metodologiczna włączonych prób. Wielka liczba uczestników nie usuwa problemu, jeśli badania mają słabe procedury albo niepełne raportowanie.",
+        "Co z tego wynika: warto śledzić temat jako ciekawy sygnał z TCM, ale uczciwy opis brzmi „potencjalnie obiecujący, wymagający lepszych badań”, a nie „udowodnione leczenie neuropatii”."
+      ],
       "insights": [
         "Liczba 31 badań może robić wrażenie, ale sama liczba publikacji nie wystarcza — równie ważna jest jakość losowania, zaślepienia i raportowania wyników.",
         "W tym przeglądzie badano połączenie kąpieli i masażu punktów, więc nie da się przypisać ewentualnego efektu jednej konkretnej części rytuału.",

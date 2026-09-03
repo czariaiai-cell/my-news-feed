@@ -22,6 +22,9 @@
 - Expanded the public baseline from five to eight substantive entries. Every
   card now contains at least six concrete insights and three focused research
   prompts, so it reads as a compact research note rather than a teaser.
+- Added a video/long-source protocol: selected Polish YouTube material needs a
+  direct link and exact timestamp map; English sources need longer Polish
+  syntheses; long texts must identify relevant pages/sections.
 - Created and validated the shared `mama-health-monitor` skill for Codex and
   Hermes.
 
