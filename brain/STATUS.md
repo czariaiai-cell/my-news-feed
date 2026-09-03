@@ -1,7 +1,8 @@
 # Geopiguła Brain Status
 
 ## Active Focus
-- Brain restructure complete. Daily news cycle running normally via OpenClaw.
+- Daily news cycle continues via OpenClaw. MieszkaniePolska is now a second,
+  published dashboard module with active maintenance.
 
 ## System Health — 2026-08-03
 | Component | Status | Notes |
@@ -21,11 +22,24 @@
 - **[2026-08-03]** All schema, skill, and index files written in English. Daily journal reports (`journal/YYYY-MM-DD.md`) remain in Polish as they are user-facing content.
 - **[2026-08-03]** Symlinked into Master Brain Obsidian vault at `~/MojAgentAI/brain/projects/Pigulla News/brain` for unified cross-project view.
 
+## Current State — 2026-09-03
+- **MieszkaniePolska dashboard:** ✅ published from `main` on GitHub Pages;
+  purchase and rental views load from `data/mieszkania.json` and render before
+  remote comments finish loading.
+- **Data freshness:** ✅ dashboard data exporter uses active-only `new today`
+  counts and bypasses stale browser snapshot caching.
+- **Per-listing comments:** ✅ Google Sheets-backed comments and optional
+  browser dictation are live; local-browser fallback is enabled.
+- **CSV comment mirror:** ⏸️ intentionally blocked until two malformed legacy
+  purchase rows are repaired; the sync tool fails safely rather than dropping
+  data.
+- **Access control:** ⚠️ a remembered client-side password gate is live but is
+  not real confidentiality on public GitHub Pages.
+
 ## Backlog / Tech Debt
-- `wiki/` is empty (only `index.md`). Populate as geopolitical topics accumulate across daily cycles.
-- **Deployment and credential follow-up (2026-09-03):** the Mieszkania Polska
-  dashboard is implemented locally but has not been committed or pushed. Before
-  publishing, confirm the GitHub Pages/deployment configuration, then commit
-  and push the reviewed files. The local `origin` URL contains an embedded
-  GitHub access token; revoke/rotate it and replace the remote with a
-  credential-free URL before any future push.
+- Repair the two malformed legacy purchase CSV rows, then run the comment
+  schema migration and synchronizer.
+- Rotate the GitHub token embedded in the local `origin` URL and replace it
+  with a credential-free remote URL.
+- When confidentiality is required, move the site and data behind real
+  authenticated hosting; do not treat the client-side gate as protection.
