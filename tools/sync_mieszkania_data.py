@@ -64,13 +64,13 @@ def main():
         'summary': {
             'purchase': {
                 'total': len(purchase), 'active': len(purchase_active),
-                'new_today': len(newest(purchase)),
+                'new_today': len(newest(purchase_active)),
                 'median_price_pln': median(purchase_prices),
                 'top_candidate_id': ranked[0]['listing_id'] if ranked else None,
             },
             'rental': {
                 'total': len(rental), 'active': len(rental_active),
-                'new_today': len(newest(rental)),
+                'new_today': len(newest(rental_active)),
                 'median_owner_rent_per_m2_pln': median(rental_rates),
             },
         },
