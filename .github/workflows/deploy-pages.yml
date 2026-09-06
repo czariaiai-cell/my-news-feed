@@ -1,0 +1,61 @@
+name: Deploy InfoPiguła to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+      - '*.js'
+      - '*.css'
+      - 'data/**'
+      - 'assets/**'
+      - '.nojekyll'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+
+      - name: Verify production apartment data is present
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s data/mieszkania.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('data/mieszkania.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert isinstance(d, dict)
+          assert isinstance(d.get('purchase'), list) and d['purchase']
+          assert isinstance(d.get('rental'), list) and d['rental']
+          print(f"Pages payload OK: purchase={len(d['purchase'])}; rental={len(d['rental'])}; generated_at={d.get('generated_at')}")
+          PY
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload entire site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
