@@ -7,6 +7,7 @@ const fmt = new Intl.NumberFormat('pl-PL');
 const mode = document.body.dataset.mode;
 const isPurchase = mode === 'purchase';
 const dataPath = 'data/mieszkania.json';
+const dataFallbackPath = 'https://raw.githubusercontent.com/czariaiai-cell/my-news-feed/main/data/mieszkania.json';
 const feedbackEndpoint = 'https://script.google.com/macros/s/AKfycbxDCHUE8sx7QxCZe7c4LKZZ6f7RRykXUvLleGtwkyTGc-j5Ab9oOpuMDbpg1JDXGBemhg/exec';
 const notePrefix = '[MIESZKANIA]';
 let remoteNotes = {};
@@ -108,4 +109,22 @@ function dictate(listingId,button) {
 async function loadRemoteNotes() {
   try { const response=await fetch(`${feedbackEndpoint}?cb=mieszkania-dashboard`); if(!response.ok) return; const rows=await response.json(); const latest={}; rows.filter(row=>String(row.newsTitle||'').startsWith(notePrefix)).forEach(row=>{ const match=String(row.newsTitle).match(/^\[MIESZKANIA\]\[(purchase|rental)\]\[(.+)\]$/); if(match && match[1]===mode && (!latest[match[2]] || String(row.timestamp)>String(latest[match[2]].timestamp))) latest[match[2]]=row; }); remoteNotes=Object.fromEntries(Object.entries(latest).map(([id,row])=>[id,row.comment||''])); } catch {}
 }
-fetch(`${dataPath}?snapshot=${Date.now()}`, {cache:'no-store'}).then(r => { if (!r.ok) throw Error(); return r.json(); }).then(payload => { data=payload; document.getElementById('snapshot-date').textContent=`Snapshot bazy: ${data.generated_at}`; setSummary(isPurchase ? data.purchase : data.rental, data.summary[mode]); render(); const status=document.getElementById('status'); if(![...status.options].some(option=>option.value==='new')) { const option=document.createElement('option'); option.value='new'; option.textContent='Tylko nowe dziś'; status.insertBefore(option,status.querySelector('option[value="all"]')); } ['search','status','sort'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render)); loadRemoteNotes().then(() => render()); }).catch(()=>{document.getElementById('status-message').textContent='Brak pliku danych. Uruchom tools/sync_mieszkania_data.py.';});
+
+async function loadData() {
+  const candidates = [dataPath, dataFallbackPath];
+  let lastError;
+  for (const path of candidates) {
+    try {
+      const response = await fetch(`${path}?snapshot=${Date.now()}`, {cache:'no-store'});
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const payload = await response.json();
+      if (!payload || !Array.isArray(payload.purchase) || !Array.isArray(payload.rental)) throw new Error('Nieprawidłowy format danych');
+      return payload;
+    } catch (error) {
+      lastError = error;
+    }
+  }
+  throw lastError || new Error('Nie udało się pobrać danych');
+}
+
+loadData().then(payload => { data=payload; document.getElementById('snapshot-date').textContent=`Snapshot bazy: ${data.generated_at}`; setSummary(isPurchase ? data.purchase : data.rental, data.summary[mode]); render(); const status=document.getElementById('status'); if(![...status.options].some(option=>option.value==='new')) { const option=document.createElement('option'); option.value='new'; option.textContent='Tylko nowe dziś'; status.insertBefore(option,status.querySelector('option[value="all"]')); } ['search','status','sort'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render)); loadRemoteNotes().then(() => render()); }).catch(()=>{document.getElementById('status-message').textContent='Nie udało się pobrać pliku danych z serwisu ani z bezpiecznego źródła GitHub.';});
