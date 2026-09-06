@@ -24,15 +24,34 @@ jobs:
           mkdir -p data/.push_work
           base64 -d data/.push_transfer/mieszkania.json.gz.b64 > data/.push_work/mieszkania.json.gz
           gzip -dc data/.push_work/mieszkania.json.gz > data/mieszkania.json
+
           python - <<'PY'
           import json
+          from datetime import datetime
           from pathlib import Path
+
           p = Path('data/mieszkania.json')
           d = json.loads(p.read_text(encoding='utf-8'))
-          assert isinstance(d.get('purchase'), list) and len(d['purchase']) == 14
-          assert isinstance(d.get('rental'), list) and len(d['rental']) == 39
-          assert p.stat().st_size == 78519
-          print('VALID:', p.stat().st_size, 'bytes; purchase=14; rental=39')
+
+          assert isinstance(d, dict), 'JSON root must be an object'
+          assert isinstance(d.get('purchase'), list), 'purchase must be a list'
+          assert isinstance(d.get('rental'), list), 'rental must be a list'
+          assert d['purchase'], 'purchase must not be empty'
+          assert d['rental'], 'rental must not be empty'
+          assert d.get('generated_at'), 'generated_at is required'
+          datetime.fromisoformat(str(d['generated_at']).replace('Z', '+00:00'))
+
+          for market in ('purchase', 'rental'):
+              rows = d[market]
+              ids = []
+              for row in rows:
+                  assert isinstance(row, dict), f'{market} row must be an object'
+                  listing_id = row.get('listing_id')
+                  assert listing_id not in (None, ''), f'{market} row missing listing_id'
+                  ids.append(str(listing_id))
+              assert len(ids) == len(set(ids)), f'{market} contains duplicate listing_id values'
+
+          print(f"VALID: {p.stat().st_size} bytes; purchase={len(d['purchase'])}; rental={len(d['rental'])}")
           PY
 
       - name: Commit production JSON
