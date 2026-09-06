@@ -1,0 +1,51 @@
+name: Materialize Mieszkania JSON
+
+on:
+  push:
+    paths:
+      - 'data/.push_transfer/**'
+      - 'data/.push_chunks/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Materialize JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data/.push_work
+          base64 -d data/.push_transfer/mieszkania.json.gz.b64 > data/.push_work/mieszkania.json.gz
+          gzip -dc data/.push_work/mieszkania.json.gz > data/mieszkania.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('data/mieszkania.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert isinstance(d.get('purchase'), list) and len(d['purchase']) == 14
+          assert isinstance(d.get('rental'), list) and len(d['rental']) == 39
+          assert p.stat().st_size == 78519
+          print('VALID:', p.stat().st_size, 'bytes; purchase=14; rental=39')
+          PY
+
+      - name: Commit production JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf data/.push_transfer data/.push_chunks data/.push_work
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Update Mieszkania Polska rental and purchase data'
+          git push
