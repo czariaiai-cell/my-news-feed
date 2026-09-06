@@ -1,0 +1,100 @@
+name: Normalize Listing Links
+
+on:
+  push:
+    paths:
+      - 'mieszkania-live.js'
+      - 'data/mieszkania.json'
+      - '.github/workflows/normalize-listing-links.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add structured link fallback fields
+        shell: python
+        run: |
+          import json
+          import re
+          from pathlib import Path
+          from urllib.parse import quote
+
+          p = Path('data/mieszkania.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+
+          def portal(url):
+              u = str(url or '').lower()
+              for name, domain in [
+                  ('OLX','olx.pl'), ('Otodom','otodom.pl'), ('Morizon','morizon.pl'),
+                  ('Gratka','gratka.pl'), ('Adresowo','adresowo.pl'),
+                  ('Nieruchomosci-online','nieruchomosci-online.pl'),
+                  ('Domiporta','domiporta.pl'), ('GetHome','gethome.pl')]:
+                  if domain in u: return name
+              return 'portal'
+
+          def search_url(row):
+              if row.get('search_url'): return row['search_url']
+              title = str(row.get('title') or '').strip()
+              address = str(row.get('address') or row.get('address_or_area') or '').strip()
+              area = str(row.get('area_m2') or '').strip()
+              price = str(row.get('asking_price_pln') or row.get('owner_rent_pln') or '').strip()
+              q = ' '.join(x for x in [title, address, area, price] if x)
+              u = str(row.get('url') or '').lower()
+              if 'olx.pl' in u:
+                  slug = re.sub(r'\s+', '-', q.lower())
+                  return 'https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-' + quote(slug, safe='-') + '/'
+              return ''
+
+          for market in ('purchase','rental'):
+              for row in d.get(market, []):
+                  row['primary_url'] = row.get('url') or ''
+                  row['alternative_urls'] = row.get('alternative_urls') if isinstance(row.get('alternative_urls'), list) else []
+                  row['search_query'] = ' '.join(str(x).strip() for x in [row.get('title'), row.get('address') or row.get('address_or_area'), row.get('area_m2'), row.get('asking_price_pln') or row.get('owner_rent_pln')] if x and str(x).strip())
+                  row['search_url'] = search_url(row)
+                  s = str(row.get('verification_status') or '').lower()
+                  if 'direct verified' in s or 'verified_on_listing_page' in s:
+                      row['link_status'] = 'direct_verified'
+                  elif row['alternative_urls']:
+                      row['link_status'] = 'alternative_verified'
+                  elif row['search_url']:
+                      row['link_status'] = 'search_fallback'
+                  else:
+                      row['link_status'] = 'unverified'
+                  row['link_portal'] = portal(row.get('url'))
+
+          assert d.get('purchase') and d.get('rental')
+          assert all(r.get('listing_id') for m in ('purchase','rental') for r in d[m])
+          p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print('Normalized link fields:', len(d['purchase']), 'purchase;', len(d['rental']), 'rental')
+
+      - name: Validate and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/mieszkania.json').read_text(encoding='utf-8'))
+          assert d.get('generated_at')
+          assert isinstance(d.get('purchase'),list) and d['purchase']
+          assert isinstance(d.get('rental'),list) and d['rental']
+          for market in ('purchase','rental'):
+              ids=[r['listing_id'] for r in d[market]]
+              assert len(ids)==len(set(ids))
+              for r in d[market]:
+                  assert 'primary_url' in r and 'alternative_urls' in r and 'search_query' in r and 'search_url' in r and 'link_status' in r
+          print('VALID link structure:', len(d['purchase']), len(d['rental']))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/mieszkania.json
+          if git diff --cached --quiet; then echo 'No data changes.'; exit 0; fi
+          git commit -m 'Add structured listing link fallbacks'
+          git push
