@@ -1,0 +1,96 @@
+name: Repair Purchase Snapshot 2026-09-06
+
+on:
+  push:
+    paths:
+      - 'data/.purchase_repair/2026-09-06.json'
+      - '.github/workflows/repair-purchase-2026-09-06.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Merge verified purchase candidates into current production snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from datetime import date
+          from pathlib import Path
+
+          p = Path('data/mieszkania.json')
+          patch = Path('data/.purchase_repair/2026-09-06.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          q = json.loads(patch.read_text(encoding='utf-8'))
+
+          assert isinstance(d, dict)
+          assert isinstance(d.get('purchase'), list) and d['purchase']
+          assert isinstance(d.get('rental'), list) and d['rental']
+          assert q.get('date') == '2026-09-06'
+          assert isinstance(q.get('records'), list) and q['records']
+
+          existing = {str(x['listing_id']): x for x in d['purchase']}
+          before = len(existing)
+          added = 0
+          for row in q['records']:
+              lid = str(row.get('listing_id', ''))
+              assert lid, 'repair record missing listing_id'
+              if lid not in existing:
+                  existing[lid] = row
+                  added += 1
+              else:
+                  raise AssertionError(f'repair candidate already exists: {lid}')
+
+          d['purchase'] = list(existing.values())
+          d['generated_at'] = '2026-09-06'
+
+          # Safety: rental must be untouched by this purchase repair.
+          assert len(d['rental']) > 0
+          ids = [str(x.get('listing_id', '')) for x in d['purchase']]
+          assert all(ids) and len(ids) == len(set(ids)), 'duplicate/missing purchase listing_id'
+          rental_ids = [str(x.get('listing_id', '')) for x in d['rental']]
+          assert all(rental_ids) and len(rental_ids) == len(set(rental_ids)), 'duplicate/missing rental listing_id'
+
+          p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f'REPAIRED purchase: {before} -> {len(d["purchase"])} (+{added}); rental preserved={len(d["rental"])}')
+          assert added == len(q['records']), 'not all repair candidates were added'
+          PY
+
+      - name: Validate production JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('data/mieszkania.json').read_text(encoding='utf-8'))
+          assert d['purchase'] and d['rental']
+          assert d['generated_at'] == '2026-09-06'
+          for market in ('purchase','rental'):
+              ids=[str(x['listing_id']) for x in d[market]]
+              assert len(ids)==len(set(ids))
+          wanted={'OLX_1095558481','OLX_1072017469'}
+          got={str(x['listing_id']) for x in d['purchase']}
+          assert wanted <= got
+          print(f'VALID production JSON: purchase={len(d["purchase"])} rental={len(d["rental"])}')
+          PY
+
+      - name: Commit repaired production JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf data/.purchase_repair
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/mieszkania.json data/.purchase_repair || true
+          git add -A
+          git commit -m 'Repair purchase snapshot with verified new listings'
+          git push
