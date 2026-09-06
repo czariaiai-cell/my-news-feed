@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/.push_transfer/**'
       - 'data/.push_chunks/**'
+      - '.github/workflows/materialize-mieszkania.yml'
   workflow_dispatch:
 
 permissions:
@@ -22,6 +23,12 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p data/.push_work
+
+          # Keep the last production snapshot as the safety baseline.
+          if [ -f data/mieszkania.json ]; then
+            cp data/mieszkania.json data/.push_work/previous_mieszkania.json
+          fi
+
           base64 -d data/.push_transfer/mieszkania.json.gz.b64 > data/.push_work/mieszkania.json.gz
           gzip -dc data/.push_work/mieszkania.json.gz > data/mieszkania.json
 
@@ -32,6 +39,8 @@ jobs:
 
           p = Path('data/mieszkania.json')
           d = json.loads(p.read_text(encoding='utf-8'))
+          old_path = Path('data/.push_work/previous_mieszkania.json')
+          old = json.loads(old_path.read_text(encoding='utf-8')) if old_path.exists() else None
 
           assert isinstance(d, dict), 'JSON root must be an object'
           assert isinstance(d.get('purchase'), list), 'purchase must be a list'
@@ -50,6 +59,44 @@ jobs:
                   assert listing_id not in (None, ''), f'{market} row missing listing_id'
                   ids.append(str(listing_id))
               assert len(ids) == len(set(ids)), f'{market} contains duplicate listing_id values'
+
+          # Two cron jobs share one production JSON. A job may update its own
+          # market, but it must never erase or silently replace the other market.
+          if old is not None:
+              assert isinstance(old.get('purchase'), list) and old['purchase'], 'previous purchase baseline is invalid'
+              assert isinstance(old.get('rental'), list) and old['rental'], 'previous rental baseline is invalid'
+
+              old_purchase = json.dumps(old['purchase'], ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+              new_purchase = json.dumps(d['purchase'], ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+              old_rental = json.dumps(old['rental'], ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+              new_rental = json.dumps(d['rental'], ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+
+              purchase_changed = old_purchase != new_purchase
+              rental_changed = old_rental != new_rental
+
+              assert purchase_changed or rental_changed, 'incoming snapshot contains no market changes'
+
+              # If rental changed, purchase must be preserved exactly.
+              # If purchase changed, rental must be preserved exactly.
+              if rental_changed:
+                  assert new_purchase == old_purchase, 'SAFETY STOP: rental update changed purchase data'
+              if purchase_changed:
+                  assert new_rental == old_rental, 'SAFETY STOP: purchase update changed rental data'
+
+              old_rental_count = len(old['rental'])
+              new_rental_count = len(d['rental'])
+              if old_rental_count:
+                  drop = (old_rental_count - new_rental_count) / old_rental_count
+                  if drop > 0.50:
+                      raise AssertionError(
+                          f'SAFETY STOP: rental count dropped from {old_rental_count} to {new_rental_count} '
+                          f'({drop:.0%} drop)'
+                      )
+                  if drop > 0.20:
+                      print(
+                          f'WARNING: rental count dropped from {old_rental_count} to {new_rental_count} '
+                          f'({drop:.0%} drop) — review recommended'
+                      )
 
           print(f"VALID: {p.stat().st_size} bytes; purchase={len(d['purchase'])}; rental={len(d['rental'])}")
           PY
