@@ -1,0 +1,55 @@
+name: Materialize Mieszkania JSON 2026-09-09
+
+on:
+  push:
+    paths:
+      - 'data/.push_transfer/**'
+      - '.github/workflows/materialize-once-2026-09-09.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Materialize and validate shared transfer
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data/.push_work
+          cp data/mieszkania.json data/.push_work/previous_mieszkania.json
+          base64 -d data/.push_transfer/mieszkania.json.gz.b64 > data/.push_work/mieszkania.json.gz
+          gzip -dc data/.push_work/mieszkania.json.gz > data/mieszkania.json
+          python - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          p=Path('data/mieszkania.json')
+          old=json.loads(Path('data/.push_work/previous_mieszkania.json').read_text(encoding='utf-8'))
+          d=json.loads(p.read_text(encoding='utf-8'))
+          assert d.get('generated_at') == '2026-09-09'
+          assert d.get('purchase') and d.get('rental')
+          assert len(d['purchase']) == len(old['purchase']) + 2
+          assert d['rental'] == old['rental']
+          for market in ('purchase','rental'):
+              ids=[str(x.get('listing_id')) for x in d[market]]
+              assert all(ids) and len(ids)==len(set(ids))
+          wanted={'OLX_1088523237','OLX_1091803060'}
+          got={str(x['listing_id']) for x in d['purchase']}
+          assert wanted <= got
+          datetime.fromisoformat(d['generated_at'])
+          print(f'VALID production payload: purchase={len(d["purchase"])} rental={len(d["rental"])}')
+          PY
+      - name: Commit production JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf data/.push_transfer data/.push_work
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Materialize verified 2026-09-09 purchase snapshot'
+          git push
