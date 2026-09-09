@@ -1,0 +1,85 @@
+name: Repair Purchase Snapshot 2026-09-09
+
+on:
+  push:
+    paths:
+      - 'data/.purchase_repair/2026-09-09.json'
+      - '.github/workflows/repair-purchase-2026-09-09.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Merge verified purchase candidates and prepare shared materialization transfer
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import base64, gzip, json
+          from pathlib import Path
+
+          p = Path('data/mieszkania.json')
+          patch = Path('data/.purchase_repair/2026-09-09.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          q = json.loads(patch.read_text(encoding='utf-8'))
+
+          assert isinstance(d, dict)
+          assert isinstance(d.get('purchase'), list) and d['purchase']
+          assert isinstance(d.get('rental'), list) and d['rental']
+          assert q.get('date') == '2026-09-09'
+          assert isinstance(q.get('records'), list) and q['records']
+
+          existing = {str(x['listing_id']): x for x in d['purchase']}
+          rental_before = json.dumps(d['rental'], ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+          added = 0
+          for row in q['records']:
+              lid = str(row.get('listing_id', ''))
+              assert lid, 'repair record missing listing_id'
+              assert lid not in existing, f'purchase candidate already exists: {lid}'
+              existing[lid] = row
+              added += 1
+
+          d['purchase'] = list(existing.values())
+          d['generated_at'] = '2026-09-09'
+
+          ids = [str(x.get('listing_id', '')) for x in d['purchase']]
+          rental_ids = [str(x.get('listing_id', '')) for x in d['rental']]
+          assert all(ids) and len(ids) == len(set(ids)), 'duplicate/missing purchase listing_id'
+          assert all(rental_ids) and len(rental_ids) == len(set(rental_ids)), 'duplicate/missing rental listing_id'
+          assert json.dumps(d['rental'], ensure_ascii=False, sort_keys=True, separators=(',', ':')) == rental_before, 'rental changed'
+
+          payload = json.dumps(d, ensure_ascii=False, indent=2) + '\n'
+          transfer = Path('data/.push_transfer')
+          transfer.mkdir(parents=True, exist_ok=True)
+          encoded = base64.b64encode(gzip.compress(payload.encode('utf-8'), mtime=0)).decode('ascii')
+          (transfer / 'mieszkania.json.gz.b64').write_text(encoded + '\n', encoding='ascii')
+
+          check = json.loads(gzip.decompress(base64.b64decode(encoded)).decode('utf-8'))
+          assert check['generated_at'] == '2026-09-09'
+          assert check['purchase'] and check['rental']
+          assert len(check['purchase']) == len(d['purchase'])
+          assert len(check['rental']) == len(d['rental'])
+          wanted = {str(x['listing_id']) for x in q['records']}
+          got = {str(x['listing_id']) for x in check['purchase']}
+          assert wanted <= got
+          print(f'VALID TRANSFER: purchase={len(check["purchase"])} rental={len(check["rental"])} added={added}')
+          PY
+
+      - name: Commit transfer for shared Materialize Mieszkania JSON workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf data/.purchase_repair
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/.push_transfer
+          git add -A
+          git commit -m 'Prepare 2026-09-09 verified purchase snapshot'
+          git push
