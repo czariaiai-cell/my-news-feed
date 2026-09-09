@@ -76,8 +76,6 @@ jobs:
 
               assert purchase_changed or rental_changed, 'incoming snapshot contains no market changes'
 
-              # If rental changed, purchase must be preserved exactly.
-              # If purchase changed, rental must be preserved exactly.
               if rental_changed:
                   assert new_purchase == old_purchase, 'SAFETY STOP: rental update changed purchase data'
               if purchase_changed:
@@ -115,3 +113,5 @@ jobs:
           fi
           git commit -m 'Update Mieszkania Polska rental and purchase data'
           git push
+
+# Triggered intentionally after a validated purchase transfer is prepared.
