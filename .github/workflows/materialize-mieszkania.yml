@@ -23,42 +23,46 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p data/.push_work
-
           if [ -f data/mieszkania.json ]; then
             cp data/mieszkania.json data/.push_work/previous_mieszkania.json
           fi
 
-          if [ -f data/.push_transfer/purchase_patch.json ]; then
-            python - <<'PY'
-            import json
-            from datetime import date
-            from pathlib import Path
+          python - <<'PY'
+          import json
+          import subprocess
+          from datetime import date
+          from pathlib import Path
 
-            p = Path('data/mieszkania.json')
-            patch_path = Path('data/.push_transfer/purchase_patch.json')
-            old_path = Path('data/.push_work/previous_mieszkania.json')
-            assert old_path.exists(), 'purchase patch requires an existing production baseline'
-            d = json.loads(old_path.read_text(encoding='utf-8'))
-            patch = json.loads(patch_path.read_text(encoding='utf-8'))
-            assert isinstance(patch, list) and patch, 'purchase_patch must be a non-empty list'
-            assert isinstance(d.get('purchase'), list) and d['purchase'], 'previous purchase baseline is invalid'
-            assert isinstance(d.get('rental'), list) and d['rental'], 'previous rental baseline is invalid'
+          p = Path('data/mieszkania.json')
+          old_path = Path('data/.push_work/previous_mieszkania.json')
+          patch_path = Path('data/.push_transfer/purchase_patch.json')
+          transfer_path = Path('data/.push_transfer/mieszkania.json.gz.b64')
 
-            by_id = {str(r['listing_id']): r for r in d['purchase']}
-            for row in patch:
-                assert isinstance(row, dict), 'patch row must be an object'
-                lid = str(row.get('listing_id', ''))
-                assert lid, 'patch row missing listing_id'
-                by_id[lid] = row
-
-            d['purchase'] = list(by_id.values())
-            d['generated_at'] = str(date.today())
-            p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-            PY
-          else
-            base64 -d data/.push_transfer/mieszkania.json.gz.b64 > data/.push_work/mieszkania.json.gz
-            gzip -dc data/.push_work/mieszkania.json.gz > data/mieszkania.json
-          fi
+          if patch_path.exists():
+              assert old_path.exists(), 'purchase patch requires an existing production baseline'
+              d = json.loads(old_path.read_text(encoding='utf-8'))
+              patch = json.loads(patch_path.read_text(encoding='utf-8'))
+              assert isinstance(patch, list) and patch, 'purchase_patch must be a non-empty list'
+              assert isinstance(d.get('purchase'), list) and d['purchase'], 'previous purchase baseline is invalid'
+              assert isinstance(d.get('rental'), list) and d['rental'], 'previous rental baseline is invalid'
+              by_id = {str(r['listing_id']): r for r in d['purchase']}
+              for row in patch:
+                  assert isinstance(row, dict), 'patch row must be an object'
+                  lid = str(row.get('listing_id', ''))
+                  assert lid, 'patch row missing listing_id'
+                  by_id[lid] = row
+              d['purchase'] = list(by_id.values())
+              d['generated_at'] = str(date.today())
+              p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          else:
+              assert transfer_path.exists(), 'no purchase patch or full transfer found'
+              gz = Path('data/.push_work/mieszkania.json.gz')
+              raw = Path('data/.push_work/incoming_mieszkania.json')
+              import base64, gzip
+              gz.write_bytes(base64.b64decode(transfer_path.read_bytes()))
+              raw.write_bytes(gzip.decompress(gz.read_bytes()))
+              p.write_bytes(raw.read_bytes())
+          PY
 
           python - <<'PY'
           import json
@@ -92,8 +96,7 @@ jobs:
               assert isinstance(old.get('rental'), list) and old['rental'], 'previous rental baseline is invalid'
               old_rental = json.dumps(old['rental'], ensure_ascii=False, sort_keys=True, separators=(',', ':'))
               new_rental = json.dumps(d['rental'], ensure_ascii=False, sort_keys=True, separators=(',', ':'))
-              if old_rental != new_rental:
-                  raise AssertionError('SAFETY STOP: purchase update changed rental data')
+              assert new_rental == old_rental, 'SAFETY STOP: purchase update changed rental data'
 
           print(f"VALID: {p.stat().st_size} bytes; purchase={len(d['purchase'])}; rental={len(d['rental'])}")
           PY
