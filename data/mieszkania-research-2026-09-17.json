@@ -16,7 +16,8 @@
       "risk": "brak czynszu i ogrzewania; jedna łazienka może ograniczać 8 osób; cena wymaga uwzględnienia całego portfela",
       "url": "https://www.morizon.pl/oferta/sprzedaz-mieszkanie-sosnowiec-pogon-58m2-mzn2047929195",
       "status": "bezpośrednia strona i opis otwarte; dostępność do potwierdzenia telefonicznie",
-      "fit": "mocny układ — sprawdzić koszty"
+      "fit": "mocny układ — sprawdzić koszty",
+      "visual_review": "Obejrzane 2 zdjęcia dostępne w pobranym HTML: blok i jasny pokój z balkonem, starsze lecz zadbane wykończenie. Pozostałych pokoi, kuchni i łazienki nie oceniono ze zdjęć."
     },
     {
       "id": "gratka-DOM670357",
@@ -32,7 +33,8 @@
       "risk": "ogrzewanie podłogowe elektryczne i bojler; koszty eksploatacji oraz metraż wymagają dokumentów; parter kamienicy",
       "url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-mikulczyce-poleglych-gornikow/ob/48839583",
       "status": "bezpośrednia strona i opis otwarte; dostępność do potwierdzenia telefonicznie",
-      "fit": "kandydat warunkowy"
+      "fit": "kandydat warunkowy",
+      "visual_review": "Obejrzane 2 zdjęcia: jasna, świeżo urządzona przestrzeń kuchenna z sofą. Zdjęcia nie potwierdzają deklaracji osobnej kuchni; trzeba wyjaśnić układ i liczbę niezależnych pokoi."
     },
     {
       "id": "gratka-48798877",
@@ -48,7 +50,8 @@
       "risk": "pełny koszt remontu może przekroczyć założenia; niski czynsz może pomijać istotne opłaty",
       "url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-zaborze-emilii-plater/ob/48798877",
       "status": "bezpośrednia strona i opis otwarte; dostępność do potwierdzenia telefonicznie",
-      "fit": "do sprawdzenia z ekipą i kosztorysem"
+      "fit": "do sprawdzenia z ekipą i kosztorysem",
+      "visual_review": "Dwa dostępne obrazy są oznaczone WIZUALIZACJA. Nie dokumentują obecnego stanu mieszkania ani skali remontu; zażądać zdjęć rzeczywistych i kosztorysu ekipy."
     },
     {
       "id": "gratka-48850643",
@@ -64,7 +67,8 @@
       "risk": "wysoki czynsz, 4/4 piętro bez podanej windy, piecyk gazowy do ciepłej wody",
       "url": "https://gratka.pl/nieruchomosci/mieszkanie-sosnowiec-konstytucji/ob/48850643",
       "status": "bezpośrednia strona i opis otwarte; dostępność do potwierdzenia telefonicznie",
-      "fit": "kandydat warunkowy; wymaga negocjacji"
+      "fit": "kandydat warunkowy; wymaga negocjacji",
+      "visual_review": "Jedno z 2 obejrzanych zdjęć wygląda na wizualizację salonu, drugie pokazuje starszy umeblowany pokój. Weryfikować stan na fotografiach bez obróbki i podczas oględzin."
     },
     {
       "id": "gratka-ZG721440",
@@ -80,7 +84,8 @@
       "risk": "4/4 piętro, brak czynszu; odległość od uczelni i czas wynajmu nieznane",
       "url": "https://gratka.pl/nieruchomosci/mieszkanie-bedzinski-bedzin/ob/45851421",
       "status": "bezpośrednia strona i opis otwarte; dostępność do potwierdzenia telefonicznie",
-      "fit": "alternatywa lokalizacyjna"
+      "fit": "alternatywa lokalizacyjna",
+      "visual_review": "Obejrzane 2 zdjęcia tego samego małego pokoju: starsza okładzina ścienna, łóżko pojedyncze, okna i balkon. Lokal wygląda na możliwy do liftingu, ale brak zdjęć kuchni, łazienki i pozostałych pokoi."
     }
   ]
 }

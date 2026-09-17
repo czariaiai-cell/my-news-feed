@@ -24,6 +24,7 @@ function screeningScore(row) {
   else if (fee >= 900) score -= 14;
   if (row.rooms >= 4) score += 8;
   if (row.condition.includes('do remontu')) score -= 8;
+  if (row.visual_review?.includes('WIZUALIZACJA')) score -= 12;
   return score;
 }
 
@@ -40,7 +41,7 @@ async function loadResearch() {
       <h3>${researchEscape(row.city)} · ${researchEscape(row.district)}</h3>
       <div class="price">${new Intl.NumberFormat('pl-PL').format(row.price)} zł</div><div class="address">Po tej cenie zostaje ${new Intl.NumberFormat('pl-PL').format(800000 - row.price)} zł na dwa pozostałe zakupy oraz koszty</div>
       <div class="facts"><div><b>Metraż</b><br>${researchEscape(row.area)}</div><div><b>Pokoje</b><br>${researchEscape(row.rooms)}</div><div><b>Cena/m²</b><br>${Math.round(row.price / parseFloat(row.area.replace(',', '.'))).toLocaleString('pl-PL')} zł</div><div><b>Czynsz</b><br>${researchEscape(row.fee)}</div><div><b>Stan</b><br>${researchEscape(row.condition)}</div><div><b>Układ</b><br>${researchEscape(row.layout)}</div></div>
-      <div class="note"><b>Najem:</b> ${researchEscape(row.demand)}<br><b>Do sprawdzenia:</b> ${researchEscape(row.risk)}</div>
+      <div class="note"><b>Zdjęcia:</b> ${researchEscape(row.visual_review)}<br><b>Najem:</b> ${researchEscape(row.demand)}<br><b>Do sprawdzenia:</b> ${researchEscape(row.risk)}</div>
       <a class="listing" href="${researchEscape(row.url)}" target="_blank" rel="noopener noreferrer">Otwórz bezpośrednie ogłoszenie ↗</a>
     </article>`).join('');
     document.getElementById('research-status').textContent = `Sprawdzono treść stron ${data.checked_at}. Dostępność i cena wymagają potwierdzenia u sprzedawcy przed oględzinami.`;
