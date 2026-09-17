@@ -3,7 +3,7 @@ const gate=document.createElement('script'); gate.src='access-gate.js'; document
 const mode=document.body.dataset.mode;
 const isPurchase=mode==='purchase';
 const DATA_URL='https://raw.githubusercontent.com/czariaiai-cell/my-news-feed/main/data/mieszkania.json';
-const TODAY='2026-09-06';
+const TODAY=new Date().toLocaleDateString('sv-SE',{timeZone:'Europe/Warsaw'});
 const fmt=new Intl.NumberFormat('pl-PL');
 const val=v=>(v===undefined||v===null||v===''||v==='unknown')?'—':String(v);
 const money=v=>val(v)==='—'?'—':`${fmt.format(Number(v))} zł`;
