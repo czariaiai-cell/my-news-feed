@@ -41,7 +41,13 @@
       "investment_fit": "bardzo dobry / wymaga remontu",
       "ranking_score": "88",
       "rank_position": "1",
-      "notes": "verified_on_listing_page; bardzo niska cena/m², 3 pokoje, CO miejskie, blisko ŚUM; pełny remont obniża wynik względem papierowego ROI"
+      "notes": "verified_on_listing_page; bardzo niska cena/m², 3 pokoje, CO miejskie, blisko ŚUM; pełny remont obniża wynik względem papierowego ROI",
+      "primary_url": "https://www.olx.pl/d/oferta/okazja-inwestycyjna-blisko-sum-CID3-ID1bWMu7.html",
+      "alternative_urls": [],
+      "search_query": "Okazja Inwestycyjna | Blisko Sum ul. Kołobrzeska 17, Zabrze-Rokitnica 52.50 199000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-okazja-inwestycyjna-%7C-blisko-sum-ul.-ko%C5%82obrzeska-17%2C-zabrze-rokitnica-52.50-199000/",
+      "link_status": "direct_verified",
+      "link_portal": "OLX"
     },
     {
       "market_city": "Zabrze",
@@ -82,7 +88,13 @@
       "investment_fit": "bardzo dobra cena i układ, ale istotne ryzyko CAPEX/budynku",
       "ranking_score": "78",
       "rank_position": "2",
-      "notes": "✅ direct verified on Morizon 2026-09-02. 3 niezależne pokoje, 290 cm wysokości, dwustronne, oryginalny parkiet, osobna kuchnia i okna w łazience/kuchni. Strona jednoznacznie podaje stan lokalu ORAZ budynku: do remontu; czynsz 673,30 PLN. Zdjęcia pokazują czyste, puste pokoje z dobrym parkietem, ale brak podstaw do uznania zakresu prac za zdalny lifting. Piętro 4/5, winda niepotwierdzona."
+      "notes": "✅ direct verified on Morizon 2026-09-02. 3 niezależne pokoje, 290 cm wysokości, dwustronne, oryginalny parkiet, osobna kuchnia i okna w łazience/kuchni. Strona jednoznacznie podaje stan lokalu ORAZ budynku: do remontu; czynsz 673,30 PLN. Zdjęcia pokazują czyste, puste pokoje z dobrym parkietem, ale brak podstaw do uznania zakresu prac za zdalny lifting. Piętro 4/5, winda niepotwierdzona.",
+      "primary_url": "https://www.morizon.pl/oferta/sprzedaz-mieszkanie-zabrze-centrum-powstancow-slaskich-67m2-mzn2047773484",
+      "alternative_urls": [],
+      "search_query": "M4 | samo Centrum | C.O miejskie ul. Powstańców Śląskich, Zabrze 67.33 289000",
+      "search_url": "",
+      "link_status": "direct_verified",
+      "link_portal": "Morizon"
     },
     {
       "market_city": "Zabrze",
@@ -123,7 +135,13 @@
       "investment_fit": "referencyjny standard, za droga względem większych lokali",
       "ranking_score": "70",
       "rank_position": "",
-      "notes": "✅ direct verified on Otodom 2026-09-02; stan dobry i czynsz 300 PLN, ale 6 016 zł/m² za 42,39 m² jest za wysoką premią względem benchmarków: Powstańców Śląskich 67,33 m² / 289 tys. i Jagiellońska 1 ok. 83 m² / 348 tys.; nie jest kandydatem pierwszego wyboru"
+      "notes": "✅ direct verified on Otodom 2026-09-02; stan dobry i czynsz 300 PLN, ale 6 016 zł/m² za 42,39 m² jest za wysoką premią względem benchmarków: Powstańców Śląskich 67,33 m² / 289 tys. i Jagiellońska 1 ok. 83 m² / 348 tys.; nie jest kandydatem pierwszego wyboru",
+      "primary_url": "https://www.otodom.pl/pl/oferta/2-niezalezne-pokoje-wyposazone-przy-ul-de-gaullea-ID4CDLC",
+      "alternative_urls": [],
+      "search_query": "2 niezależne pokoje/wyposażone/przy ul.De Gaulle'a ul. de Gaulle'a, Zabrze 42.39 255000",
+      "search_url": "",
+      "link_status": "direct_verified",
+      "link_portal": "Otodom"
     },
     {
       "market_city": "Sosnowiec",
@@ -164,7 +182,13 @@
       "investment_fit": "bardzo dobry",
       "ranking_score": "84",
       "rank_position": "4",
-      "notes": "verified_on_listing_page"
+      "notes": "verified_on_listing_page",
+      "primary_url": "https://www.olx.pl/d/oferta/pogon-2-pokoje-z-balkonem-w-bloku-umeblowane-bez-prowizji-CID3-ID1c3glN.html",
+      "alternative_urls": [],
+      "search_query": "Pogoń, 2 pokoje z balkonem w bloku, umeblowane, bez prowizji ul. Hallera, Sosnowiec 45.5 255000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-pogo%C5%84%2C-2-pokoje-z-balkonem-w-bloku%2C-umeblowane%2C-bez-prowizji-ul.-hallera%2C-sosnowiec-45.5-255000/",
+      "link_status": "direct_verified",
+      "link_portal": "OLX"
     },
     {
       "market_city": "Zabrze",
@@ -205,7 +229,13 @@
       "investment_fit": "dobry",
       "ranking_score": "78",
       "rank_position": "5",
-      "notes": "verified_on_listing_page"
+      "notes": "verified_on_listing_page",
+      "primary_url": "https://www.olx.pl/d/oferta/nowe-dwupoziomowe-mieszkanie-z-klimatyzacja-centrum-zabrza-CID3-ID1bFg6H.html",
+      "alternative_urls": [],
+      "search_query": "Nowe dwupoziomowe mieszkanie z klimatyzacją. Centrum Zabrza ul. Różańskiego, Zabrze 40 279000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-nowe-dwupoziomowe-mieszkanie-z-klimatyzacj%C4%85.-centrum-zabrza-ul.-r%C3%B3%C5%BCa%C5%84skiego%2C-zabrze-40-279000/",
+      "link_status": "direct_verified",
+      "link_portal": "OLX"
     },
     {
       "market_city": "Sosnowiec",
@@ -246,7 +276,13 @@
       "investment_fit": "średni/dobry",
       "ranking_score": "74",
       "rank_position": "6",
-      "notes": "verified_on_listing_page"
+      "notes": "verified_on_listing_page",
+      "primary_url": "https://www.olx.pl/d/oferta/2-pokoje-sosnowiec-pogon-CID3-ID1c1xkZ.html",
+      "alternative_urls": [],
+      "search_query": "2 Pokoje Sosnowiec Pogoń ul. Staropogońska, Sosnowiec 42.6 275000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-2-pokoje-sosnowiec-pogo%C5%84-ul.-staropogo%C5%84ska%2C-sosnowiec-42.6-275000/",
+      "link_status": "direct_verified",
+      "link_portal": "OLX"
     },
     {
       "market_city": "Sosnowiec",
@@ -287,7 +323,13 @@
       "investment_fit": "dobry / value-add",
       "ranking_score": "72",
       "rank_position": "7",
-      "notes": "verified_on_listing_page; niska cena wejścia i niski czynsz administracyjny, ale 1 pokój i pełny remont; możliwość aranżacji wymaga sprawdzenia"
+      "notes": "verified_on_listing_page; niska cena wejścia i niski czynsz administracyjny, ale 1 pokój i pełny remont; możliwość aranżacji wymaga sprawdzenia",
+      "primary_url": "https://www.olx.pl/d/oferta/sosnowiec-pogon-staropogonska-kawalerka-2-pietro-w-niskim-bloku-CID3-ID1bGMQD.html",
+      "alternative_urls": [],
+      "search_query": "Sosnowiec Pogoń Staropogońska, kawalerka, 2 piętro w niskim bloku ul. Staropogońska 62, Sosnowiec 30.96 189000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-sosnowiec-pogo%C5%84-staropogo%C5%84ska%2C-kawalerka%2C-2-pi%C4%99tro-w-niskim-bloku-ul.-staropogo%C5%84ska-62%2C-sosnowiec-30.96-189000/",
+      "link_status": "direct_verified",
+      "link_portal": "OLX"
     },
     {
       "market_city": "Zabrze",
@@ -328,7 +370,13 @@
       "investment_fit": "słaby dla założeń",
       "ranking_score": "68",
       "rank_position": "8",
-      "notes": "verified_on_listing_page"
+      "notes": "verified_on_listing_page",
+      "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-na-sprzedaz-bezposrednio-od-wlasciciela-zabrze-centrum-m2-z-potencjalem-na-m3-52-43m-balkon-termomodernizacja-ogrzewanie-miejskie-CID3-ID1bX8mx.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie na sprzedaż BEZPOŚREDNIO OD WŁAŚCICIELA | Zabrze Centrum M2 z potencjałem na M3 ul. Sądowa 6, Zabrze 52.43 242000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-na-sprzeda%C5%BC-bezpo%C5%9Brednio-od-w%C5%82a%C5%9Bciciela-%7C-zabrze-centrum-m2-z-potencja%C5%82em-na-m3-ul.-s%C4%85dowa-6%2C-zabrze-52.43-242000/",
+      "link_status": "direct_verified",
+      "link_portal": "OLX"
     },
     {
       "market_city": "Zabrze",
@@ -369,7 +417,13 @@
       "investment_fit": "historyczny benchmark",
       "ranking_score": "",
       "rank_position": "",
-      "notes": "Rekord historyczny zachowany; aktualne aktywne ogłoszenie tej samej oferty znajduje się pod OLX_1089934217."
+      "notes": "Rekord historyczny zachowany; aktualne aktywne ogłoszenie tej samej oferty znajduje się pod OLX_1089934217.",
+      "primary_url": "unknown",
+      "alternative_urls": [],
+      "search_query": "Sprzedam 3pokoje Jagiellonska1 ul. Jagiellońska 1, Zabrze 83 348000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "portal"
     },
     {
       "market_city": "Zabrze",
@@ -410,7 +464,13 @@
       "investment_fit": "najmocniejszy benchmark wartości w Zabrzu, do weryfikacji układ i instalacje",
       "ranking_score": "86",
       "rank_position": "1",
-      "notes": "✅ direct verified on OLX 2026-09-02. 2 niezależne pokoje + salon przechodni, osobna kuchnia, łazienka; piwnica 13,7 m² i strych ponad 20 m². Zdjęcia: łazienka jest w dobrym, użytkowym stanie; kuchnia starsza, ale nie wygląda na wymagającą natychmiastowego generalnego remontu. Bardzo niski czynsz. Ryzyka: salon przechodni, gaz i odległość ponad preferowane 1,5 km od Roosevelta 26–28. Najem 1 900 PLN jest konserwatywną aktualizacją po kontroli aktywnych porównywalnych ofert 70–71 m² w Centrum (1 700–1 890 PLN odstępnego); 2 300 PLN nie jest obecnie realistycznym założeniem bazowym."
+      "notes": "✅ direct verified on OLX 2026-09-02. 2 niezależne pokoje + salon przechodni, osobna kuchnia, łazienka; piwnica 13,7 m² i strych ponad 20 m². Zdjęcia: łazienka jest w dobrym, użytkowym stanie; kuchnia starsza, ale nie wygląda na wymagającą natychmiastowego generalnego remontu. Bardzo niski czynsz. Ryzyka: salon przechodni, gaz i odległość ponad preferowane 1,5 km od Roosevelta 26–28. Najem 1 900 PLN jest konserwatywną aktualizacją po kontroli aktywnych porównywalnych ofert 70–71 m² w Centrum (1 700–1 890 PLN odstępnego); 2 300 PLN nie jest obecnie realistycznym założeniem bazowym.",
+      "primary_url": "https://www.olx.pl/d/oferta/sprzedam-3pokoje-jagiellonska1-CID3-ID1bLfG9.html?srsltid=AfmBOor9fn4WzFeY8otaUOsZE1MemBPX9rgj4--TzQYdJHgsOAxh7iL9",
+      "alternative_urls": [],
+      "search_query": "Sprzedam 3pokoje Jagiellonska1 ul. Jagiellońska 1, Zabrze 83 348000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-sprzedam-3pokoje-jagiellonska1-ul.-jagiello%C5%84ska-1%2C-zabrze-83-348000/",
+      "link_status": "direct_verified",
+      "link_portal": "OLX"
     },
     {
       "market_city": "Zabrze",
@@ -451,7 +511,13 @@
       "investment_fit": "niska cena/m², ale niezgodne ze strategią wynajmu całego mieszkania",
       "ranking_score": "66",
       "rank_position": "",
-      "notes": "✅ direct verified on Otodom 2026-09-02. 5 pokoi i 2 łazienki; ogłoszenie potwierdza dotychczasowy najem pod kwatery pracownicze / hostel. Niska cena/m² porównywalna z benchmarkami, lecz układ i deklarowane przeznaczenie wymagają sprawdzenia, czy lokal nie był trwale przerobiony pod pokoje; ogrzewanie elektryczne i brak czynszu to kluczowe ryzyka kosztowe"
+      "notes": "✅ direct verified on Otodom 2026-09-02. 5 pokoi i 2 łazienki; ogłoszenie potwierdza dotychczasowy najem pod kwatery pracownicze / hostel. Niska cena/m² porównywalna z benchmarkami, lecz układ i deklarowane przeznaczenie wymagają sprawdzenia, czy lokal nie był trwale przerobiony pod pokoje; ogrzewanie elektryczne i brak czynszu to kluczowe ryzyka kosztowe",
+      "primary_url": "https://www.otodom.pl/pl/oferta/mieszkanie-66-7-m-5-pokoi-idealne-pod-inwestycje-ID4CSa7",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie 66,7 m² | 5 pokoi | Idealne pod inwestycję ul. Dubiela, Zabrze 66.7 299000",
+      "search_url": "",
+      "link_status": "direct_verified",
+      "link_portal": "Otodom"
     },
     {
       "market_city": "Zabrze",
@@ -492,7 +558,13 @@
       "investment_fit": "dobry stan, ale zbyt wysoka cena/m² względem dużych benchmarków Zabrza",
       "ranking_score": "69",
       "rank_position": "",
-      "notes": "✅ direct verified on Otodom 2026-09-02. Gotowe po remoncie, lecz 58 m² / 320k = 5 517 PLN/m² oraz 4 niezależne umeblowane pokoje wskazują produkt pod wynajem pokoi; nie jest analogiem do większego mieszkania na wynajem w całości i płaci się tu premię za gotowość"
+      "notes": "✅ direct verified on Otodom 2026-09-02. Gotowe po remoncie, lecz 58 m² / 320k = 5 517 PLN/m² oraz 4 niezależne umeblowane pokoje wskazują produkt pod wynajem pokoi; nie jest analogiem do większego mieszkania na wynajem w całości i płaci się tu premię za gotowość",
+      "primary_url": "https://www.otodom.pl/pl/oferta/zabrze-centrum-4-pokoje-po-remoncie-inwestycja-ID4B1rM",
+      "alternative_urls": [],
+      "search_query": "Zabrze centrum | 4 pokoje po remoncie | Inwestycja ul. 3 Maja, Zabrze 58 320000",
+      "search_url": "",
+      "link_status": "direct_verified",
+      "link_portal": "Otodom"
     },
     {
       "market_city": "Sosnowiec",
@@ -533,7 +605,13 @@
       "investment_fit": "bardzo dobry dla zdalnego zakupu",
       "ranking_score": "87",
       "rank_position": "1",
-      "notes": "✅ direct verified on Otodom 2026-09-02; instalacja elektryczna wymieniona podczas sukcesywnych remontów, kuchnia z AGD w bardzo dobrym stanie, łazienka sprawna i zadbana; brak potrzeby pełnego remontu; zdjęcia poglądowe — stan należy potwierdzić podczas oględzin"
+      "notes": "✅ direct verified on Otodom 2026-09-02; instalacja elektryczna wymieniona podczas sukcesywnych remontów, kuchnia z AGD w bardzo dobrym stanie, łazienka sprawna i zadbana; brak potrzeby pełnego remontu; zdjęcia poglądowe — stan należy potwierdzić podczas oględzin",
+      "primary_url": "https://www.otodom.pl/pl/oferta/aktualne-okazja-3-pokoje-sosnowiec-pogon-ul-gospodarcza-ID4CcDJ",
+      "alternative_urls": [],
+      "search_query": "! AKTUALNE ! OKAZJA ! 3 POKOJE Sosnowiec, Pogoń, ul. Gospodarcza ul. Gospodarcza, Sosnowiec 47.70 310000",
+      "search_url": "",
+      "link_status": "direct_verified",
+      "link_portal": "Otodom"
     },
     {
       "market_city": "Zabrze",
@@ -574,7 +652,13 @@
       "investment_fit": "referencyjny standard, za droga względem większych lokali",
       "ranking_score": "65",
       "rank_position": "",
-      "notes": "✅ direct verified on Otodom 2026-09-02; gotowe i prywatne, ale 6 282 zł/m² za 39 m² jest zbyt drogie względem większych benchmarków w centrum Zabrza; pozostaje wyłącznie jako wzorzec standardu, nie kandydat zakupowy"
+      "notes": "✅ direct verified on Otodom 2026-09-02; gotowe i prywatne, ale 6 282 zł/m² za 39 m² jest zbyt drogie względem większych benchmarków w centrum Zabrza; pozostaje wyłącznie jako wzorzec standardu, nie kandydat zakupowy",
+      "primary_url": "https://www.otodom.pl/pl/oferta/gotowe-do-wejscia-2-pokoje-centrum-zabrza-stylowy-design-ID4BB9J",
+      "alternative_urls": [],
+      "search_query": "Gotowe do wejścia | 2 pokoje | centrum Zabrza | stylowy design Goethego 32, Zabrze 39.00 245000",
+      "search_url": "",
+      "link_status": "direct_verified",
+      "link_portal": "Otodom"
     },
     {
       "market_city": "Sosnowiec",
@@ -615,7 +699,13 @@
       "investment_fit": "nie kwalifikować do rankingu do potwierdzenia live",
       "ranking_score": "66",
       "rank_position": "",
-      "notes": "Korekta 2026-09-03: wcześniejszy odczyt narzędziowy był cache sprzed ok. 2 tygodni, a użytkownik zgłosił, że strona nie pokazuje aktywnego ogłoszenia. Status uncertain, nie withdrawn — wymaga dwóch niezależnych kontroli na żywo / po dokładnym tytule na OLX. Dane opisowe pozostają historycznym snapshotem, nie bieżącym potwierdzeniem."
+      "notes": "Korekta 2026-09-03: wcześniejszy odczyt narzędziowy był cache sprzed ok. 2 tygodni, a użytkownik zgłosił, że strona nie pokazuje aktywnego ogłoszenia. Status uncertain, nie withdrawn — wymaga dwóch niezależnych kontroli na żywo / po dokładnym tytule na OLX. Dane opisowe pozostają historycznym snapshotem, nie bieżącym potwierdzeniem.",
+      "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-na-sprzedaz-bez-prowizji-CID3-ID1bQKdf.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie na sprzedaż - bez prowizji! ul. Będzińska, Sosnowiec 58 335000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-na-sprzeda%C5%BC---bez-prowizji%21-ul.-b%C4%99dzi%C5%84ska%2C-sosnowiec-58-335000/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market_city": "Sosnowiec",
@@ -656,7 +746,13 @@
       "investment_fit": "potencjalnie dobry koszt wejścia, ale pełny zakres CAPEX i dokładny adres do weryfikacji",
       "ranking_score": "unknown",
       "rank_position": "",
-      "notes": "Karta Domiporta odczytana 2026-09-03 (portal podał dodanie 16 dni wcześniej): 2 pokoje, parter, piwnica 3.25 m²; czynsz SM 607.04 zł obejmuje wodę, CO, fundusz remontowy, eksploatację i śmieci; CWU gazowe. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome."
+      "notes": "Karta Domiporta odczytana 2026-09-03 (portal podał dodanie 16 dni wcześniej): 2 pokoje, parter, piwnica 3.25 m²; czynsz SM 607.04 zł obejmuje wodę, CO, fundusz remontowy, eksploatację i śmieci; CWU gazowe. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome.",
+      "primary_url": "https://www.domiporta.pl/nieruchomosci/sprzedam-mieszkanie-dwupokojowe-sosnowiec-pogon-pogon-38m2/156695404",
+      "alternative_urls": [],
+      "search_query": "2-pokojowe mieszkanie 38 m² w Sosnowcu, własna aranżacja - polecam! Pogoń, Sosnowiec 38.32 215000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Domiporta"
     },
     {
       "market_city": "Sosnowiec",
@@ -697,7 +793,13 @@
       "investment_fit": "gotowiec inwestycyjny z istniejącym najmem do niezależnej weryfikacji",
       "ranking_score": "unknown",
       "rank_position": "",
-      "notes": "Karta Domiporta odczytana 2026-09-03: Będzińska 55, 3 niezależne pokoje, osobna kuchnia i WC; sprzedający deklaruje najem firmie z opcją przejęcia najemcy. Brak rozdzielonych opłat administracyjnych i daty publikacji na stronie. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome."
+      "notes": "Karta Domiporta odczytana 2026-09-03: Będzińska 55, 3 niezależne pokoje, osobna kuchnia i WC; sprzedający deklaruje najem firmie z opcją przejęcia najemcy. Brak rozdzielonych opłat administracyjnych i daty publikacji na stronie. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome.",
+      "primary_url": "https://www.domiporta.pl/nieruchomosci/sprzedam-mieszkanie-trzypokojowe-sosnowiec-pogon-bedzinska-71m2/156592293",
+      "alternative_urls": [],
+      "search_query": "Przestronne 3-pokojowe mieszkanie w Sosnowcu, gotowe pod inwestycję! polecam! ul. Będzińska 55, Sosnowiec 71.29 385000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Domiporta"
     },
     {
       "market_city": "Zabrze",
@@ -738,7 +840,13 @@
       "investment_fit": "silny kandydat kosztowy; potwierdzić spacer, stan pieca oraz CAPEX",
       "ranking_score": "unknown",
       "rank_position": "",
-      "notes": "Karta Nieruchomosci-online odczytana 2026-09-03; oferta zaktualizowana na portalu 2026-08-09. 2 niezależne pokoje, piwnica, wyposażenie w cenie, miedziana instalacja elektryczna, ogrodzony parking i monitoring. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome."
+      "notes": "Karta Nieruchomosci-online odczytana 2026-09-03; oferta zaktualizowana na portalu 2026-08-09. 2 niezależne pokoje, piwnica, wyposażenie w cenie, miedziana instalacja elektryczna, ogrodzony parking i monitoring. Aktywność potwierdzona automatycznym odczytem strony, bez niezależnej sesji Chrome.",
+      "primary_url": "https://zabrze.nieruchomosci-online.pl/mieszkanie,na-sprzedaz/26395939.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie, ul. Roosevelta ul. Roosevelta, Zabrze 48 263000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Nieruchomosci-online"
     },
     {
       "market_city": "Zabrze",
@@ -779,7 +887,13 @@
       "investment_fit": "bardzo dobry dopasowaniem, ale do remontu i czynsz 580 zł/mies. wg strony (żadne z tego nie było w karcie wyszukiwania)",
       "ranking_score": "85",
       "rank_position": "1",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. Ta sama oferta prywatna (bez pośredników) opublikowana także na Adresowo (https://adresowo.pl/o/mieszkanie-zabrze-rokitnica-ul-krakowska-2-pokojowe-j9f8f0) i OLX (https://www.olx.pl/d/oferta/mieszkanie-w-zabrzu-rokitnicy-do-remontu-z-dedykowanym-miejscem-parkingowym-na-sprzedaz-bez-posrednikow-CID3-ID1bZnZb.html) - dzwonić raz, nie trzy razy. Strona Gratka ujawnia stan do remontu, którego nie było w karcie wyszukiwania. POPRAWKA 2026-09-17: pełny tekst strony (nie tylko wycięty fragment) ujawnia opłaty czynszowe z funduszem remontowym ok. 580 zł/mies. bez wody i wywozu nieczystości - to podnosi realny koszt utrzymania, wymaga kosztorysu ekipy przed decyzją."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. Ta sama oferta prywatna (bez pośredników) opublikowana także na Adresowo (https://adresowo.pl/o/mieszkanie-zabrze-rokitnica-ul-krakowska-2-pokojowe-j9f8f0) i OLX (https://www.olx.pl/d/oferta/mieszkanie-w-zabrzu-rokitnicy-do-remontu-z-dedykowanym-miejscem-parkingowym-na-sprzedaz-bez-posrednikow-CID3-ID1bZnZb.html) - dzwonić raz, nie trzy razy. Strona Gratka ujawnia stan do remontu, którego nie było w karcie wyszukiwania. POPRAWKA 2026-09-17: pełny tekst strony (nie tylko wycięty fragment) ujawnia opłaty czynszowe z funduszem remontowym ok. 580 zł/mies. bez wody i wywozu nieczystości - to podnosi realny koszt utrzymania, wymaga kosztorysu ekipy przed decyzją.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-rokitnica-krakowska/ob/48969785",
+      "alternative_urls": [],
+      "search_query": "Przestronne mieszkanie pod lasem z miejscem parkingowym ul. Krakowska, Zabrze-Rokitnica 58 239000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market_city": "Zabrze",
@@ -820,7 +934,13 @@
       "investment_fit": "dobra lokalizacja i cena, mniejszy niż cel metraż",
       "ranking_score": "83",
       "rank_position": "2",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. Gaz CO, osobna kuchnia, piwnica, blisko ŚUM. Stan do odświeżenia (lekki lifting), nie pełny remont."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. Gaz CO, osobna kuchnia, piwnica, blisko ŚUM. Stan do odświeżenia (lekki lifting), nie pełny remont.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-rokitnica-ireny-kosmowskiej/ob/44857865",
+      "alternative_urls": [],
+      "search_query": "M3 Rokitnica CO Gazowe ŚUM Strefa ul. Ireny Kosmowskiej, Zabrze-Rokitnica 52.29 245000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market_city": "Zabrze",
@@ -861,7 +981,13 @@
       "investment_fit": "najniższa cena/m² w dzisiejszym przebiegu, bezczynszowe, 3 m² nad celem",
       "ranking_score": "87",
       "rank_position": "3",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. Bezczynszowe (brak opłaty administracyjnej), ogródek, 3 niezależne pokoje. Najniższa cena/m² (3150 zł) z całego dzisiejszego skanu."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. Bezczynszowe (brak opłaty administracyjnej), ogródek, 3 niezależne pokoje. Najniższa cena/m² (3150 zł) z całego dzisiejszego skanu.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-mikulczyce/ob/47839977",
+      "alternative_urls": [],
+      "search_query": "Bezczynszowe / 3 pokoje / ogródek / do aranżacji Mikulczyce, Zabrze 63.17 199000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market_city": "Zabrze",
@@ -902,7 +1028,13 @@
       "investment_fit": "ogrzewanie miejskie (przewidywalny koszt), tylko 2 pokoje ogranicza wynajem pokojowy",
       "ranking_score": "78",
       "rank_position": "4",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. Centralne ogrzewanie miejskie - stabilniejszy koszt niż piec węglowy/elektryczny. Tylko 2 pokoje."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. Centralne ogrzewanie miejskie - stabilniejszy koszt niż piec węglowy/elektryczny. Tylko 2 pokoje.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-mikulczyce/ob/48096761",
+      "alternative_urls": [],
+      "search_query": "Słoneczne i Przytulne Mieszkanie Dostępne od Zaraz Mikulczyce, Zabrze 54.1 269000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market_city": "Zabrze",
@@ -943,7 +1075,13 @@
       "investment_fit": "najlepszy zadeklarowany stan (bardzo dobry) w tej dzielnicy, mniejszy niż cel metraż",
       "ranking_score": "81",
       "rank_position": "5",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. Dwupoziomowe M4 z garderobą, stan bardzo dobry - brak zakładanych kosztów remontu."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. Dwupoziomowe M4 z garderobą, stan bardzo dobry - brak zakładanych kosztów remontu.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-mikulczyce-tarnopolska/ob/47100287",
+      "alternative_urls": [],
+      "search_query": "Dwupoziomowe M4 z garderobą ul. Tarnopolska, Mikulczyce, Zabrze 52 235000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market_city": "Zabrze",
@@ -984,7 +1122,13 @@
       "investment_fit": "dolna granica celu metrażowego, bardzo niska cena/m², strych do adaptacji jako dodatkowa przestrzeń",
       "ranking_score": "85",
       "rank_position": "6",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. Osobna kuchnia, piwnica, poddasze do adaptacji, kamienica."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. Osobna kuchnia, piwnica, poddasze do adaptacji, kamienica.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-centrum-juliusza-slowackiego/ob/46235881",
+      "alternative_urls": [],
+      "search_query": "Zabrze Centrum, strych do adaptacji ul. Juliusza Słowackiego, Zabrze 55 219000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market_city": "Zabrze",
@@ -1025,7 +1169,13 @@
       "investment_fit": "pakiet 2 lokali w jednej klatce, bardzo dobry stan - wymaga ustalenia czy cena dotyczy jednego czy obu lokali",
       "ranking_score": "82",
       "rank_position": "7",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. UWAGA: ogłoszenie opisuje pakiet 2 nieruchomości w jednej klatce schodowej - potwierdzić czy 249000 zł to cena za jeden lokal (58.6 m2) czy za oba przed traktowaniem ceny/m2 jako porównywalnej."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. UWAGA: ogłoszenie opisuje pakiet 2 nieruchomości w jednej klatce schodowej - potwierdzić czy 249000 zł to cena za jeden lokal (58.6 m2) czy za oba przed traktowaniem ceny/m2 jako porównywalnej.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-centrum-centrum/ob/46229481",
+      "alternative_urls": [],
+      "search_query": "Pakiet inwestycyjny - 2 lokale Centrum, Zabrze 58.6 249000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market_city": "Zabrze",
@@ -1066,7 +1216,13 @@
       "investment_fit": "w strefie celu metrażowego, rozsądna cena/m²",
       "ranking_score": "80",
       "rank_position": "8",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. Osobna kuchnia jako plus opisu."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. Osobna kuchnia jako plus opisu.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-centrum-powstancow-slaskich/ob/48954839",
+      "alternative_urls": [],
+      "search_query": "Zabrze Centrum Powstańców Śl. 57,3 m2 2 pokoje + kuchnia ul. Powstańców Śląskich, Zabrze 57.3 249000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market_city": "Zabrze",
@@ -1107,7 +1263,13 @@
       "investment_fit": "najniższa cena bezwzględna i najniższa cena/m² w całym dzisiejszym przebiegu, stan bardzo dobry, ale 4.7 m² nad celem i ogłoszenie agencyjne (nie prywatne)",
       "ranking_score": "84",
       "rank_position": "9",
-      "notes": "direct_page_verified_2026-09-17 na Gratka. UWAGA: ogłoszenie prowadzone przez agenta (Agata, tel. podany na stronie), nie sprzedawcę prywatnego - sprawdzić czy 186000 zł zawiera już prowizję czy dochodzi osobno."
+      "notes": "direct_page_verified_2026-09-17 na Gratka. UWAGA: ogłoszenie prowadzone przez agenta (Agata, tel. podany na stronie), nie sprzedawcę prywatnego - sprawdzić czy 186000 zł zawiera już prowizję czy dochodzi osobno.",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-zabrze-centrum-wolnosci/ob/48153219",
+      "alternative_urls": [],
+      "search_query": "Przestronne M3, centralne ogrzewanie, ścisłe centrum, niski czynsz ul. Wolności, Zabrze 64.68 186000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     }
   ],
   "rental": [
@@ -1141,7 +1303,13 @@
       "disappeared_date": "",
       "days_observed": "4",
       "notes": "Porównywalna oferta centrum; link może blokować automatyczny odczyt, ale jest stałym identyfikatorem oferty.",
-      "distance_to_campus": "centrum; odległość do uczelni do weryfikacji"
+      "distance_to_campus": "centrum; odległość do uczelni do weryfikacji",
+      "primary_url": "https://www.otodom.pl/pl/oferta/mieszkanie-z-balkonem-przy-placu-wolnosci-ID4zGj8",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie z balkonem przy Placu Wolności ul. Powstańców Śląskich / Plac Wolności, Centrum 59.17 1500",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Otodom"
     },
     {
       "market": "Zabrze",
@@ -1173,7 +1341,13 @@
       "disappeared_date": "",
       "days_observed": "4",
       "notes": "Oferta porównawcza 2 pokoje.",
-      "distance_to_campus": "centrum; odległość do uczelni do weryfikacji"
+      "distance_to_campus": "centrum; odległość do uczelni do weryfikacji",
+      "primary_url": "https://www.otodom.pl/pl/oferta/komfortowe-2-pokojowe-mieszkanie-z-balkonem-centrum-ID4BeiI",
+      "alternative_urls": [],
+      "search_query": "Komfortowe 2 pokojowe mieszkanie z balkonem | Centrum Centrum 47 1400",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Otodom"
     },
     {
       "market": "Zabrze",
@@ -1205,7 +1379,13 @@
       "disappeared_date": "",
       "days_observed": "3",
       "notes": "Górny zakres metrażu.",
-      "distance_to_campus": "do weryfikacji"
+      "distance_to_campus": "do weryfikacji",
+      "primary_url": "https://www.otodom.pl/pl/oferta/70m2-mieszkanie-z-niskim-czynszem-blisko-centrum-ID4AL4i",
+      "alternative_urls": [],
+      "search_query": "70m2 mieszkanie z niskim czynszem blisko centrum! blisko Centrum 70 1890",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Otodom"
     },
     {
       "market": "Zabrze",
@@ -1237,7 +1417,13 @@
       "disappeared_date": "",
       "days_observed": "3",
       "notes": "Dłużej obecna oferta; ważna dla oceny czasu ekspozycji.",
-      "distance_to_campus": "do weryfikacji"
+      "distance_to_campus": "do weryfikacji",
+      "primary_url": "https://www.otodom.pl/pl/oferta/mieszkanie-3-4-pokojowe-zabrze-centrum-zus-co-ID4yCZo",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie 3, 4 pokojowe Zabrze Centrum Zus Co Centrum 62 1690",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Otodom"
     },
     {
       "market": "Sosnowiec",
@@ -1269,7 +1455,13 @@
       "disappeared_date": "",
       "days_observed": "4",
       "notes": "Bardzo dobry benchmark blisko UŚ.",
-      "distance_to_campus": "kilka minut pieszo od UŚ"
+      "distance_to_campus": "kilka minut pieszo od UŚ",
+      "primary_url": "https://www.olx.pl/d/oferta/wygodne-51-m-na-pogoni-na-wynajem-przy-us-CID3-ID1c3WhJ.html",
+      "alternative_urls": [],
+      "search_query": "Wygodne 51 m² na Pogoni na wynajem przy UŚ Bema 6 51.5 1950",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wygodne-51-m%C2%B2-na-pogoni-na-wynajem-przy-u%C5%9B-bema-6-51.5-1950/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1301,7 +1493,13 @@
       "disappeared_date": "",
       "days_observed": "4",
       "notes": "3 pokoje, duży metraż, bardzo blisko UŚ.",
-      "distance_to_campus": "ok. 3 min od UŚ wg ogłoszenia"
+      "distance_to_campus": "ok. 3 min od UŚ wg ogłoszenia",
+      "primary_url": "https://www.olx.pl/d/oferta/wynajme-mieszkanie-3-pokojowe-pogon-CID3-ID1c0qSc.html",
+      "alternative_urls": [],
+      "search_query": "Wynajmę Mieszkanie 3 pokojowe Pogoń okolice Grota-Roweckiego 74 2200",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wynajm%C4%99-mieszkanie-3-pokojowe-pogo%C5%84-okolice-grota-roweckiego-74-2200/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1333,7 +1531,13 @@
       "disappeared_date": "",
       "days_observed": "4",
       "notes": "Długo aktywna oferta; ważny benchmark czasu ekspozycji.",
-      "distance_to_campus": "Pogoń; do dokładnego pomiaru"
+      "distance_to_campus": "Pogoń; do dokładnego pomiaru",
+      "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-47m2-3-pokojowe-sosnowiec-pogon-CID3-ID19FTRJ.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie 47m2 3-pokojowe Sosnowiec Pogoń ul. Hallera 47 1650",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-47m2-3-pokojowe-sosnowiec-pogo%C5%84-ul.-hallera-47-1650/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1365,7 +1569,13 @@
       "disappeared_date": "",
       "days_observed": "4",
       "notes": "Brak osobnego czynszu administracyjnego; bardzo blisko UŚ.",
-      "distance_to_campus": "UŚ w promieniu ok. 100-200 m wg ogłoszenia"
+      "distance_to_campus": "UŚ w promieniu ok. 100-200 m wg ogłoszenia",
+      "primary_url": "https://www.olx.pl/d/oferta/wynajme-mieszkanie-2-pokoje-50-m-balkon-us-humanitas-3-min-sosnowiec-pogon-bezposrednio-CID3-ID1bksEo.html",
+      "alternative_urls": [],
+      "search_query": "2 pokoje | 50 m² | Balkon | UŚ, Humanitas 3 min | Pogoń Osiedle Rudna / Pogoń 49 2050",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-2-pokoje-%7C-50-m%C2%B2-%7C-balkon-%7C-u%C5%9B%2C-humanitas-3-min-%7C-pogo%C5%84-osiedle-rudna-%2F-pogo%C5%84-49-2050/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1397,7 +1607,13 @@
       "disappeared_date": "",
       "days_observed": "4",
       "notes": "Nieco poniżej docelowych 40 m², ale bardzo dobry benchmark lokalizacyjny.",
-      "distance_to_campus": "blisko Wydziału Nauk o Ziemi / Osiedla Akademickiego"
+      "distance_to_campus": "blisko Wydziału Nauk o Ziemi / Osiedla Akademickiego",
+      "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-dwupokojowe-37m-pogon-lwowska-sosnowiec-CID3-ID1c2CbZ.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie dwupokojowe 37m Pogoń Lwowska Sosnowiec ul. Lwowska 37 1600",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-dwupokojowe-37m-pogo%C5%84-lwowska-sosnowiec-ul.-lwowska-37-1600/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1429,7 +1645,13 @@
       "disappeared_date": "",
       "days_observed": "4",
       "notes": "Cena zawiera czynsz administracyjny wg opisu.",
-      "distance_to_campus": "blisko uczelni wg ogłoszenia"
+      "distance_to_campus": "blisko uczelni wg ogłoszenia",
+      "primary_url": "https://www.olx.pl/d/oferta/do-wynajecia-nowe-mieszkanie-pogon-sosnowiec-CID3-ID1bOGek.html",
+      "alternative_urls": [],
+      "search_query": "Do wynajęcia nowe mieszkanie Pogoń Sosnowiec Przechodnia 4 40 1999",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-do-wynaj%C4%99cia-nowe-mieszkanie-pogo%C5%84-sosnowiec-przechodnia-4-40-1999/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Zabrze",
@@ -1461,7 +1683,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Nowa 2026-09-01; pełna strona OLX zweryfikowana.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/wynajem-mieszkania-CID3-ID1c6W5y.html",
+      "alternative_urls": [],
+      "search_query": "wynajem mieszkania ul. Ireny Kosmowskiej 26/6, Zabrze 52 2000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wynajem-mieszkania-ul.-ireny-kosmowskiej-26%2F6%2C-zabrze-52-2000/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1493,7 +1721,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Nowa 2026-09-01; pełna strona OLX zweryfikowana; rezerwacja.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/sloneczne-2-pokojowe-sosnowiec-pogon-rezerwacja-CID3-ID1c2Hzq.html",
+      "alternative_urls": [],
+      "search_query": "Słoneczne 2 pokojowe Sosnowiec Pogoń rezerwacja ul. Zamenhofa, Sosnowiec 40 1200",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-s%C5%82oneczne-2-pokojowe-sosnowiec-pogo%C5%84-rezerwacja-ul.-zamenhofa%2C-sosnowiec-40-1200/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1525,7 +1759,13 @@
       "disappeared_date": "",
       "days_observed": "3",
       "notes": "Nowa 2026-09-01; pełna strona OLX zweryfikowana.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/wynajme-przytulne-mieszkanie-dla-studentki-sosnowiec-pogon-gospodarcza-CID3-ID1bMSXn.html",
+      "alternative_urls": [],
+      "search_query": "WYNAJMĘ przytulne mieszkanie dla STUDENTKI Sosnowiec Pogoń Gospodarcza ul. Gospodarcza, Sosnowiec 47.30 1400",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wynajm%C4%99-przytulne-mieszkanie-dla-studentki-sosnowiec-pogo%C5%84-gospodarcza-ul.-gospodarcza%2C-sosnowiec-47.30-1400/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1557,7 +1797,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Nowa 2026-09-01; pełna strona OLX zweryfikowana.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/wynajme-2-pokojowe-mieszkanie-sosnowiec-pogon-CID3-ID1bi3VX.html",
+      "alternative_urls": [],
+      "search_query": "Wynajmę 2-pokojowe mieszkanie Sosnowiec - Pogoń ul. Gospodarcza, Sosnowiec 45.5 1200",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wynajm%C4%99-2-pokojowe-mieszkanie-sosnowiec---pogo%C5%84-ul.-gospodarcza%2C-sosnowiec-45.5-1200/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1589,7 +1835,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Nowa 2026-09-01; pełna strona OLX zweryfikowana.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-dwupokojowe-pogon-CID3-ID1bUDz4.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie dwupokojowe Pogoń ul. Zamenhofa 6, Sosnowiec 38 1400",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-dwupokojowe-pogo%C5%84-ul.-zamenhofa-6%2C-sosnowiec-38-1400/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1621,7 +1873,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Bez opłat administracyjnych wg ogłoszenia; kamienica; nieumeblowane; bezpośrednio.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-wynajme-sosnowiec-pogon-CID3-ID1c5UNX.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie wynajmę Sosnowiec Pogoń ul. Średnia, Pogoń 40 1700",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-wynajm%C4%99-sosnowiec-pogo%C5%84-ul.-%C5%9Brednia%2C-pogo%C5%84-40-1700/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1653,7 +1911,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Nowa oferta porównawcza; aktualna cena widoczna na liście OLX 2 300 zł. | 2026-09-03: aktualna lista OLX pokazuje 2200 zł; wcześniejsze wyniki pokazywały 2300 zł.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/wynajme-mieszkanie-48m2-pogon-sosnowiec-CID3-ID1c0dI8.html",
+      "alternative_urls": [],
+      "search_query": "Wynajme mieszkanie 48m2 Pogoń Sosnowiec Pogoń 48 2200",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wynajme-mieszkanie-48m2-pogo%C5%84-sosnowiec-pogo%C5%84-48-2200/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -1685,7 +1949,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Cena 1 500 zł do negocjacji; nowa oferta porównawcza.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-na-wynajem-sosnowiec-pogon-ul-gospodarcza-CID3-ID19ctSf.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie na wynajem Sosnowiec Pogoń ul. Gospodarcza ul. Gospodarcza, Pogoń 39 1500",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-na-wynajem-sosnowiec-pogo%C5%84-ul.-gospodarcza-ul.-gospodarcza%2C-pogo%C5%84-39-1500/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Zabrze",
@@ -1717,7 +1987,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Umeblowane, blok, bez pośredników. Stały koszt = odstępne + administracja + CO + śmieci; woda i prąd zmienne.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/wynajme-2-pokojowe-mieszkanie-w-zabrzu-przy-ul-powstancow-slaskich-2-CID3-ID1bZYxS.html",
+      "alternative_urls": [],
+      "search_query": "Wynajmę 2-pokojowe mieszkanie w Zabrzu przy ul. Powstańców Śląskich 2 ul. Powstańców Śląskich 2 39 1800",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wynajm%C4%99-2-pokojowe-mieszkanie-w-zabrzu-przy-ul.-powsta%C5%84c%C3%B3w-%C5%9Bl%C4%85skich-2-ul.-powsta%C5%84c%C3%B3w-%C5%9Bl%C4%85skich-2-39-1800/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Zabrze",
@@ -1749,7 +2025,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "Umeblowane, blok z windą, bez pośredników. Stały koszt = odstępne + administracja + CO + śmieci; pozostałe media zmienne.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/wynajme-mieszkanie-2-pokojowe-ul-sklodowskiej-curie-16b-zabrze-CID3-ID17Ffc1.html",
+      "alternative_urls": [],
+      "search_query": "Wynajmę mieszkanie 2-pokojowe ul. Skłodowskiej-Curie 16b, Zabrze ul. Skłodowskiej-Curie 16b 52.5 1400",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wynajm%C4%99-mieszkanie-2-pokojowe-ul.-sk%C5%82odowskiej-curie-16b%2C-zabrze-ul.-sk%C5%82odowskiej-curie-16b-52.5-1400/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Zabrze",
@@ -1781,7 +2063,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "Oferta aktywna na liście OLX/Otodom; bezpośrednia strona Otodom blokuje automatyczny odczyt (403).",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.otodom.pl/pl/oferta/wyposazone-2-pokojowe-z-balkonem-centrum-ID4BnM6",
+      "alternative_urls": [],
+      "search_query": "Wyposażone 2 pokojowe z balkonem Centrum Centrum, Zabrze 48.7 1500",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Otodom"
     },
     {
       "market": "Zabrze",
@@ -1813,7 +2101,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "✅ direct verified on Otodom 2026-09-02. Dostępne od zaraz; najem okazjonalny. Cena całkowita przed mediami jest wysoka, więc nie jest dowodem wysokiej płynności całego segmentu.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.otodom.pl/pl/oferta/komfortowe-m3-w-pelni-wyposazone-gotowe-do-zamieszkania-ID4xL8e",
+      "alternative_urls": [],
+      "search_query": "Komfortowe M3 w pełni wyposażone gotowe do zamieszkania ul. gen. Charlesa de Gaulle'a, Zabrze 53.36 2000",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Otodom"
     },
     {
       "market": "Zabrze",
@@ -1845,7 +2139,13 @@
       "disappeared_date": "",
       "days_observed": "2",
       "notes": "✅ direct verified on Otodom 2026-09-02. Duży lokal nadal aktywny około 4 tygodni po publikacji; produkt rodzinny/pracowniczy, administracja 900 PLN i media dodatkowo ograniczają porównywalność z Jagiellońską.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.otodom.pl/pl/oferta/do-wynajecia-2pokojowe-mieszkanie-w-centrum-zabrza-ID4CtRy",
+      "alternative_urls": [],
+      "search_query": "Do wynajęcia 2pokojowe mieszkanie w Centrum Zabrza ul. Roosevelta, Centrum Południe, Zabrze 71.4 1700",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Otodom"
     },
     {
       "market": "Zabrze",
@@ -1877,7 +2177,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "✅ direct verified on Otodom 2026-09-02. Prywatne, dostępne od 2026-09-01; student-friendly, ale to świeżo po remoncie kawalerka i nie jest porównywalne cenowo z dużym lokalem do liftingu.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.otodom.pl/pl/oferta/wynajme-mieszkanie-zabrze-plac-wolnosci-centrum-ID4sa6O",
+      "alternative_urls": [],
+      "search_query": "Wynajmę mieszkanie Zabrze Plac Wolności centrum pl. Plac Wolności 291, Zabrze 42 1700",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Otodom"
     },
     {
       "market": "Sosnowiec",
@@ -1909,7 +2215,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "✅ direct verified 2026-09-03. Oferta od 22.07 nadal aktywna; to ważny sygnał wolniejszej płynności przy 1600 + wysoka administracja.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-sosnowiec-ostrogorska/ob/48343305",
+      "alternative_urls": [],
+      "search_query": "M2 | 42 m2 | Ostrogórska | dostępne od 31.08.26 ul. Ostrogórska, Sosnowiec 42 1600",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market": "Sosnowiec",
@@ -1941,7 +2253,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "Widoczna na aktualnej liście Gratka 2026-09-03; direct URL został znaleziony, ale pełna strona miała cache miss. Oferta istnieje od 22.07, więc istotny benchmark czasu ekspozycji.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-sosnowiec/ob/48343749",
+      "alternative_urls": [],
+      "search_query": "3 pokoje z balkonem-klimatyzacja- ul.Ostrogórska ul. Ostrogórska, Sosnowiec 54 1800",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market": "Sosnowiec",
@@ -1973,7 +2291,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "Oferta widoczna jako podobna na zweryfikowanej stronie Gratka 2026-09-03; direct URL znaleziony, pełny odczyt cache miss.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-sosnowiec-jagiellonska/ob/47793897",
+      "alternative_urls": [],
+      "search_query": "2-pokojowe, słoneczne mieszkanie w Centrum ul. Jagiellońska, Sosnowiec 38 1800",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market": "Sosnowiec",
@@ -2005,7 +2329,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "Benchmark pasa Centrum↔Pogoń. Oferta widoczna na Gratka od czerwca; pełny direct miał cache miss. Długi czas ekspozycji wymaga ostrożności przy interpretacji popytu.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://gratka.pl/nieruchomosci/mieszkanie-sosnowiec-jana-iii-sobieskiego/ob/47780123",
+      "alternative_urls": [],
+      "search_query": "Sosnowiec Sobieskiego 2 pokoje umeblowane i wyposażone ul. Jana III Sobieskiego, Sosnowiec 36 1600",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Gratka"
     },
     {
       "market": "Sosnowiec",
@@ -2037,7 +2367,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "🔎 search verified na OLX 2026-09-03; direct URL nie został zweryfikowany. Bardzo niska stawka ofertowa, trzeba sprawdzić czy 1200 zł to faktyczne odstępne właściciela czy cena niepełna.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/nieruchomosci/mieszkania/wynajem/sosnowiec/q-mieszkanie/",
+      "alternative_urls": [],
+      "search_query": "Wynajme mieszkanie Sosnowiec ul. Ostrogórska 35A ul. Ostrogórska 35A, Sosnowiec 43 1200",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-wynajme-mieszkanie-sosnowiec-ul.-ostrog%C3%B3rska-35a-ul.-ostrog%C3%B3rska-35a%2C-sosnowiec-43-1200/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Zabrze",
@@ -2069,7 +2405,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "Korekta 2026-09-03: wcześniejszy odczyt automatyczny pokazał opis, ale nie mam niezależnego live potwierdzenia z przeglądarki; użytkownik zgłosił nieaktywną stronę. Status uncertain, nie withdrawn. Dane opisowe są historycznym snapshotem i wymagają powtórnej kontroli po tytule/ID na OLX.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-do-wynajecia-z-dwiema-sypialniami-oraz-salonem-z-aneksem-kuchennym-przy-ulicy-roosevelta-8-CID3-ID1c5EhF.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie do wynajęcia z dwiema sypialniami oraz salonem z aneksem kuchennym przy ulicy Roosevelta 8 ul. Roosevelta 8, Zabrze 48 2000",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-do-wynaj%C4%99cia-z-dwiema-sypialniami-oraz-salonem-z-aneksem-kuchennym-przy-ulicy-roosevelta-8-ul.-roosevelta-8%2C-zabrze-48-2000/",
+      "link_status": "search_fallback",
+      "link_portal": "OLX"
     },
     {
       "market": "Sosnowiec",
@@ -2101,7 +2443,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "Bez czynszu administracyjnego wskazanego na karcie; czynsz właściciela 1500 zł przez pierwszy rok, później 1800 zł. Karta bezpośrednia odczytana 2026-09-03; aktywność potwierdzona automatycznie, bez niezależnej sesji Chrome.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://sosnowiec.nieruchomosci-online.pl/mieszkanie,na-wynajem/26800384.html",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie do wynajęcia 65 m² przy Grota-Roweckiego ul. Grota-Roweckiego, Sosnowiec Pogoń 65 1500",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Nieruchomosci-online"
     },
     {
       "market": "Zabrze",
@@ -2133,7 +2481,13 @@
       "disappeared_date": "",
       "days_observed": "1",
       "notes": "Morizon podaje 2200 zł jako „odstępne z czynszem”, więc nie wolno traktować tej kwoty jako samego czynszu właściciela ani liczyć stawki owner-rent/m². Karta bezpośrednia odczytana 2026-09-03; aktywność potwierdzona automatycznie, bez niezależnej sesji Chrome.",
-      "distance_to_campus": "unknown"
+      "distance_to_campus": "unknown",
+      "primary_url": "https://www.morizon.pl/oferta/wynajem-mieszkanie-zabrze-centrum-53m2-mzn2047970435",
+      "alternative_urls": [],
+      "search_query": "Mieszkanie do wynajęcia 53 m², 2 pokoje, Zabrze Centrum Centrum, Zabrze 53 unknown",
+      "search_url": "",
+      "link_status": "unverified",
+      "link_portal": "Morizon"
     }
   ],
   "summary": {
