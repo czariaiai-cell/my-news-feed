@@ -794,7 +794,7 @@
       "primary_url": "https://www.olx.pl/d/oferta/2-pokojowe-mieszkanie-10m2-balkon-pogon-CID3-ID1bFkCp.html",
       "alternative_urls": [],
       "search_query": "2 pokojowe mieszkanie |10m2 balkon | Pogoń Pogoń, Sosnowiec 51.65 289000",
-      "search_url": "",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-2-pokojowe-mieszkanie-%7C10m2-balkon-%7C-pogo%C5%84-pogo%C5%84%2C-sosnowiec-51.65-289000/",
       "link_status": "direct_verified",
       "link_portal": "OLX"
     },
@@ -840,7 +840,7 @@
       "primary_url": "https://www.olx.pl/d/oferta/mieszkanie-w-centrum-z-widokiem-na-park-52m2-CID3-ID1bT5QM.html?search_reason=search%7Corganic",
       "alternative_urls": [],
       "search_query": "Mieszkanie w centrum z widokiem na park 52m2 centrum Zabrza, okolice ul. Wolności 51 320000",
-      "search_url": "",
+      "search_url": "https://www.olx.pl/nieruchomosci/mieszkania/sprzedaz/q-mieszkanie-w-centrum-z-widokiem-na-park-52m2-centrum-zabrza%2C-okolice-ul.-wolno%C5%9Bci-51-320000/",
       "link_status": "direct_verified",
       "link_portal": "OLX"
     },
@@ -885,9 +885,9 @@
       "notes": "DIRECT VERIFIED 2026-09-10. 64,68 m² powierzchni całkowitej, 50,28 m² użytkowej; 2 pokoje, 4/4, zadbana kamienica, czynsz 228 zł. Stan bardzo dobry. Kluczowe ryzyko: dwufunkcyjny piec CO/CWU wymaga naprawy lub wymiany. Bardzo niska cena wejścia; oferta szczególnie interesująca do negocjacji i oględzin. Morizon podaje pełną własność.",
       "primary_url": "https://www.morizon.pl/oferta/sprzedaz-mieszkanie-zabrze-centrum-wolnosci-64m2-mzn2047741496",
       "alternative_urls": [],
-      "search_query": "Przestronne M3 Wolności Zabrze 64.68 186000",
+      "search_query": "Przestronne M3, z centralny ogrzewaniem, ścisłe centrum. Niski czynsz. ul. Wolności, Zabrze 64.68 186000",
       "search_url": "https://www.morizon.pl/mieszkania/2-pokojowe/zabrze/centrum/",
-      "link_status": "direct_verified",
+      "link_status": "search_fallback",
       "link_portal": "Morizon"
     },
     {
@@ -931,9 +931,9 @@
       "notes": "DIRECT VERIFIED 2026-09-10. 49 m², 2 pokoje, parter, dwustronne, pełna własność, budynek po termomodernizacji, czynsz 330 zł. Morizon pokazuje Politechnikę Śląską ok. 398 m od oferty. Stan do remontu, ale instalacje wymienione. Możliwość przeniesienia kuchni do salonu i uzyskania 3-pokojowego układu. Bardzo mocna lokalizacja względem ceny.",
       "primary_url": "https://www.morizon.pl/oferta/sprzedaz-mieszkanie-zabrze-centrum-49m2-mzn2047884047",
       "alternative_urls": [],
-      "search_query": "W Bloku Centrum 2 lub 3 Pokoje Super Lokalizacja Korzeniowskiego Zabrze 49 239000",
+      "search_query": "W Bloku Centrum 2 lub 3 Pokoje Super Lokalizacja ul. Korzeniowskiego, Zabrze 49 239000",
       "search_url": "https://www.morizon.pl/mieszkania/2-pokojowe/zabrze/centrum/",
-      "link_status": "direct_verified",
+      "link_status": "search_fallback",
       "link_portal": "Morizon"
     },
     {
@@ -977,9 +977,9 @@
       "notes": "DIRECT VERIFIED 2026-09-10. 43,60 m², 2 niezależne pokoje, wysoki parter, niski czynsz 197 zł, blok po modernizacji, oferta gotowa do umeblowania i zamieszkania. Bardzo dobra relacja ceny do kosztów stałych. Minusy: parter, ogrzewanie gazowe i brak pełnych danych o własności.",
       "primary_url": "https://www.morizon.pl/oferta/sprzedaz-mieszkanie-zabrze-centrum-43m2-mzn2047773247",
       "alternative_urls": [],
-      "search_query": "2 pokojowe przy Politechnice Śląskiej niski czynsz Zabrze 43.6 218000",
+      "search_query": "2 pokojowe przy Politechnice Śląskiej/niski czynsz Zabrze Centrum 43.60 218000",
       "search_url": "https://www.morizon.pl/mieszkania/2-pokojowe/zabrze/centrum/",
-      "link_status": "direct_verified",
+      "link_status": "search_fallback",
       "link_portal": "Morizon"
     },
     {
@@ -1021,8 +1021,10 @@
       "notes": "fresh direct verification 2026-09-12; brak potwierdzonego alternatywnego linku",
       "primary_url": "https://www.morizon.pl/oferta/sprzedaz-mieszkanie-zabrze-centrum-gen-charlesa-de-gaulle-a-52m2-mzn2047789821",
       "alternative_urls": [],
-      "link_status": "direct_verified",
-      "link_portal": "Morizon"
+      "link_status": "unverified",
+      "link_portal": "Morizon",
+      "search_query": "Drugie Piętro | Balkon | Blisko DTŚ | 2 osobne pokoje, możliwość salon z aneksem gen. Charlesa de Gaulle'a, Zabrze 52.14 300000",
+      "search_url": ""
     },
     {
       "market_city": "Zabrze",
@@ -1063,8 +1065,10 @@
       "notes": "fresh direct verification 2026-09-12; wysokie opłaty i 11 piętro; brak potwierdzonego alternatywnego linku",
       "primary_url": "https://www.morizon.pl/oferta/sprzedaz-mieszkanie-zabrze-centrum-marii-curie-sklodowskiej-52m2-mzn2047871230",
       "alternative_urls": [],
-      "link_status": "direct_verified",
-      "link_portal": "Morizon"
+      "link_status": "unverified",
+      "link_portal": "Morizon",
+      "search_query": "2 Pokoje | Skłodowskiej-Curie | Ostatnie Piętro z Balkonem Marii Curie-Skłodowskiej, Zabrze 52.5 300000",
+      "search_url": ""
     },
     {
       "market_city": "Zabrze",
@@ -1105,8 +1109,10 @@
       "notes": "fresh direct verification 2026-09-12; brak potwierdzonego alternatywnego linku",
       "primary_url": "https://www.morizon.pl/oferta/sprzedaz-mieszkanie-zabrze-centrum-floriana-49m2-mzn2047711771",
       "alternative_urls": [],
-      "link_status": "direct_verified",
-      "link_portal": "Morizon"
+      "link_status": "unverified",
+      "link_portal": "Morizon",
+      "search_query": "Słoneczne M3 | po remoncie | Zielona okolica w ścisłym centrum Zabrza. Floriana 9a, Zabrze 49.08 295000",
+      "search_url": ""
     }
   ],
   "rental": [
